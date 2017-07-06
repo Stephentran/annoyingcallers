@@ -40,7 +40,7 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         //
         // Numbers must be provided in numerically ascending order.
         
-        var phones = DataManager.instance.getPhoneNumbers()
+        let phones = DataManager.instance.getPhoneNumbers()
         let sortedKeys = Array(phones.keys).sorted(by: <)
         for (number) in sortedKeys {
             context.addBlockingEntry(withNextSequentialPhoneNumber: number)

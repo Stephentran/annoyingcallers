@@ -38,7 +38,7 @@ public final class DataManager {
             print ("Unable to find group id")
             database = nil
         }
-        
+        DataService.instance.getContacts();
     }
 
     // MARK: Shared Instance

@@ -37,6 +37,14 @@
 		61AB7DD01F0958380033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
 		61AB7DD31F0958690033D4FB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DD21F0958690033D4FB /* Contact.swift */; };
 		61AB7DD41F0959B20033D4FB /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
+		61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DD51F0E8C720033D4FB /* MainViewController.swift */; };
+		61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7DD81F0E9B820033D4FB /* settings.jpg */; };
+		61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7DDA1F0E9C100033D4FB /* settings2.jpg */; };
+		61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DDF1F0EAB7C0033D4FB /* DataService.swift */; };
+		61AB7DE21F0EAC220033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
+		61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
+		61AB7DE41F0EAECF0033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
+		61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +113,7 @@
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
 				61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */,
 				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
+				61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +135,7 @@
 		61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTeleSellsUITests.swift; sourceTree = "<group>"; };
 		61AB7D481F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
-		61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ../ContactTableViewController.swift; sourceTree = "<group>"; };
 		61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		61AB7D581F08B28C0033D4FB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		61AB7D641F08BE690033D4FB /* MMWormhole.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMWormhole.framework; path = Carthage/Build/iOS/MMWormhole.framework; sourceTree = "<group>"; };
@@ -144,6 +153,11 @@
 		61AB7DC21F0957C50033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7DCE1F0957E00033D4FB /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		61AB7DD21F0958690033D4FB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Model/Contact.swift; sourceTree = "<group>"; };
+		61AB7DD51F0E8C720033D4FB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		61AB7DD81F0E9B820033D4FB /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
+		61AB7DDA1F0E9C100033D4FB /* settings2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settings2.jpg; path = images/settings2.jpg; sourceTree = SOURCE_ROOT; };
+		61AB7DDF1F0EAB7C0033D4FB /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = Service/DataService.swift; sourceTree = "<group>"; };
+		61AB7DE11F0EAC220033D4FB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
 				61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */,
 				61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */,
 				61AB7D7D1F08C5270033D4FB /* MMWormhole.framework in Frameworks */,
+				61AB7DE41F0EAECF0033D4FB /* Alamofire.framework in Frameworks */,
 				61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */,
 				61AB7D671F08BE690033D4FB /* SQLite.framework in Frameworks */,
 			);
@@ -187,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7DE21F0EAC220033D4FB /* Alamofire.framework in Frameworks */,
 				61AB7DD01F0958380033D4FB /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,11 +251,11 @@
 			children = (
 				61AB7D821F08C8270033D4FB /* BlockTeleSells.entitlements */,
 				61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */,
-				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
 				61AB7D561F08B28C0033D4FB /* Controller */,
 				61AB7D261F08B0880033D4FB /* AppDelegate.swift */,
 				61AB7D281F08B0880033D4FB /* ViewController.swift */,
 				61AB7D2A1F08B0880033D4FB /* Main.storyboard */,
+				61AB7DD71F0E9B820033D4FB /* images */,
 				61AB7D2D1F08B0880033D4FB /* Assets.xcassets */,
 				61AB7D2F1F08B0880033D4FB /* LaunchScreen.storyboard */,
 				61AB7D321F08B0880033D4FB /* Info.plist */,
@@ -267,8 +284,10 @@
 		61AB7D561F08B28C0033D4FB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
 				61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */,
 				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
+				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +295,7 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7DE11F0EAC220033D4FB /* Alamofire.framework */,
 				61AB7D641F08BE690033D4FB /* MMWormhole.framework */,
 				61AB7D651F08BE690033D4FB /* SQLite.framework */,
 			);
@@ -295,6 +315,7 @@
 		61AB7DB21F0957C40033D4FB /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7DDC1F0EAB280033D4FB /* Service */,
 				61AB7DD11F0958500033D4FB /* Model */,
 				61AB7DB31F0957C40033D4FB /* DataManager.h */,
 				61AB7DB41F0957C40033D4FB /* Info.plist */,
@@ -318,6 +339,23 @@
 				61AB7DD21F0958690033D4FB /* Contact.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		61AB7DD71F0E9B820033D4FB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				61AB7DDA1F0E9C100033D4FB /* settings2.jpg */,
+				61AB7DD81F0E9B820033D4FB /* settings.jpg */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
+		61AB7DDC1F0EAB280033D4FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				61AB7DDF1F0EAB7C0033D4FB /* DataService.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,7 +567,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
+				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
 				61AB7D2E1F08B0880033D4FB /* Assets.xcassets in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
 			);
@@ -577,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */,
 				61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */,
 				61AB7D5F1F08B28C0033D4FB /* ContactDetailViewController.swift in Sources */,
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
@@ -614,6 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */,
 				61AB7DD31F0958690033D4FB /* Contact.swift in Sources */,
 				61AB7DCF1F0957E00033D4FB /* DataManager.swift in Sources */,
 			);
@@ -1023,6 +1065,7 @@
 				61AB7D4D1F08B0890033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61AB7D4E1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsTests" */ = {
 			isa = XCConfigurationList;
@@ -1031,6 +1074,7 @@
 				61AB7D501F08B0890033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61AB7D511F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsUITests" */ = {
 			isa = XCConfigurationList;
@@ -1039,6 +1083,7 @@
 				61AB7D531F08B0890033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61AB7D741F08BE960033D4FB /* Build configuration list for PBXNativeTarget "BTSExtension" */ = {
 			isa = XCConfigurationList;
@@ -1047,6 +1092,7 @@
 				61AB7D761F08BE960033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61AB7DC81F0957C50033D4FB /* Build configuration list for PBXNativeTarget "DataManager" */ = {
 			isa = XCConfigurationList;
@@ -1055,6 +1101,7 @@
 				61AB7DCA1F0957C50033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61AB7DCB1F0957C50033D4FB /* Build configuration list for PBXNativeTarget "DataManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -1063,6 +1110,7 @@
 				61AB7DCD1F0957C50033D4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

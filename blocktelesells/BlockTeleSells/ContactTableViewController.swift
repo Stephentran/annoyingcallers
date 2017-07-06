@@ -13,7 +13,7 @@ class ContactTableViewController: UITableViewController {
     var contacts = [Contact]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem
+        //navigationItem.leftBarButtonItem = editButtonItem
         loadContacts();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -95,31 +95,7 @@ class ContactTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        switch(segue.identifier ?? "") {
-            case "AddItem":
-                os_log("Adding a new meal.", log: OSLog.default, type: .debug)
-            case "ShowDetail":
-                guard let contactDetailViewController = segue.destination as? ContactViewController else {
-                    fatalError("Unexpected destination: \(segue.destination)")
-                }
-                guard let selectedMealCell = sender as? ContactTableViewCell else {
-                    fatalError("Unexpected sender: \(sender)")
-                }
- 
-                guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
-                    fatalError("The selected cell is not being displayed by the table")
-                }
- 
-                let selectedContact = contacts[indexPath.row]
-                contactDetailViewController.contact = selectedContact
-            default:
-                fatalError("Unexpected Segue Identifier; \(segue.identifier)")
-
-        }
-
-    }
+    
  
 
     //MARK: Actions
