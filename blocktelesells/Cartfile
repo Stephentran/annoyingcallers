@@ -1,0 +1,2 @@
+github "stephencelis/SQLite.swift" ~> 0.11.3
+github "mutualmobile/MMWormhole" ~> 2.0.0

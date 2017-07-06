@@ -1,0 +1,21 @@
+{
+  "iOS" : [
+    {
+      "hash" : "96e1739ed28a74d56224e38c24c892c868594d9398deb1d865fc642b87760a8c",
+      "name" : "MMWormhole"
+    }
+  ],
+  "commitish" : "2.0.9",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+    {
+      "hash" : "5dbfc0176d8143050fe355698403dd00d0194f753ca3406987d8e83875664bd5",
+      "name" : "MMWormhole"
+    }
+  ]
+}
