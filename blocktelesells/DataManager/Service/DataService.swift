@@ -12,15 +12,14 @@ import AlamofireObjectMapper
 import CallKit
 public class DataService{
     public static let instance = DataService()
-    public static let URL = "http://192.168.1.12:8000/callers/"
+    
     var callers : [Caller]
     private init() {
         callers = [Caller]();
     }
     private func reloadExtension(){
         let callDirManager = CXCallDirectoryManager.sharedInstance;
- 
-        callDirManager.reloadExtension(withIdentifier: "com.ste.CallBlock.CallBlockExtension",
+        callDirManager.reloadExtension(withIdentifier: DataManager.CBX_IDENTIFIER,
             completionHandler: {(error) in
             
                 if (error == nil)
@@ -32,10 +31,10 @@ public class DataService{
             
         })
     }
-    public func requestCallers(completionHandler: @escaping (String) -> Void) {
+    public func requestCallers(url: String, completionHandler: @escaping (String) -> Void) {
         callers = [Caller]();
         
-        Alamofire.request(DataService.URL).responseArray { (response: DataResponse<[Caller]>) in
+        Alamofire.request(url).responseArray { (response: DataResponse<[Caller]>) in
             let callerArray = response.result.value
             if let callerArray = callerArray {
                 for caller in callerArray {

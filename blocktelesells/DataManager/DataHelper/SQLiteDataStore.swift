@@ -16,11 +16,11 @@ class SQLiteDataStore {
     private init() {
        
         let fileManager = FileManager.default
-        if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.stephentran.callblock") {
-            let newDirectory = directory.appendingPathComponent("callers")
+        if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: DataManager.APP_GROUP_CALL_BLOCK_IDENTIFIER) {
+            let newDirectory = directory.appendingPathComponent(DataManager.APP_GROUP_CALL_BLOCK_FOLDER)
             try? fileManager.createDirectory(at: newDirectory, withIntermediateDirectories: false, attributes: nil)
             do {
-                BBDB = try Connection("\(newDirectory)/callblock.sqlite3")
+                BBDB = try Connection("\(newDirectory)/" + DataManager.APP_GROUP_CALL_BLOCK_SQLITE_FILE_NAME)
             } catch {
                 BBDB = nil
                 print ("Unable to open database")

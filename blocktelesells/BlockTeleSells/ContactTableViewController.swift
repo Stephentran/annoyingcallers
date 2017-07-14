@@ -121,7 +121,7 @@ class ContactTableViewController: UITableViewController {
     }
     //MARK: private
     private func loadContacts() {
-        DataService.instance.requestCallers(completionHandler: {(callBackType) in
+        DataService.instance.requestCallers(url: Constants.SERVICE_URL, completionHandler: {(callBackType) in
             self.callers = DataService.instance.getLoadedCallers()
             self.tableView.reloadData()
         })

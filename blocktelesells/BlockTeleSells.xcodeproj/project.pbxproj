@@ -60,6 +60,8 @@
 		61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */; };
 		61AB7DFD1F17D48B0033D4FB /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFC1F17D48B0033D4FB /* SQLiteDataStore.swift */; };
 		61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */; };
+		61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E031F193C7F0033D4FB /* Constants.swift */; };
+		61AB7E081F19477A0033D4FB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7E071F19477A0033D4FB /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +154,7 @@
 		61AB7D421F08B0890033D4FB /* BlockTeleSellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTeleSellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTeleSellsUITests.swift; sourceTree = "<group>"; };
 		61AB7D481F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
 		61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ../ContactTableViewController.swift; sourceTree = "<group>"; };
 		61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		61AB7D581F08B28C0033D4FB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,8 @@
 		61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerDataHelper.swift; sourceTree = "<group>"; };
 		61AB7DFC1F17D48B0033D4FB /* SQLiteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
 		61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
+		61AB7E031F193C7F0033D4FB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		61AB7E071F19477A0033D4FB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,7 @@
 		61AB7D1A1F08B0880033D4FB = {
 			isa = PBXGroup;
 			children = (
+				61AB7E071F19477A0033D4FB /* Cartfile */,
 				61AB7D251F08B0880033D4FB /* BlockTeleSells */,
 				61AB7D3A1F08B0890033D4FB /* BlockTeleSellsTests */,
 				61AB7D451F08B0890033D4FB /* BlockTeleSellsUITests */,
@@ -282,8 +287,8 @@
 		61AB7D251F08B0880033D4FB /* BlockTeleSells */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7E021F193C6C0033D4FB /* Common */,
 				61AB7D821F08C8270033D4FB /* BlockTeleSells.entitlements */,
-				61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */,
 				61AB7D561F08B28C0033D4FB /* Controller */,
 				61AB7D261F08B0880033D4FB /* AppDelegate.swift */,
 				61AB7D281F08B0880033D4FB /* ViewController.swift */,
@@ -317,6 +322,7 @@
 		61AB7D561F08B28C0033D4FB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */,
 				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
 				61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */,
 				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
@@ -404,6 +410,14 @@
 				61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */,
 			);
 			path = DataHelper;
+			sourceTree = "<group>";
+		};
+		61AB7E021F193C6C0033D4FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				61AB7E031F193C7F0033D4FB /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,6 +629,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
 				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
@@ -672,6 +687,7 @@
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,
 				61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */,
+				61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "d4f3cf52f17324d9724e054011089b7048384fe427d71c1082b19aded6e9fbec",
+      "name" : "MRCountryPicker"
+    }
+  ],
+  "commitish" : "0.0.7",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}
