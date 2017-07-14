@@ -1,3 +1,6 @@
 github "stephencelis/SQLite.swift" ~> 0.11.3
 github "mutualmobile/MMWormhole" ~> 2.0.0
 github "Alamofire/Alamofire" ~> 4.4
+github "SwiftyJSON/SwiftyJSON"
+github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
+github "Hearst-DD/ObjectMapper" ~> 2.2

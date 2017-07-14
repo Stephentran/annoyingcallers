@@ -12,9 +12,8 @@ import DataManager
 class CallDirectoryHandler: CXCallDirectoryProvider {
     override func beginRequest(with context: CXCallDirectoryExtensionContext) {
         context.delegate = self
-        let contacts = DataManager.instance.getContacts()
         do {
-            try addBlockingPhoneNumbers(to: context, contacts: contacts)
+            try addBlockingPhoneNumbers(to: context)
         } catch {
             NSLog("Unable to add blocking phone numbers")
             let error = NSError(domain: "CallDirectoryHandler", code: 1, userInfo: nil)
@@ -23,7 +22,7 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         }
 
         do {
-            try addIdentificationPhoneNumbers(to: context, contacts: contacts)
+            try addIdentificationPhoneNumbers(to: context)
         } catch {
             NSLog("Unable to add identification phone numbers")
             let error = NSError(domain: "CallDirectoryHandler", code: 2, userInfo: nil)
@@ -34,28 +33,30 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         context.completeRequest()
     }
 
-    private func addBlockingPhoneNumbers(to context: CXCallDirectoryExtensionContext, contacts: [Contact]) throws {
+    private func addBlockingPhoneNumbers(to context: CXCallDirectoryExtensionContext) throws {
         // Retrieve phone numbers to block from data store. For optimal performance and memory usage when there are many phone numbers,
         // consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
         //
         // Numbers must be provided in numerically ascending order.
-        
+        /*
         let phones = DataManager.instance.getPhoneNumbers()
         let sortedKeys = Array(phones.keys).sorted(by: <)
         for (number) in sortedKeys {
             context.addBlockingEntry(withNextSequentialPhoneNumber: number)
         }
+        */
         
     }
-    private func addIdentificationPhoneNumbers(to context: CXCallDirectoryExtensionContext, contacts: [Contact]) throws {
+    private func addIdentificationPhoneNumbers(to context: CXCallDirectoryExtensionContext) throws {
         // Retrieve phone numbers to identify and their identification labels from data store. For optimal performance and memory usage when there are many phone numbers,
         // consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
         //
         // Numbers must be provided in numerically ascending order.
         
-        var phones = DataManager.instance.getPhoneNumbers()
+        let phones = DataManager.sharedInstance.getPhoneNumbers()
         let sortedKeys = Array(phones.keys).sorted(by: <)
-        for (number) in sortedKeys {
+        
+        for number in sortedKeys {
             context.addIdentificationEntry(withNextSequentialPhoneNumber: number, label: phones[number]!)
         }
     }

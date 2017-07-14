@@ -17,7 +17,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var contactDescription: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    var contact: Contact?
+    var caller: Caller?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,8 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
         // Handle the text field’s user input through delegate callbacks.
         contactPhoneNumber.delegate = self
         // Set up views if editing an existing Meal.
+        
+        /*
         if let contact = contact {
             navigationItem.title = contact.firstName + " " + contact.lastName
             contactFirstName.text = contact.firstName
@@ -32,6 +34,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
             contactPhoneNumber.text = contact.phoneNumber
             contactDescription.text = contact.description
         }
+        */
          // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
 
@@ -61,12 +64,14 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
+        /*
         let firstName = contactFirstName.text ?? ""
         let lastName = contactLastName.text ?? ""
         let phoneNumber = contactPhoneNumber.text ?? ""
         let description = contactDescription.text ?? ""
-        let cid = contact?.id
         
+        
+        let cid = caller?.id
         if(contact != nil && contact?.id != nil){
             let contactForSave = Contact(id: cid!, phoneNumber: phoneNumber, firstName: firstName, lastName: lastName ,description: description)
             if DataManager.instance.updateContact(cid: cid!, newContact: contactForSave){
@@ -78,6 +83,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
                 contact = Contact(id: id!, phoneNumber: phoneNumber, firstName: firstName, lastName: lastName ,description: description)
             }
         }
+        */
         
         
         super.prepare(for: segue, sender: sender)

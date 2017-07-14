@@ -9,8 +9,9 @@
 import UIKit
 import os.log
 import DataManager
+import CallKit
 class ContactTableViewController: UITableViewController {
-    var contacts = [Contact]()
+    var callers = [Caller]()
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationItem.leftBarButtonItem = editButtonItem
@@ -35,7 +36,7 @@ class ContactTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return contacts.count
+        return callers.count
     }
 
     
@@ -45,10 +46,11 @@ class ContactTableViewController: UITableViewController {
         
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
-        let contact = contacts[indexPath.row]
-        cell.contactPhoneNumber.text = contact.phoneNumber
-        cell.contactDescription.text = contact.description
-
+        
+        let caller = callers[indexPath.row]
+        cell.contactPhoneNumber.text = caller.callerNumber
+        cell.contactDescription.text = caller.countryCode
+        
         return cell
     }
     
@@ -61,20 +63,20 @@ class ContactTableViewController: UITableViewController {
     }
  
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            DataManager.instance.deleteContact(cid: contacts[indexPath.row].id!)
-            contacts.remove(at: indexPath.row)
+            DataManager.instance.deleteContact(cid: callers[indexPath.row].callerId!)
+            callers.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
- 
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -100,8 +102,8 @@ class ContactTableViewController: UITableViewController {
 
     //MARK: Actions
     @IBAction func unwindToContactList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? ContactViewController, let contact = sourceViewController.contact {
-        
+        if let sourceViewController = sender.source as? ContactViewController, let caller = sourceViewController.caller {
+            /*
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing contact.
                 contacts[selectedIndexPath.row] = contact
@@ -113,17 +115,18 @@ class ContactTableViewController: UITableViewController {
                 contacts.append(contact)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            */
             
         }
     }
     //MARK: private
     private func loadContacts() {
-        let phones = DataManager.instance.getPhoneNumbers()
-        for (number, fullname) in phones {
-            NSLog(number.description)
-            NSLog(fullname)
-        }
-        contacts = DataManager.instance.getContacts()
+        DataService.instance.requestCallers(completionHandler: {(callBackType) in
+            self.callers = DataService.instance.getLoadedCallers()
+            self.tableView.reloadData()
+        })
+        
+        
     }
 
 }

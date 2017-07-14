@@ -7,25 +7,57 @@
 //
 
 import Alamofire
+import SwiftyJSON
+import AlamofireObjectMapper
+import CallKit
 public class DataService{
     public static let instance = DataService()
+    public static let URL = "http://192.168.1.12:8000/callers/"
+    var callers : [Caller]
     private init() {
+        callers = [Caller]();
     }
-    public func getContacts() -> [Contact] {
-        Alamofire.request("http://127.0.0.1:8000/callers/").responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-
-            if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+    private func reloadExtension(){
+        let callDirManager = CXCallDirectoryManager.sharedInstance;
+ 
+        callDirManager.reloadExtension(withIdentifier: "com.ste.CallBlock.CallBlockExtension",
+            completionHandler: {(error) in
+            
+                if (error == nil)
+                {
+                    print("Reloaded extension successfully")
+                } else {
+                    print("Reloaded extension failed with ")
+                }
+            
+        })
+    }
+    public func requestCallers(completionHandler: @escaping (String) -> Void) {
+        callers = [Caller]();
+        
+        Alamofire.request(DataService.URL).responseArray { (response: DataResponse<[Caller]>) in
+            let callerArray = response.result.value
+            if let callerArray = callerArray {
+                for caller in callerArray {
+                    self.callers.append(caller)
+                    print(caller.callerNumber ?? "No Data")
+                }
             }
-
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
+            
+            do{
+                try CallerDataHelper.insertAll(items: self.callers)
+            }catch{
+                print("Sqlite saving failed")
             }
+            completionHandler("LoadedCallers")
+            self.reloadExtension()
         }
-        return [Contact]();
+        
     }
+    
+    public func getLoadedCallers() -> [Caller]{
+        return self.callers;
+    }
+    
     
 }

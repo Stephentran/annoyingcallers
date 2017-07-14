@@ -13,5 +13,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
