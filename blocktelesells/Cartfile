@@ -6,3 +6,4 @@ github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
 github "Hearst-DD/ObjectMapper" ~> 2.2
 github "xTrinch/MRCountryPicker" ~> 0.0.7
 github "ashleymills/Reachability.swift" ~> 3.0
+github "radex/SwiftyUserDefaults"

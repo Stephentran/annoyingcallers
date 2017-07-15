@@ -9,6 +9,8 @@
 import UIKit
 import Reachability
 import DataManager
+import CallKit
+//CXCallObserverDelegate
 class MainViewController: UIViewController {
 
     @IBOutlet weak var gotoList: UIButton!
@@ -16,8 +18,9 @@ class MainViewController: UIViewController {
     let reachability = Reachability()!
     @IBOutlet weak var updatedStatus: UILabel!
     override func viewDidLoad() {
+        //CXCallObserver *callObserver = CXCallObserver();
         super.viewDidLoad()
-        startNetworkingListener()
+        loadData()
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +29,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -37,7 +40,15 @@ class MainViewController: UIViewController {
     }
     */
     
-    
+    private func loadData(){
+        startNetworkingListener()
+        let latestDate = DataManager.sharedInstance.loadUpdatedStatus()
+        if(latestDate != nil){
+            self.updatedStatus.text = latestDate?.description
+        }
+        
+        
+    }
     private func startNetworkingListener(){
         reachability.whenReachable = { reachability in
             // this is called on a background thread, but UI updates must
@@ -45,7 +56,12 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 if reachability.isReachableViaWiFi {
                     DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: {Void in
-                        self.updatedStatus.text = Date().description
+                        
+                        DataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
+                        self.updatedStatus.text = DataManager.sharedInstance.loadUpdatedStatus()?.description
+                    })
+                    DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
+            
                     })
                 } else {
                     print("Reachable via Cellular")

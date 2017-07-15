@@ -45,9 +45,12 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         // Connect data:
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loadDataForCategoryPicker()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -131,8 +134,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         self.countryFlag.image = flag
     }
     func loadDataForCategoryPicker(){
-        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
-            let categories = DataService.sharedInstance.getLoadedCategories()
+        let categories = DataService.sharedInstance.getLoadedCategories()
             self.pickerData = [Category]()
             for category in categories {
                 self.pickerData?.append(category)
@@ -140,8 +142,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
             self.categoryPicker.reloadAllComponents()
             if(categories.count > 0){
                 self.categoryPicker.selectRow(0, inComponent:0, animated:false)
-            }
-        })
+         }
         
     }
     

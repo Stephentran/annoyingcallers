@@ -64,6 +64,9 @@
 		61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
 		61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
 		61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
+		61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
+		61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,7 @@
 				61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */,
 				61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
+				61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */,
 				61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */,
 				61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */,
 				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
@@ -195,6 +199,7 @@
 		61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDataHelper.swift; sourceTree = "<group>"; };
 		61AB7E101F19F6020033D4FB /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		61AB7E121F1A192F0033D4FB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +210,7 @@
 				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
 				61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */,
+				61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */,
 				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
@@ -242,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7DEC1F14D6C40033D4FB /* ObjectMapper.framework in Frameworks */,
@@ -340,6 +347,7 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */,
 				61AB7E121F1A192F0033D4FB /* Reachability.framework */,
 				61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */,
 				61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */,

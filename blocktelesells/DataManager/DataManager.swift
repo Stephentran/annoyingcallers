@@ -5,7 +5,10 @@
 //  Created by Stephen Tran on 7/1/17.
 //  Copyright © 2017 STEPHENTRAN. All rights reserved.
 //
-
+import SwiftyUserDefaults
+extension DefaultsKeys {
+    static let updatedStatus = DefaultsKey<Date?>("updatedStatus")
+}
 public final class DataManager {
     
     public static let CBX_IDENTIFIER = "com.ste.CallBlock.CallBlockExtension"
@@ -33,5 +36,15 @@ public final class DataManager {
             print("Unable to load phone numbers")
         }
         return dictionary
+    }
+    public func saveUpdatedStatus(latestDate: Date){
+        Defaults[.updatedStatus] = latestDate
+    }
+    public func loadUpdatedStatus() -> Date?{
+        if Defaults[.updatedStatus] != nil {
+            return Defaults[.updatedStatus]!
+        }
+        return nil
+        
     }
 }
