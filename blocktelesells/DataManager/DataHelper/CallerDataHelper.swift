@@ -9,7 +9,7 @@
 import Foundation
 import SQLite
 
-public class CallerDataHelper: DataHelperProtocol {
+ class CallerDataHelper: DataHelperProtocol {
     static let TABLE_NAME = "Callers"
    
     static let table = Table(TABLE_NAME)
@@ -70,9 +70,8 @@ public class CallerDataHelper: DataHelperProtocol {
         }
         if (item.callerNumber != nil) {
             do{
-                if (try find(id: item.callerId!)) == nil{
+                if try item.callerId == nil || ( find(id: item.callerId!)) == nil{
                    let insert = table.insert(
-                        callerId <- item.callerId!,
                         callerNumber <- item.callerNumber!,
                         countryCode <- item.countryCode!,
                         registeredDevice <- item.registeredDevice,
@@ -163,7 +162,7 @@ public class CallerDataHelper: DataHelperProtocol {
                     registeredDevice: item[registeredDevice],
                     registeredDate: item[registeredDate],
                     category: item[category])
-                    callers.append(caller)
+                callers.append(caller)
             }
         }catch{
             throw DataAccessError.FindAll_Error

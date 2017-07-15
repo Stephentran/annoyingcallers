@@ -41,6 +41,7 @@ class SQLiteDataStore {
     func createTables(BBDB: Connection) throws{
         do {
             try CallerDataHelper.createTable(DB: BBDB)
+            try CategoryDataHelper.createTable(DB: BBDB)
         } catch {
             throw DataAccessError.Datastore_Connection_Error
         }

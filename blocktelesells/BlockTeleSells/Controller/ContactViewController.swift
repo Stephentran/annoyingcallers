@@ -8,37 +8,44 @@
 
 import UIKit
 import os.log
-import DataManager
-class ContactViewController: UIViewController, UITextFieldDelegate {
+import class DataManager.Category
+import class DataManager.Caller
+import class DataManager.DataService
+import MRCountryPicker
+class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var countryName: UILabel!
+    @IBOutlet weak var category: UILabel!
 
-    @IBOutlet weak var contactLastName: UITextField!
-    @IBOutlet weak var contactFirstName: UITextField!
+    @IBOutlet weak var countryFlag: UIImageView!
+    @IBOutlet weak var phoneCode: UILabel!
+    @IBOutlet weak var countryCode: UILabel!
+    @IBOutlet weak var countryPicker: MRCountryPicker!
+    
     @IBOutlet weak var contactPhoneNumber: UITextField!
-    @IBOutlet weak var contactDescription: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     var caller: Caller?
-    
+    var pickerData: [Category]? = [Category]()
+    var categorySelected: Category?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        countryPicker.countryPickerDelegate = self
+        countryPicker.showPhoneNumbers = true
+
+        // set country by its code
+        countryPicker.setCountry(Constants.COUNTRY_CODE_DEFAULT)
         // Handle the text field’s user input through delegate callbacks.
         contactPhoneNumber.delegate = self
-        // Set up views if editing an existing Meal.
         
-        /*
-        if let contact = contact {
-            navigationItem.title = contact.firstName + " " + contact.lastName
-            contactFirstName.text = contact.firstName
-            contactLastName.text   = contact.lastName
-            contactPhoneNumber.text = contact.phoneNumber
-            contactDescription.text = contact.description
-        }
-        */
          // Enable the Save button only if the text field has a valid Meal name.
-        updateSaveButtonState()
+        //updateSaveButtonState()
 
 
+        // Connect data:
+        self.categoryPicker.delegate = self
+        self.categoryPicker.dataSource = self
+        loadDataForCategoryPicker()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,27 +71,24 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
-        /*
-        let firstName = contactFirstName.text ?? ""
-        let lastName = contactLastName.text ?? ""
+        
         let phoneNumber = contactPhoneNumber.text ?? ""
-        let description = contactDescription.text ?? ""
+        let countryCode = self.countryCode.text ?? ""
         
-        
-        let cid = caller?.id
-        if(contact != nil && contact?.id != nil){
-            let contactForSave = Contact(id: cid!, phoneNumber: phoneNumber, firstName: firstName, lastName: lastName ,description: description)
-            if DataManager.instance.updateContact(cid: cid!, newContact: contactForSave){
-                contact = Contact(id: cid!, phoneNumber: phoneNumber, firstName: firstName, lastName: lastName ,description: description)
-            }
-        }else{
-            let id = DataManager.instance.addContact(cfirstName: firstName,clastName: lastName, cphoneNumber: phoneNumber, cdescription: description)
-            if id! > 0{
-                contact = Contact(id: id!, phoneNumber: phoneNumber, firstName: firstName, lastName: lastName ,description: description)
-            }
+
+        let caller = Caller.createCaller(
+                    callerId: nil,
+                    countryCode: countryCode,
+                    callerNumber: phoneNumber,
+                    registeredDevice: "aaid123",
+                    registeredDate: Date(),
+                    category: categorySelected?.categoryName)
+        let ret = DataService.sharedInstance.insertCaller(caller: caller)
+        if ret == false {
+            let alert = UIAlertController(title: "Alert", message: "Can not report this number", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
-        */
-        
         
         super.prepare(for: segue, sender: sender)
     }
@@ -105,10 +109,10 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
      //MARK: UITextFieldDelegate 
      func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the Save button while editing.
-        saveButton.isEnabled = false
+        //saveButton.isEnabled = false
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        updateSaveButtonState()
+        //updateSaveButtonState()
         navigationItem.title = textField.text
     }
     //MARK: Private Methods
@@ -118,4 +122,47 @@ class ContactViewController: UIViewController, UITextFieldDelegate {
         saveButton.isEnabled = !text.isEmpty
     }
     
+    //MARK: MRCountryPickerDelegate
+    // a picker item was selected
+    func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+        self.countryName.text = name
+        self.countryCode.text = countryCode
+        self.phoneCode.text = phoneCode
+        self.countryFlag.image = flag
+    }
+    func loadDataForCategoryPicker(){
+        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
+            let categories = DataService.sharedInstance.getLoadedCategories()
+            self.pickerData = [Category]()
+            for category in categories {
+                self.pickerData?.append(category)
+            }
+            self.categoryPicker.reloadAllComponents()
+            if(categories.count > 0){
+                self.categoryPicker.selectRow(0, inComponent:0, animated:false)
+            }
+        })
+        
+    }
+    
+    //MARK: UIPickerViewDelegate,UIPickerViewDataSource
+    // The number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData!.count > 4 ? 4 : pickerData!.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData?[row].categoryName
+    }
+    // Catpure the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.category.text = pickerData?[row].categoryName
+        categorySelected = pickerData?[row]
+    }
 }

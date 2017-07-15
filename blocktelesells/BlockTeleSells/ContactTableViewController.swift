@@ -10,12 +10,14 @@ import UIKit
 import os.log
 import DataManager
 import CallKit
+import Reachability
 class ContactTableViewController: UITableViewController {
     var callers = [Caller]()
+    let reachability = Reachability()!
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationItem.leftBarButtonItem = editButtonItem
-        loadContacts();
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,7 +29,10 @@ class ContactTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       loadContacts()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,7 +107,7 @@ class ContactTableViewController: UITableViewController {
 
     //MARK: Actions
     @IBAction func unwindToContactList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? ContactViewController, let caller = sourceViewController.caller {
+        if let sourceViewController = sender.source as? ContactViewController, let _ = sourceViewController.caller {
             /*
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing contact.
@@ -121,11 +126,8 @@ class ContactTableViewController: UITableViewController {
     }
     //MARK: private
     private func loadContacts() {
-        DataService.instance.requestCallers(url: Constants.SERVICE_URL, completionHandler: {(callBackType) in
-            self.callers = DataService.instance.getLoadedCallers()
-            self.tableView.reloadData()
-        })
-        
+        self.callers = DataService.sharedInstance.getLoadedCallers()
+        self.tableView.reloadData()
         
     }
 

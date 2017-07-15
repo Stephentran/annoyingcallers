@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import Reachability
+import DataManager
 class MainViewController: UIViewController {
 
     @IBOutlet weak var gotoList: UIButton!
+    
+    let reachability = Reachability()!
+    @IBOutlet weak var updatedStatus: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startNetworkingListener()
         // Do any additional setup after loading the view.
     }
 
@@ -33,5 +37,40 @@ class MainViewController: UIViewController {
     }
     */
     
+    
+    private func startNetworkingListener(){
+        reachability.whenReachable = { reachability in
+            // this is called on a background thread, but UI updates must
+            // be on the main thread, like this:
+            DispatchQueue.main.async {
+                if reachability.isReachableViaWiFi {
+                    DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: {Void in
+                        self.updatedStatus.text = Date().description
+                    })
+                } else {
+                    print("Reachable via Cellular")
+                    let alert = UIAlertController(title: "Alert", message: "We just got Cellular", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        reachability.whenUnreachable = { reachability in
+            // this is called on a background thread, but UI updates must
+            // be on the main thread, like this:
+            DispatchQueue.main.async {
+                print("Not reachable")
+                let alert = UIAlertController(title: "Alert", message: "There is no network connection", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+            }
+        }
+
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
 
 }

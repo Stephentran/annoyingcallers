@@ -23,7 +23,6 @@
 		61AB7D731F08BE960033D4FB /* BTSExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		61AB7D781F08BEC10033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D791F08BEC10033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
-		61AB7D7D1F08C5270033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
 		61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -42,18 +41,14 @@
 		61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DDF1F0EAB7C0033D4FB /* DataService.swift */; };
 		61AB7DE21F0EAC220033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
 		61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
-		61AB7DE41F0EAECF0033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
 		61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
-		61AB7DE81F149A740033D4FB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
 		61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DEA1F149A980033D4FB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
 		61AB7DEC1F14D6C40033D4FB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
 		61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
-		61AB7DEE1F14D7060033D4FB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
 		61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
-		61AB7DF21F14EB090033D4FB /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
 		61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
 		61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DF81F17D40A0033D4FB /* DataHelperProtocol.swift */; };
@@ -62,6 +57,13 @@
 		61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */; };
 		61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E031F193C7F0033D4FB /* Constants.swift */; };
 		61AB7E081F19477A0033D4FB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7E071F19477A0033D4FB /* Cartfile */; };
+		61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */; };
+		61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */; };
+		61AB7E111F19F6020033D4FB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E101F19F6020033D4FB /* Category.swift */; };
+		61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
+		61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
+		61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +133,10 @@
 				61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
 				61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */,
+				61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */,
 				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
 				61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */,
+				61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */,
 				61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -182,11 +186,15 @@
 		61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		61AB7DF81F17D40A0033D4FB /* DataHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelperProtocol.swift; sourceTree = "<group>"; };
-		61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerDataHelper.swift; sourceTree = "<group>"; };
+		61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerDataHelper.swift; path = ../CallerDataHelper.swift; sourceTree = "<group>"; };
 		61AB7DFC1F17D48B0033D4FB /* SQLiteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
 		61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
 		61AB7E031F193C7F0033D4FB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		61AB7E071F19477A0033D4FB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MRCountryPicker.framework; path = Carthage/Build/iOS/MRCountryPicker.framework; sourceTree = "<group>"; };
+		61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDataHelper.swift; sourceTree = "<group>"; };
+		61AB7E101F19F6020033D4FB /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		61AB7E121F1A192F0033D4FB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,17 +202,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
 				61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */,
 				61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */,
-				61AB7DEE1F14D7060033D4FB /* ObjectMapper.framework in Frameworks */,
+				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
-				61AB7DE81F149A740033D4FB /* SwiftyJSON.framework in Frameworks */,
 				61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */,
-				61AB7DF21F14EB090033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */,
-				61AB7D7D1F08C5270033D4FB /* MMWormhole.framework in Frameworks */,
-				61AB7DE41F0EAECF0033D4FB /* Alamofire.framework in Frameworks */,
 				61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7DEC1F14D6C40033D4FB /* ObjectMapper.framework in Frameworks */,
 				61AB7DEA1F149A980033D4FB /* SwiftyJSON.framework in Frameworks */,
@@ -334,6 +340,8 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7E121F1A192F0033D4FB /* Reachability.framework */,
+				61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */,
 				61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */,
 				61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */,
 				61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */,
@@ -380,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				61AB7DD21F0958690033D4FB /* Caller.swift */,
+				61AB7E101F19F6020033D4FB /* Category.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -404,8 +413,8 @@
 		61AB7DF71F17D3E40033D4FB /* DataHelper */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7E0D1F19F53A0033D4FB /* EntityHelper */,
 				61AB7DF81F17D40A0033D4FB /* DataHelperProtocol.swift */,
-				61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */,
 				61AB7DFC1F17D48B0033D4FB /* SQLiteDataStore.swift */,
 				61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */,
 			);
@@ -418,6 +427,15 @@
 				61AB7E031F193C7F0033D4FB /* Constants.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		61AB7E0D1F19F53A0033D4FB /* EntityHelper */ = {
+			isa = PBXGroup;
+			children = (
+				61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */,
+				61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */,
+			);
+			path = EntityHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,7 +740,9 @@
 				61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */,
 				61AB7DFD1F17D48B0033D4FB /* SQLiteDataStore.swift in Sources */,
 				61AB7DD31F0958690033D4FB /* Caller.swift in Sources */,
+				61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */,
 				61AB7DCF1F0957E00033D4FB /* DataManager.swift in Sources */,
+				61AB7E111F19F6020033D4FB /* Category.swift in Sources */,
 				61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */,
 				61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */,
 				61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */,

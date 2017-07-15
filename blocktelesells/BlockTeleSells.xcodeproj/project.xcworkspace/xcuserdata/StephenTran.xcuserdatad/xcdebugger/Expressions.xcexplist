@@ -3,13 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "DataManager.getPhoneNumbers() -&gt; [Int64 : String]:DataManager.swift">
+         contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ContactTableViewController.(loadContacts() -&gt; ()).(closure #1):ContactTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(getContacts() -&gt; [Caller]).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Int64(contact.phoneNumber).toString()">
-            </PersistentString>
-            <PersistentString
-               value = "String(describing: Int64(contact.phoneNumber)!)">
+               value = "response">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -17,10 +26,30 @@
          contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
+         contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SQLiteDataStore.createTables() throws -&gt; ():SQLiteDataStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ContactViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():ContactViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "response">
+               value = "pickerData[row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataManager.getPhoneNumbers() -&gt; [Int64 : String]:DataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Int64(contact.phoneNumber).toString()">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: Int64(contact.phoneNumber)!)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
