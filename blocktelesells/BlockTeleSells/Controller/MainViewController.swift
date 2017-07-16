@@ -10,20 +10,24 @@ import UIKit
 import Reachability
 import DataManager
 import CallKit
-//CXCallObserverDelegate
-class MainViewController: UIViewController {
+//, CXCallObserverDelegate
+class MainViewController: UIViewController , CXCallObserverDelegate{
 
     @IBOutlet weak var gotoList: UIButton!
-    
+    var callObserver: CXCallObserver?
     let reachability = Reachability()!
     @IBOutlet weak var updatedStatus: UILabel!
     override func viewDidLoad() {
-        //CXCallObserver *callObserver = CXCallObserver();
+        self.callObserver = CXCallObserver()
+        self.callObserver?.setDelegate(self, queue: nil)
         super.viewDidLoad()
-        loadData()
+        
         // Do any additional setup after loading the view.
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,10 +48,13 @@ class MainViewController: UIViewController {
         startNetworkingListener()
         let latestDate = DataManager.sharedInstance.loadUpdatedStatus()
         if(latestDate != nil){
-            self.updatedStatus.text = latestDate?.description
+            self.updatedStatus.text = Common.sharedInstance.formatDate(date: latestDate!)
         }
         
         
+    }
+    public func updateData(){
+        startNetworkingListener()
     }
     private func startNetworkingListener(){
         reachability.whenReachable = { reachability in
@@ -58,7 +65,7 @@ class MainViewController: UIViewController {
                     DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: {Void in
                         
                         DataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
-                        self.updatedStatus.text = DataManager.sharedInstance.loadUpdatedStatus()?.description
+                        self.updatedStatus.text = Common.sharedInstance.formatDate(date: DataManager.sharedInstance.loadUpdatedStatus()!)
                     })
                     DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
             
@@ -88,5 +95,15 @@ class MainViewController: UIViewController {
             print("Unable to start notifier")
         }
     }
+    
+    //MARK: CallObserver
+    func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall){
+        if (call.hasConnected) {
+            NSLog("********** voice call connected **********/n");
+        } else if(call.hasEnded) {
+            NSLog("********** voice call disconnected **********/n");
+        }
+    }
+    
 
 }

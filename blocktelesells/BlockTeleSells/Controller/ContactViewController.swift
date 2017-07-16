@@ -46,6 +46,12 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
         
+        //let tap = UITapGestureRecognizer(target: self, action: "handleKeyboard:")
+        //view.addGestureRecognizer(tap)
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapView(_:)))
+        //tapRecognizer.addTarget(self, action: #selector(ViewController.didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -117,6 +123,13 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     func textFieldDidEndEditing(_ textField: UITextField) {
         //updateSaveButtonState()
         navigationItem.title = textField.text
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true);
+        return false;
+    }
+    func didTapView(_ sender: UITapGestureRecognizer){
+        self.view.endEditing(true);
     }
     //MARK: Private Methods
     private func updateSaveButtonState() {

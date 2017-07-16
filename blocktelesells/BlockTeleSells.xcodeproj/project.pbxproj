@@ -67,6 +67,8 @@
 		61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
 		61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
 		61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1A1F1BCF230033D4FB /* Configuration.swift */; };
+		61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1C1F1BD04A0033D4FB /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +202,8 @@
 		61AB7E101F19F6020033D4FB /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		61AB7E121F1A192F0033D4FB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		61AB7E1A1F1BCF230033D4FB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		61AB7E1C1F1BD04A0033D4FB /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +437,8 @@
 			isa = PBXGroup;
 			children = (
 				61AB7E031F193C7F0033D4FB /* Constants.swift */,
+				61AB7E1A1F1BCF230033D4FB /* Configuration.swift */,
+				61AB7E1C1F1BD04A0033D4FB /* Common.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -589,6 +595,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 						};
 					};
 					61AB7D361F08B0890033D4FB = {
@@ -709,10 +718,12 @@
 				61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */,
 				61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */,
 				61AB7D5F1F08B28C0033D4FB /* ContactDetailViewController.swift in Sources */,
+				61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */,
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,
 				61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */,
+				61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */,
 				61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

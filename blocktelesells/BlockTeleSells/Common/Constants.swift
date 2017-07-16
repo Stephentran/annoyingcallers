@@ -14,5 +14,6 @@ class Constants {
     public static let COUNTRY_CODE_DEFAULT = "VN"
     public static let PHONE_CODE_DEFAULT = "+84"
     public static let LOCALE_DEFAULT = "vi_VN"
+    public static let TIME_ZONE_DEFAULT = "ICT"
 
 }
