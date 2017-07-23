@@ -63,7 +63,6 @@ class ContactTableViewController: UITableViewController {
         }else{
             cell.callerBlocked.setOn(false, animated: false)
         }
-        let test = LocalDataManager.sharedInstance.getBlockedPhoneNumbers()
         return cell
     }
     
