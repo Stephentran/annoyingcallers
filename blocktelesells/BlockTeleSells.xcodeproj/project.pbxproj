@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612F49661F24F66300ABC512 /* BlockedCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F49651F24F66300ABC512 /* BlockedCaller.swift */; };
 		61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D261F08B0880033D4FB /* AppDelegate.swift */; };
 		61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D281F08B0880033D4FB /* ViewController.swift */; };
 		61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2A1F08B0880033D4FB /* Main.storyboard */; };
@@ -153,6 +154,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		612F49651F24F66300ABC512 /* BlockedCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockedCaller.swift; path = Model/BlockedCaller.swift; sourceTree = "<group>"; };
 		61AB7D231F08B0880033D4FB /* BlockTeleSells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTeleSells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D261F08B0880033D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AB7D281F08B0880033D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			children = (
 				61AB7DD21F0958690033D4FB /* Caller.swift */,
 				61AB7E101F19F6020033D4FB /* Category.swift */,
+				612F49651F24F66300ABC512 /* BlockedCaller.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				61AB7E111F19F6020033D4FB /* Category.swift in Sources */,
 				61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */,
 				61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */,
+				612F49661F24F66300ABC512 /* BlockedCaller.swift in Sources */,
 				61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */,
 				61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ import SQLite
  class CallerDataHelper: DataHelperProtocol {
     var tableName = "Callers"
    
-    let table: Table
+    var table: Table
     static let callerId = Expression<Int64>("callerId")
     static let callerNumber = Expression<String?>("callerNumber")
     static let countryCode = Expression<String?>("countryCode")
@@ -161,10 +161,7 @@ import SQLite
             throw DataAccessError.Datastore_Connection_Error
         }
         do {
-            let tmp = try DB.run(table.delete())
-             guard tmp == 1 else {
-                throw DataAccessError.Delete_Error
-            }
+            try DB.run(table.delete())
         } catch _ {
             throw DataAccessError.Delete_Error
         }

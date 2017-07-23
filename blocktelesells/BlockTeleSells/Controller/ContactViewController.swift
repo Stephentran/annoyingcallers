@@ -12,6 +12,7 @@ import class DataManager.Category
 import class DataManager.Caller
 import class DataManager.DataService
 import class DataManager.LocalDataManager
+import Reachability
 import MRCountryPicker
 class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -29,6 +30,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     var caller: Caller?
     var pickerData: [Category]? = [Category]()
     var categorySelected: Category?
+    let reachability = Reachability()!
     override func viewDidLoad() {
         super.viewDidLoad()
         countryPicker.countryPickerDelegate = self
@@ -56,7 +58,10 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadDataForCategoryPicker()
+        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
+            self.loadDataForCategoryPicker()
+        })
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,14 +106,17 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else {
-            DataService.sharedInstance.syncUpCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: handleAfterSyncedCallers)
+            LocalDataManager.sharedInstance.startDataRequest(url: Constants.SERVICE_CALLER_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         }
         super.prepare(for: segue, sender: sender)
     }
     func handleAfterSyncedCallers(result: Bool) {
-        if result == true {
-            LocalDataManager.sharedInstance.deleteAllLocalCaller()
-        }
+        
+    }
+    
+    
+    func completionHandler(result: Bool){
+        
     }
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         let isPresentingInAddMealMode = presentingViewController is UINavigationController

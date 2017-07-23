@@ -38,13 +38,14 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         // consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
         //
         // Numbers must be provided in numerically ascending order.
-        /*
-        let phones = DataManager.instance.getPhoneNumbers()
+        
+        
+        let phones = LocalDataManager.sharedInstance.getBlockedPhoneNumbers()
         let sortedKeys = Array(phones.keys).sorted(by: <)
-        for (number) in sortedKeys {
+        
+        for number in sortedKeys {
             context.addBlockingEntry(withNextSequentialPhoneNumber: number)
         }
-        */
         
     }
     private func addIdentificationPhoneNumbers(to context: CXCallDirectoryExtensionContext) throws {

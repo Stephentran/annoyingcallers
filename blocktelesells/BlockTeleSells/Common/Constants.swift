@@ -7,7 +7,7 @@
 //
 
 class Constants {
-    public static let SERVICE_URL = "http://192.168.1.2:8000/api/"
+    public static let SERVICE_URL = "http://192.168.1.4:8000/api/"
     public static let SERVICE_CALLER_URL = SERVICE_URL + "callers/"
     public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
     public static let COUNTRY_NAME_DEFAULT = "Vietnam"

@@ -45,6 +45,7 @@ public class DataService{
         var newCallers = [Caller]();
         var updateCallers = [Caller]();
         do{
+            try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.deleteAll()
             for caller in callerArray {
                 if try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.find(id: caller.callerId!) != nil {
                     updateCallers.append(caller)
@@ -55,6 +56,8 @@ public class DataService{
             _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.updateAll(items: updateCallers)
             _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.insertAll(items: newCallers)
             LocalDataManager.sharedInstance.reloadExtension()
+            LocalDataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
+            LocalDataManager.sharedInstance.deleteAllLocalCaller()
         }catch{
             print("Sqlite saving failed")
         }
@@ -64,6 +67,7 @@ public class DataService{
         Alamofire.request(url).responseArray { (response: DataResponse<[Caller]>) in
             if(response.result.isSuccess) {
                 self.handleCallerResponse(callerArray: response.result.value!)
+                
             }
             completionHandler()
             

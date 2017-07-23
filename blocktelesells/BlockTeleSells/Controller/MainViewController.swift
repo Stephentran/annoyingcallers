@@ -45,7 +45,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     */
     
     private func loadData(){
-        startNetworkingListener()
+        self.updateData()
         let latestDate = LocalDataManager.sharedInstance.loadUpdatedStatus()
         if(latestDate != nil){
             self.updatedStatus.text = Common.sharedInstance.formatDate(date: latestDate!)
@@ -54,33 +54,16 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         
     }
     public func updateData(){
-        startNetworkingListener()
+        LocalDataManager.sharedInstance.startDataRequest(url: Constants.SERVICE_CALLER_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
+        //LocalDataManager.sharedInstance.syncUpCallers(url: Constants.SERVICE_CATEGORY_URL, completionHandler:completionHandler)
+        
     }
     
-    func handleReachableViaWiFi(){
+    func completionHandler(result: Bool){
+        if result == true {
+            self.updatedStatus.text = Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
+        }
         
-        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
-            DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: { Void in
-                LocalDataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
-                self.updatedStatus.text = Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
-            })
-        })
-    }
-    func alertWhenCellular(){
-        print("Reachable via Cellular")
-                    let alert = UIAlertController(title: "Alert", message: "We just got Cellular", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-    }
-    func alertWhenNoNetwork(){
-        print("Not reachable")
-        let alert = UIAlertController(title: "Alert", message: "There is no network connection", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    private func startNetworkingListener(){
-        NetworkManager.sharedInstance.configureAllowCellular(allowCell: Constants.USING_CELLULAR_FOR_REQUEST)
-        NetworkManager.sharedInstance.requestIfReachableViaWiFi(reachability: reachability, requestingHandler: handleReachableViaWiFi, alertWhenCellular: alertWhenCellular, alertWhenNoNetwork: alertWhenNoNetwork)
     }
     
     //MARK: CallObserver

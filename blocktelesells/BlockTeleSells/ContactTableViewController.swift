@@ -16,6 +16,7 @@ class ContactTableViewController: UITableViewController {
     let reachability = Reachability()!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.allowsSelection = false
         //navigationItem.leftBarButtonItem = editButtonItem
         
         // Uncomment the following line to preserve selection between presentations
@@ -55,7 +56,14 @@ class ContactTableViewController: UITableViewController {
         let caller = callers[indexPath.row]
         cell.contactPhoneNumber.text = caller.callerNumber
         cell.contactDescription.text = caller.categoryNames()
-        
+        cell.caller = caller
+        let blockedCaller = LocalDataManager.sharedInstance.findOneBlockedCaller(callerId: caller.callerId!)
+        if blockedCaller != nil {
+            cell.callerBlocked.setOn(true, animated: false)
+        }else{
+            cell.callerBlocked.setOn(false, animated: false)
+        }
+        let test = LocalDataManager.sharedInstance.getBlockedPhoneNumbers()
         return cell
     }
     

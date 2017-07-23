@@ -10,16 +10,16 @@ import Reachability
 public class NetworkManager {
     public static let sharedInstance = NetworkManager()
     var allowCellular = false;
-    public func requestIfReachableViaWiFi(reachability: Reachability, requestingHandler: @escaping () -> Void, alertWhenCellular: @escaping () -> Void, alertWhenNoNetwork: @escaping () -> Void) {
+    public func requestIfReachableViaWiFi(url: String, reachability: Reachability,allowCell: Bool, requestingHandler: @escaping (_ url: String, _ completionHandler: @escaping (_ result: Bool) -> Void) -> Void, completionHandler: @escaping (_ result: Bool) -> Void) {
+        NetworkManager.sharedInstance.configureAllowCellular(allowCell: allowCell)
         reachability.whenReachable = { reachability in
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
             DispatchQueue.main.async {
                 if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
-                    requestingHandler()
+                    requestingHandler(url, completionHandler)
                 } else {
                     print("Reachable via Cellular")
-                    alertWhenCellular()
                 }
             }
         }
@@ -27,7 +27,7 @@ public class NetworkManager {
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
             DispatchQueue.main.async {
-                alertWhenNoNetwork()
+                print("Unreachable via Network")
             }
         }
 

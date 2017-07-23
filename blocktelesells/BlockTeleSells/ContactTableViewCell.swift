@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import DataManager
 class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var contactPhoneNumber: UILabel!
     @IBOutlet weak var contactDescription: UITextView!
@@ -15,7 +15,17 @@ class ContactTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    var caller: Caller?
+    @IBAction func blockedToggle(_ sender: Any) {
+        if callerBlocked.isOn {
+            LocalDataManager.sharedInstance.insertBlockedCaller(caller: caller!)
+        }else{
+            LocalDataManager.sharedInstance.deleteBlockedCaller(caller: caller)
+        }
+        
+    }
+    
+    @IBOutlet weak var callerBlocked: UISwitch!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
