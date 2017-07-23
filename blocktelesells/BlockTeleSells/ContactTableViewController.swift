@@ -54,7 +54,7 @@ class ContactTableViewController: UITableViewController {
         
         let caller = callers[indexPath.row]
         cell.contactPhoneNumber.text = caller.callerNumber
-        cell.contactDescription.text = caller.countryCode
+        cell.contactDescription.text = caller.categoryNames()
         
         return cell
     }
@@ -126,7 +126,7 @@ class ContactTableViewController: UITableViewController {
     }
     //MARK: private
     private func loadContacts() {
-        self.callers = DataService.sharedInstance.getLoadedCallers()
+        self.callers = LocalDataManager.sharedInstance.getLoadedCallers()
         self.tableView.reloadData()
         
     }

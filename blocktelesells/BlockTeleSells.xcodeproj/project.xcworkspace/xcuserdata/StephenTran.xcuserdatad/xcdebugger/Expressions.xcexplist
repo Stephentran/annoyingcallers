@@ -9,7 +9,18 @@
          contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
       </ContextState>
       <ContextState
-         contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
+         contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "window?.rootViewController">
+            </PersistentString>
+            <PersistentString
+               value = "window?.rootViewController.childViewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "window?.rootViewController as?MainViewController">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DataService.(getContacts() -&gt; [Caller]).(closure #1):DataService.swift">
@@ -37,21 +48,31 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
+         contextName = "CallerDataHelper.insert(item : Caller) throws -&gt; Int64:CallerDataHelper.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
-            </PersistentString>
-            <PersistentString
-               value = "window?.rootViewController.childViewControllers">
-            </PersistentString>
-            <PersistentString
-               value = "window?.rootViewController">
+               value = "item.categoryIds()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SQLiteDataStore.createTables() throws -&gt; ():SQLiteDataStore.swift">
+         contextName = "DataService.(requestCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.isSuccess">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.postCaller(url : String, caller : Caller, completionHandler : () -&gt; ()) -&gt; ():DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json.toString()">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "Common.formatDate(date : Date) -&gt; String:Common.swift">
@@ -68,7 +89,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SQLiteDataStore.createTables() throws -&gt; ():SQLiteDataStore.swift">
+      </ContextState>
+      <ContextState
          contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NetworkManager.(requestIfReachableViaWiFi(reachability : Reachability, requestingHandler : () -&gt; (), alertWhenCellular : () -&gt; (), alertWhenNoNetwork : () -&gt; ()) -&gt; ()).(closure #1).(closure #1):NetworkManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.allowCellular">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
@@ -85,7 +117,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
+         contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -10,23 +10,30 @@ import Foundation
 import SQLite
 
 class CategoryDataHelper: DataHelperProtocol {
-    static let TABLE_NAME = "Categories"
+    var tableName = "Categories"
    
-    static let table = Table(TABLE_NAME)
+    let table: Table
     static let categoryId = Expression<Int64>("categoryId")
     static let categoryName = Expression<String?>("categoryName")
     static let categoryType = Expression<Int?>("categoryType")
     static let createdDate = Expression<Date?>("createdDate")
     public typealias T = Category
-   
-    static func createTable(DB: Connection) throws {
+    private init(){
+        self.tableName = "Categories"
+        self.table = Table(self.tableName)
+    }
+    init(tableName: String) {
+        self.tableName = tableName
+        self.table = Table(self.tableName)
+    }
+    func createTable(DB: Connection) throws {
         
         do {
             try DB.run(table.create(ifNotExists: true) { table in
-                table.column(categoryId, primaryKey: true)
-                table.column(categoryName)
-                table.column(categoryType)
-                table.column(createdDate)
+                table.column(CategoryDataHelper.categoryId, primaryKey: true)
+                table.column(CategoryDataHelper.categoryName)
+                table.column(CategoryDataHelper.categoryType)
+                table.column(CategoryDataHelper.createdDate)
             })
            
         } catch  {
@@ -34,12 +41,42 @@ class CategoryDataHelper: DataHelperProtocol {
         }
        
     }
-    public static func delete(item: T) throws -> Void{
+    public func delete(item: T) throws -> Void{
     }
-    public static func update(cid:Int64, updatedItem: T) throws -> Bool{
-        return false;
+    public func updateAll(items: [T]) throws -> Bool {
+        var ret = false
+        do{
+            for item in items {
+            try ret = update(cid:item.categoryId!, updatedItem: item)
+        }
+        }catch{
+            throw DataAccessError.Update_Error
+        }
+        return ret
+        
     }
-    public static func findAll() throws -> [T]?{
+    public func update(cid:Int64, updatedItem: T) throws -> Bool {
+        guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
+            throw DataAccessError.Datastore_Connection_Error
+        }
+        do {
+            
+            let query = table.filter(CategoryDataHelper.categoryId == cid)
+            let updated = query.update([
+                        CategoryDataHelper.categoryName <- updatedItem.categoryName!,
+                        CategoryDataHelper.categoryType <- updatedItem.categoryType!,
+                        CategoryDataHelper.createdDate <- updatedItem.createdDate
+                ])
+             if try DB.run(updated) > 0 {
+                return true
+             }
+            
+        } catch {
+            throw DataAccessError.Update_Error
+        }
+        throw DataAccessError.Nil_In_Data
+    }
+    public func findAll() throws -> [T]?{
         var categories = [T]()
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
@@ -48,10 +85,10 @@ class CategoryDataHelper: DataHelperProtocol {
             let items = try DB.prepare(table)
             for item in items {
                 let caller = Category.createCategory(
-                    categoryId: item[categoryId],
-                    categoryName: item[categoryName],
-                    categoryType: item[categoryType],
-                    createdDate: item[createdDate])
+                    categoryId: item[CategoryDataHelper.categoryId],
+                    categoryName: item[CategoryDataHelper.categoryName],
+                    categoryType: item[CategoryDataHelper.categoryType],
+                    createdDate: item[CategoryDataHelper.createdDate])
                 categories.append(caller)
             }
         }catch{
@@ -61,19 +98,19 @@ class CategoryDataHelper: DataHelperProtocol {
        
         return categories
     }
-    public static func find(id: Int64) throws -> T? {
+    public func find(id: Int64) throws -> T? {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
-        let query = table.filter(categoryId == id)
+        let query = table.filter(CategoryDataHelper.categoryId == id)
         do{
             let items = try DB.prepare(query)
             for item in  items {
                 return Category.createCategory(
-                    categoryId: item[categoryId],
-                    categoryName: item[categoryName],
-                    categoryType: item[categoryType],
-                    createdDate: item[createdDate])
+                    categoryId: item[CategoryDataHelper.categoryId],
+                    categoryName: item[CategoryDataHelper.categoryName],
+                    categoryType: item[CategoryDataHelper.categoryType],
+                    createdDate: item[CategoryDataHelper.createdDate])
             }
         }catch {
             throw DataAccessError.Find_Error
@@ -81,17 +118,17 @@ class CategoryDataHelper: DataHelperProtocol {
         return nil
        
     }
-    public static func insert(item: T) throws -> Int64 {
+    public func insert(item: T) throws -> Int64 {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
         do{
             if (try find(id: item.categoryId!)) == nil{
                 let insert = table.insert(
-                        categoryId <- item.categoryId!,
-                        categoryName <- item.categoryName!,
-                        categoryType <- item.categoryType!,
-                        createdDate <- item.createdDate
+                        CategoryDataHelper.categoryId <- item.categoryId!,
+                        CategoryDataHelper.categoryName <- item.categoryName!,
+                        CategoryDataHelper.categoryType <- item.categoryType!,
+                        CategoryDataHelper.createdDate <- item.createdDate
                     )
                 let rowId = try DB.run(insert)
                 guard rowId > 0 else {
@@ -106,7 +143,7 @@ class CategoryDataHelper: DataHelperProtocol {
         }
        
     }
-    public static func insertAll(items: [T]) throws -> [Int64] {
+    public func insertAll(items: [T]) throws -> [Int64] {
         var ret = [Int64]()
         do{
             for item in items {

@@ -31,7 +31,7 @@
 		61AB7DC31F0957C50033D4FB /* DataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AB7DB31F0957C40033D4FB /* DataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
 		61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61AB7DCF1F0957E00033D4FB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DCE1F0957E00033D4FB /* DataManager.swift */; };
+		61AB7DCF1F0957E00033D4FB /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DCE1F0957E00033D4FB /* LocalDataManager.swift */; };
 		61AB7DD01F0958380033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
 		61AB7DD31F0958690033D4FB /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DD21F0958690033D4FB /* Caller.swift */; };
 		61AB7DD41F0959B20033D4FB /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
@@ -69,6 +69,8 @@
 		61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1A1F1BCF230033D4FB /* Configuration.swift */; };
 		61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1C1F1BD04A0033D4FB /* Common.swift */; };
+		61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E201F226F610033D4FB /* NetworkManager.swift */; };
+		61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,12 +178,12 @@
 		61AB7D821F08C8270033D4FB /* BlockTeleSells.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockTeleSells.entitlements; sourceTree = "<group>"; };
 		61AB7D831F08C8330033D4FB /* BTSExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTSExtension.entitlements; sourceTree = "<group>"; };
 		61AB7DB11F0957C40033D4FB /* DataManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61AB7DB31F0957C40033D4FB /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		61AB7DB31F0957C40033D4FB /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../DataManager.h; sourceTree = "<group>"; };
 		61AB7DB41F0957C40033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7DB91F0957C40033D4FB /* DataManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7DC01F0957C50033D4FB /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		61AB7DC21F0957C50033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61AB7DCE1F0957E00033D4FB /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		61AB7DCE1F0957E00033D4FB /* LocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalDataManager.swift; path = ../LocalDataManager.swift; sourceTree = "<group>"; };
 		61AB7DD21F0958690033D4FB /* Caller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Caller.swift; path = Model/Caller.swift; sourceTree = "<group>"; };
 		61AB7DD51F0E8C720033D4FB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		61AB7DD81F0E9B820033D4FB /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
@@ -204,6 +206,8 @@
 		61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		61AB7E1A1F1BCF230033D4FB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		61AB7E1C1F1BD04A0033D4FB /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		61AB7E201F226F610033D4FB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStringArrayEncoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,12 +381,12 @@
 		61AB7DB21F0957C40033D4FB /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				61B0CB351F23C6A600F7D824 /* Extension */,
+				61AB7E1F1F226F500033D4FB /* Network */,
 				61AB7DF71F17D3E40033D4FB /* DataHelper */,
 				61AB7DDC1F0EAB280033D4FB /* Service */,
 				61AB7DD11F0958500033D4FB /* Model */,
-				61AB7DB31F0957C40033D4FB /* DataManager.h */,
 				61AB7DB41F0957C40033D4FB /* Info.plist */,
-				61AB7DCE1F0957E00033D4FB /* DataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -425,6 +429,8 @@
 		61AB7DF71F17D3E40033D4FB /* DataHelper */ = {
 			isa = PBXGroup;
 			children = (
+				61AB7DB31F0957C40033D4FB /* DataManager.h */,
+				61AB7DCE1F0957E00033D4FB /* LocalDataManager.swift */,
 				61AB7E0D1F19F53A0033D4FB /* EntityHelper */,
 				61AB7DF81F17D40A0033D4FB /* DataHelperProtocol.swift */,
 				61AB7DFC1F17D48B0033D4FB /* SQLiteDataStore.swift */,
@@ -450,6 +456,22 @@
 				61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */,
 			);
 			path = EntityHelper;
+			sourceTree = "<group>";
+		};
+		61AB7E1F1F226F500033D4FB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				61AB7E201F226F610033D4FB /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		61B0CB351F23C6A600F7D824 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,12 +780,14 @@
 			files = (
 				61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */,
 				61AB7DFD1F17D48B0033D4FB /* SQLiteDataStore.swift in Sources */,
+				61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */,
 				61AB7DD31F0958690033D4FB /* Caller.swift in Sources */,
 				61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */,
-				61AB7DCF1F0957E00033D4FB /* DataManager.swift in Sources */,
+				61AB7DCF1F0957E00033D4FB /* LocalDataManager.swift in Sources */,
 				61AB7E111F19F6020033D4FB /* Category.swift in Sources */,
 				61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */,
 				61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */,
+				61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */,
 				61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,7 +1109,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ste.DataManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ste.LocalDataManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1115,7 +1139,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ste.DataManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ste.LocalDataManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

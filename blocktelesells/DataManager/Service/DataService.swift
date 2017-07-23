@@ -9,66 +9,88 @@
 import Alamofire
 import SwiftyJSON
 import AlamofireObjectMapper
-import CallKit
+
+import ObjectMapper
 public class DataService{
     public static let sharedInstance = DataService()
     
     
     private init() {
     }
-    private func reloadExtension(){
-        let callDirManager = CXCallDirectoryManager.sharedInstance;
-        callDirManager.reloadExtension(withIdentifier: DataManager.CBX_IDENTIFIER,
-            completionHandler: {(error) in
-            
-                if (error == nil)
-                {
-                    print("Reloaded extension successfully")
-                } else {
-                    print("Reloaded extension failed with ")
+    
+    public func syncUpCallers(url: String, completionHandler: @escaping (_ result: Bool) -> Void){
+        do{
+            let callers = try LocalDataManager.sharedInstance.CALLER_DATA_LOCAL_HELPER.findAll()
+            for caller in callers! {
+                caller.callerId = nil
+            }
+            let jsonStringArrayEncoding = JSONStringArrayEncoding(array: Mapper<Caller>().toJSONArray(callers!))
+        
+            let headers: HTTPHeaders = [ "Content-Type": "application/json"]
+            Alamofire.request(url, method: HTTPMethod.post, parameters: [:], encoding: jsonStringArrayEncoding, headers: headers).responseArray{
+                (response: DataResponse<[Caller]>) in
+                    if(response.result.isSuccess) {
+                        self.handleCallerResponse(callerArray: response.result.value!)
+                    
+                    }
+                    completionHandler(response.result.isSuccess)
                 }
-            
-        })
+        }catch{
+            print("There is some error during syncing server")
+            completionHandler(false)
+        }
+        
+    }
+    func handleCallerResponse(callerArray: [Caller]){
+        var newCallers = [Caller]();
+        var updateCallers = [Caller]();
+        do{
+            for caller in callerArray {
+                if try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.find(id: caller.callerId!) != nil {
+                    updateCallers.append(caller)
+                }else {
+                    newCallers.append(caller)
+                }
+            }
+            _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.updateAll(items: updateCallers)
+            _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.insertAll(items: newCallers)
+            LocalDataManager.sharedInstance.reloadExtension()
+        }catch{
+            print("Sqlite saving failed")
+        }
     }
     public func requestCallers(url: String, completionHandler: @escaping () -> Void) {
-        var callers = [Caller]();
         
         Alamofire.request(url).responseArray { (response: DataResponse<[Caller]>) in
             if(response.result.isSuccess) {
-                let callerArray = response.result.value
-                if let callerArray = callerArray {
-                    for caller in callerArray {
-                        callers.append(caller)
-                        print(caller.callerNumber ?? "No Data")
-                    }
-                }
-            
-                do{
-                    _ = try CallerDataHelper.insertAll(items: callers)
-                    self.reloadExtension()
-                }catch{
-                    print("Sqlite saving failed")
-                }
+                self.handleCallerResponse(callerArray: response.result.value!)
             }
-            
             completionHandler()
             
         }
         
     }
+    
     public func requestCategories(url: String, completionHandler: @escaping () -> Void) {
-        var categories = [Category]();
+        var newCategories = [Category]();
+        var updateCategories = [Category]();
         
         Alamofire.request(url).responseArray { (response: DataResponse<[Category]>) in
             if(response.result.isSuccess) {
                 let categoryArray = response.result.value
-                if let categoryArray = categoryArray {
-                    for category in categoryArray {
-                        categories.append(category)                }
-                    }
-            
                 do{
-                    _ = try CategoryDataHelper.insertAll(items: categories)
+                    if let categoryArray = categoryArray {
+                        for category in categoryArray {
+                            if ((try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.find(id: category.categoryId!)) != nil) {
+                                updateCategories.append(category)
+                            }else {
+                                newCategories.append(category)
+                            }
+                            
+                        }
+                    }
+                    _ = try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.updateAll(items: updateCategories)
+                    _ = try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.insertAll(items: newCategories)
                 }catch{
                     print("Sqlite saving failed")
                 }
@@ -80,33 +102,7 @@ public class DataService{
         
     }
     
-    public func getLoadedCallers() -> [Caller]{
-        do{
-            return try CallerDataHelper.findAll()!
-        }catch{
-            print("Get all Categories failed")
-        }
-        return [Caller]()
-    }
-    public func getLoadedCategories() -> [Category]{
-        do{
-            return try CategoryDataHelper.findAll()!
-        }catch{
-            print("Get all Categories failed")
-        }
-        return [Category]()
-    }
-    public func insertCaller(caller: Caller) -> Bool{
-        do{
-            let id = try CallerDataHelper.insert(item: caller)
-            self.reloadExtension()
-            return id > 0
-        }catch {
-            print("Insert new Caller failed")
-            return false
-            
-        }
-    }
+    
     
     
 }

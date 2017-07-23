@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "61AB7D8E1F0956910033D4FB"
+               BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
                BuildableName = "DataManager.framework"
                BlueprintName = "DataManager"
                ReferencedContainer = "container:BlockTeleSells.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "61AB7D8E1F0956910033D4FB"
+            BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
             BuildableName = "DataManager.framework"
             BlueprintName = "DataManager"
             ReferencedContainer = "container:BlockTeleSells.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "61AB7D8E1F0956910033D4FB"
+            BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
             BuildableName = "DataManager.framework"
             BlueprintName = "DataManager"
             ReferencedContainer = "container:BlockTeleSells.xcodeproj">

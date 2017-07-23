@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for DataManager.
-FOUNDATION_EXPORT double DataManagerVersionNumber;
+//! Project version number for LocalDataManager.
+FOUNDATION_EXPORT double LocalDataManagerVersionNumber;
 
-//! Project version string for DataManager.
-FOUNDATION_EXPORT const unsigned char DataManagerVersionString[];
+//! Project version string for LocalDataManager.
+FOUNDATION_EXPORT const unsigned char LocalDataManagerVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <DataManager/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <LocalDataManager/PublicHeader.h>
 
 

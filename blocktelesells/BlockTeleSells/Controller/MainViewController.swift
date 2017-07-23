@@ -46,7 +46,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     
     private func loadData(){
         startNetworkingListener()
-        let latestDate = DataManager.sharedInstance.loadUpdatedStatus()
+        let latestDate = LocalDataManager.sharedInstance.loadUpdatedStatus()
         if(latestDate != nil){
             self.updatedStatus.text = Common.sharedInstance.formatDate(date: latestDate!)
         }
@@ -56,44 +56,31 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     public func updateData(){
         startNetworkingListener()
     }
-    private func startNetworkingListener(){
-        reachability.whenReachable = { reachability in
-            // this is called on a background thread, but UI updates must
-            // be on the main thread, like this:
-            DispatchQueue.main.async {
-                if reachability.isReachableViaWiFi {
-                    DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: {Void in
-                        
-                        DataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
-                        self.updatedStatus.text = Common.sharedInstance.formatDate(date: DataManager.sharedInstance.loadUpdatedStatus()!)
-                    })
-                    DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
-            
-                    })
-                } else {
-                    print("Reachable via Cellular")
+    
+    func handleReachableViaWiFi(){
+        
+        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
+            DataService.sharedInstance.requestCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: { Void in
+                LocalDataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
+                self.updatedStatus.text = Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
+            })
+        })
+    }
+    func alertWhenCellular(){
+        print("Reachable via Cellular")
                     let alert = UIAlertController(title: "Alert", message: "We just got Cellular", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
-        reachability.whenUnreachable = { reachability in
-            // this is called on a background thread, but UI updates must
-            // be on the main thread, like this:
-            DispatchQueue.main.async {
-                print("Not reachable")
-                let alert = UIAlertController(title: "Alert", message: "There is no network connection", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-            }
-        }
-
-        do {
-            try reachability.startNotifier()
-        } catch {
-            print("Unable to start notifier")
-        }
+    }
+    func alertWhenNoNetwork(){
+        print("Not reachable")
+        let alert = UIAlertController(title: "Alert", message: "There is no network connection", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    private func startNetworkingListener(){
+        NetworkManager.sharedInstance.configureAllowCellular(allowCell: Constants.USING_CELLULAR_FOR_REQUEST)
+        NetworkManager.sharedInstance.requestIfReachableViaWiFi(reachability: reachability, requestingHandler: handleReachableViaWiFi, alertWhenCellular: alertWhenCellular, alertWhenNoNetwork: alertWhenNoNetwork)
     }
     
     //MARK: CallObserver

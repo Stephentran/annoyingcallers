@@ -53,7 +53,7 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         //
         // Numbers must be provided in numerically ascending order.
         
-        let phones = DataManager.sharedInstance.getPhoneNumbers()
+        let phones = LocalDataManager.sharedInstance.getPhoneNumbers()
         let sortedKeys = Array(phones.keys).sorted(by: <)
         
         for number in sortedKeys {

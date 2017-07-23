@@ -11,6 +11,7 @@ import os.log
 import class DataManager.Category
 import class DataManager.Caller
 import class DataManager.DataService
+import class DataManager.LocalDataManager
 import MRCountryPicker
 class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -86,20 +87,28 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         
 
         let caller = Caller.createCaller(
-                    callerId: nil,
-                    countryCode: countryCode,
-                    callerNumber: phoneNumber,
-                    registeredDevice: "aaid123",
-                    registeredDate: Date(),
-                    category: categorySelected?.categoryName)
-        let ret = DataService.sharedInstance.insertCaller(caller: caller)
+                        callerId: nil,
+                        countryCode: countryCode,
+                        callerNumber: phoneNumber,
+                        registeredDevice: "aaid123",
+                        registeredDate: Date(),
+                        categories: [categorySelected]
+                    )
+        
+        let ret = LocalDataManager.sharedInstance.insertCaller(caller: caller)
         if ret == false {
             let alert = UIAlertController(title: "Alert", message: "Can not report this number", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }else {
+            DataService.sharedInstance.syncUpCallers(url: Constants.SERVICE_CALLER_URL, completionHandler: handleAfterSyncedCallers)
         }
-        
         super.prepare(for: segue, sender: sender)
+    }
+    func handleAfterSyncedCallers(result: Bool) {
+        if result == true {
+            LocalDataManager.sharedInstance.deleteAllLocalCaller()
+        }
     }
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         let isPresentingInAddMealMode = presentingViewController is UINavigationController
@@ -147,7 +156,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         self.countryFlag.image = flag
     }
     func loadDataForCategoryPicker(){
-        let categories = DataService.sharedInstance.getLoadedCategories()
+        let categories = LocalDataManager.sharedInstance.getLoadedCategories()
             self.pickerData = [Category]()
             for category in categories {
                 self.pickerData?.append(category)

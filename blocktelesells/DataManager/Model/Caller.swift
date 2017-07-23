@@ -13,9 +13,11 @@ public class Caller: Mappable{
     public var callerNumber: String?
     public var registeredDevice: String?
     public var registeredDate: Date?
-    public var category: [String]?
+    public var categories: [Category]?
+    static let CATEGORY_ID_SEPARATOR = "_"
+    static let CATEGORY_NAME_SEPARATOR = "\n"
     required public init?(map: Map) {
-
+        
     }
     // Mappable
     public func mapping(map: Map) {
@@ -23,24 +25,38 @@ public class Caller: Mappable{
         countryCode    <- map["country_code"]
         callerNumber    <- map["caller_number"]
         registeredDevice    <- map["registered_device"]
-        category    <- map["category"]
+        categories    <- map["category"]
         registeredDate    <-  (map["registered_date"], DateTransform())
     }
-    public func categoryToString() -> String{
+    public func categoryIds() -> String{
         var s = ""
-        for cat in category! {
-            s += cat + "\n"
+        for cat in categories! {
+            if s.isEmpty {
+                s += String(cat.categoryId!)
+            } else {
+                s += Caller.CATEGORY_ID_SEPARATOR + String(cat.categoryId!)
+            }
+            
         }
         return s
     }
-    public static func createCaller(callerId: Int64?, countryCode: String? ,callerNumber: String?, registeredDevice: String?, registeredDate: Date?, category: String?) -> Caller{
+    public func categoryNames() -> String{
+        var s = ""
+        for cat in categories! {
+            s += String(cat.categoryName!) + Caller.CATEGORY_NAME_SEPARATOR
+        }
+        return s
+    }
+    public static func createCaller(callerId: Int64?, countryCode: String? ,callerNumber: String?, registeredDevice: String?, registeredDate: Date?, categories: [Category?]) -> Caller{
+        
         let caller: Caller = Mapper<Caller>().map(JSON: [:])!
         caller.callerId = callerId
         caller.countryCode = countryCode
         caller.callerNumber = callerNumber
         caller.registeredDate = registeredDate
         caller.registeredDevice = registeredDevice
-        caller.category = category?.components(separatedBy: "\n")
+        caller.categories = categories as? [Category]
+        
         return caller
         
     }
