@@ -10,9 +10,9 @@ import UIKit
 import Reachability
 import DataManager
 import CallKit
-//, CXCallObserverDelegate
+import AVFoundation
 class MainViewController: UIViewController , CXCallObserverDelegate{
-
+    
     @IBOutlet weak var gotoList: UIButton!
     var callObserver: CXCallObserver?
     let reachability = Reachability()!
@@ -21,8 +21,10 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         self.callObserver = CXCallObserver()
         self.callObserver?.setDelegate(self, queue: nil)
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        
+       
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -54,8 +56,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         
     }
     public func updateData(){
-        LocalDataManager.sharedInstance.startDataRequest(url: Constants.SERVICE_CALLER_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
-        //LocalDataManager.sharedInstance.syncUpCallers(url: Constants.SERVICE_CATEGORY_URL, completionHandler:completionHandler)
+        LocalDataManager.sharedInstance.startDataRequest(callerUrl: Constants.SERVICE_CALLER_URL, categoryUrl:Constants.SERVICE_CATEGORY_URL , reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         
     }
     
@@ -63,17 +64,38 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         if result == true {
             self.updatedStatus.text = Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
         }
-        
     }
     
     //MARK: CallObserver
     func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall){
-        if (call.hasConnected) {
-            NSLog("********** voice call connected **********/n");
-        } else if(call.hasEnded) {
-            NSLog("********** voice call disconnected **********/n");
+    //callObserver.calls
+        if call.hasEnded == true {
+            print("Disconnected")        }
+        if call.isOutgoing == true && call.hasConnected == false {
+            print("Dialing")
+        }
+        if call.isOutgoing == false && call.hasConnected == false && call.hasEnded == false {
+            print("Incoming " + call.uuid.uuidString + " " + call.uuid.description)
+            
+            /*
+            let cXSetMutedCallAction = CXSetMutedCallAction(call:call.uuid, muted: true)
+            let callController = CXCallController()
+            // 2.
+            let transaction = CXTransaction(action: cXSetMutedCallAction)
+            callController.request(transaction) {
+                error in
+                if let error = error {
+                    print("Error requesting transaction: \(error)")
+                } else {
+                    print("Requested transaction successfully")
+                }
+            }
+            */
+        }
+
+        if call.hasConnected == true && call.hasEnded == false {
+            print("Connected")
         }
     }
     
-
 }

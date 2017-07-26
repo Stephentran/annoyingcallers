@@ -106,7 +106,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else {
-            LocalDataManager.sharedInstance.startDataRequest(url: Constants.SERVICE_CALLER_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
+            LocalDataManager.sharedInstance.startDataRequest(callerUrl: Constants.SERVICE_CALLER_URL, categoryUrl: Constants.SERVICE_CATEGORY_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         }
         super.prepare(for: segue, sender: sender)
     }

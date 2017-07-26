@@ -18,7 +18,7 @@ public class DataService{
     private init() {
     }
     
-    public func syncUpCallers(url: String, completionHandler: @escaping (_ result: Bool) -> Void){
+    public func syncUpCallers(callerUrl: String, categoryUrl: String, completionHandler: @escaping (_ result: Bool) -> Void){
         do{
             let callers = try LocalDataManager.sharedInstance.CALLER_DATA_LOCAL_HELPER.findAll()
             for caller in callers! {
@@ -27,10 +27,13 @@ public class DataService{
             let jsonStringArrayEncoding = JSONStringArrayEncoding(array: Mapper<Caller>().toJSONArray(callers!))
         
             let headers: HTTPHeaders = [ "Content-Type": "application/json"]
-            Alamofire.request(url, method: HTTPMethod.post, parameters: [:], encoding: jsonStringArrayEncoding, headers: headers).responseArray{
+            Alamofire.request(callerUrl, method: HTTPMethod.post, parameters: [:], encoding: jsonStringArrayEncoding, headers: headers).responseArray{
                 (response: DataResponse<[Caller]>) in
                     if(response.result.isSuccess) {
-                        self.handleCallerResponse(callerArray: response.result.value!)
+                        DataService.sharedInstance.requestCategories(url: categoryUrl, completionHandler: { Void in
+                            self.handleCallerResponse(callerArray: response.result.value!)
+                        })
+                        
                     
                     }
                     completionHandler(response.result.isSuccess)
@@ -57,6 +60,7 @@ public class DataService{
             _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.insertAll(items: newCallers)
             LocalDataManager.sharedInstance.reloadExtension()
             LocalDataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
+        
             LocalDataManager.sharedInstance.deleteAllLocalCaller()
         }catch{
             print("Sqlite saving failed")

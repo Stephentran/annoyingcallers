@@ -176,12 +176,12 @@ public final class LocalDataManager {
         }
         return nil;
     }
-    public func startDataRequest(url: String, reachability: Reachability,allowCell: Bool, completionHandler: @escaping (_ result: Bool) -> Void){
+    public func startDataRequest(callerUrl: String, categoryUrl: String, reachability: Reachability,allowCell: Bool, completionHandler: @escaping (_ result: Bool) -> Void){
     
-        NetworkManager.sharedInstance.requestIfReachableViaWiFi(url: url, reachability: reachability,allowCell: allowCell, requestingHandler: syncUpCallers, completionHandler: completionHandler)
+        NetworkManager.sharedInstance.requestIfReachableViaWiFi(callerUrl: callerUrl, categoryUrl: categoryUrl, reachability: reachability,allowCell: allowCell, requestingHandler: syncUpCallers, completionHandler: completionHandler)
     }
-    public func syncUpCallers(url: String, completionHandler: @escaping (_ result: Bool) -> Void){
-        DataService.sharedInstance.syncUpCallers(url: url, completionHandler:completionHandler)
+    public func syncUpCallers(callerUrl: String, categoryUrl: String, completionHandler: @escaping (_ result: Bool) -> Void){
+        DataService.sharedInstance.syncUpCallers(callerUrl: callerUrl, categoryUrl: categoryUrl, completionHandler:completionHandler)
     }
     
 }

@@ -28,12 +28,7 @@
          contextName = "JSONStringArrayEncoding.encode(URLRequestConvertible, with : [String : Any]?) throws -&gt; URLRequest:JSONStringArrayEncoding.swift">
       </ContextState>
       <ContextState
-         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "ProviderDelegate.reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ():ProviderDelegate.swift">
       </ContextState>
       <ContextState
          contextName = "DataService.(requestCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
@@ -44,13 +39,32 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
+         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.callObserver(CXCallObserver, callChanged : CXCall) -&gt; ():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "callObserver.calls">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
       </ContextState>
       <ContextState
          contextName = "SQLiteDataStore.createTables() throws -&gt; ():SQLiteDataStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
       </ContextState>
       <ContextState
          contextName = "ContactTableViewController.(loadContacts() -&gt; ()).(closure #1):ContactTableViewController.swift">
@@ -62,6 +76,9 @@
                value = "pickerData[row]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProviderDelegate.(reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ()).(closure #1):ProviderDelegate.swift">
       </ContextState>
       <ContextState
          contextName = "Common.formatDate(date : Date) -&gt; String:Common.swift">
@@ -93,6 +110,22 @@
          <PersistentStrings>
             <PersistentString
                value = "self.allowCellular">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.(callObserver(CXCallObserver, callChanged : CXCall) -&gt; ()).(closure #1):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "callObserver.calls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(syncUpCallers(url : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
