@@ -44,9 +44,9 @@ class SQLiteDataStore {
     func createTables(BBDB: Connection) throws{
         do {
             try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.createTable(DB: BBDB)
-            try LocalDataManager.sharedInstance.CALLER_DATA_LOCAL_HELPER.createTable(DB: BBDB)
             try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.createTable(DB: BBDB)
-            try LocalDataManager.sharedInstance.BLOCKED_CALLER_DATA_HELPER.createTable(DB: BBDB)
+            try LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.createTable(DB: BBDB)
+            
         } catch {
             throw DataAccessError.Datastore_Connection_Error
         }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		612F49661F24F66300ABC512 /* BlockedCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F49651F24F66300ABC512 /* BlockedCaller.swift */; };
 		61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D261F08B0880033D4FB /* AppDelegate.swift */; };
 		61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D281F08B0880033D4FB /* ViewController.swift */; };
 		61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2A1F08B0880033D4FB /* Main.storyboard */; };
@@ -72,6 +71,8 @@
 		61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1C1F1BD04A0033D4FB /* Common.swift */; };
 		61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E201F226F610033D4FB /* NetworkManager.swift */; };
 		61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */; };
+		61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */; };
+		61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +155,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		612F49651F24F66300ABC512 /* BlockedCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockedCaller.swift; path = Model/BlockedCaller.swift; sourceTree = "<group>"; };
 		61AB7D231F08B0880033D4FB /* BlockTeleSells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTeleSells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D261F08B0880033D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AB7D281F08B0880033D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +210,8 @@
 		61AB7E1C1F1BD04A0033D4FB /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		61AB7E201F226F610033D4FB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStringArrayEncoding.swift; sourceTree = "<group>"; };
+		61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerCategory.swift; path = Model/CallerCategory.swift; sourceTree = "<group>"; };
+		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,7 +409,7 @@
 			children = (
 				61AB7DD21F0958690033D4FB /* Caller.swift */,
 				61AB7E101F19F6020033D4FB /* Category.swift */,
-				612F49651F24F66300ABC512 /* BlockedCaller.swift */,
+				61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 			children = (
 				61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */,
 				61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */,
+				61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */,
 			);
 			path = EntityHelper;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 			files = (
 				61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */,
 				61AB7DFD1F17D48B0033D4FB /* SQLiteDataStore.swift in Sources */,
+				61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */,
 				61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */,
 				61AB7DD31F0958690033D4FB /* Caller.swift in Sources */,
 				61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */,
@@ -790,9 +794,9 @@
 				61AB7E111F19F6020033D4FB /* Category.swift in Sources */,
 				61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */,
 				61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */,
-				612F49661F24F66300ABC512 /* BlockedCaller.swift in Sources */,
 				61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */,
 				61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */,
+				61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

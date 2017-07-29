@@ -10,6 +10,7 @@ import UIKit
 import os.log
 import class DataManager.Category
 import class DataManager.Caller
+import class DataManager.CallerCategory
 import class DataManager.DataService
 import class DataManager.LocalDataManager
 import Reachability
@@ -90,14 +91,16 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         let phoneNumber = contactPhoneNumber.text ?? ""
         let countryCode = self.countryCode.text ?? ""
         
-
+        let callerCategory = CallerCategory.createCallerCategory(id: nil, callerId: nil, categoryId: categorySelected?.categoryId, assignType: Caller.ASSIGN_TYPE_PRIVATE, assignedDate: Date(), isLocal: true, categoryName: categorySelected?.categoryName)
         let caller = Caller.createCaller(
                         callerId: nil,
                         countryCode: countryCode,
                         callerNumber: phoneNumber,
-                        registeredDevice: "aaid123",
+                        registeredByDevice: Constants.REGISTERED_DEVICE_ID,
                         registeredDate: Date(),
-                        categories: [categorySelected]
+                        isLocal: true,
+                        isLocalBlocked: false,
+                        categories: [callerCategory]
                     )
         
         let ret = LocalDataManager.sharedInstance.insertCaller(caller: caller)

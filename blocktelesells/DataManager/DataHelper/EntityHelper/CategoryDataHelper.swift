@@ -15,7 +15,7 @@ class CategoryDataHelper: DataHelperProtocol {
     let table: Table
     static let categoryId = Expression<Int64>("categoryId")
     static let categoryName = Expression<String?>("categoryName")
-    static let categoryType = Expression<Int?>("categoryType")
+    static let description = Expression<String?>("description")
     static let createdDate = Expression<Date?>("createdDate")
     public typealias T = Category
     private init(){
@@ -32,7 +32,7 @@ class CategoryDataHelper: DataHelperProtocol {
             try DB.run(table.create(ifNotExists: true) { table in
                 table.column(CategoryDataHelper.categoryId, primaryKey: true)
                 table.column(CategoryDataHelper.categoryName)
-                table.column(CategoryDataHelper.categoryType)
+                table.column(CategoryDataHelper.description)
                 table.column(CategoryDataHelper.createdDate)
             })
            
@@ -64,7 +64,7 @@ class CategoryDataHelper: DataHelperProtocol {
             let query = table.filter(CategoryDataHelper.categoryId == cid)
             let updated = query.update([
                         CategoryDataHelper.categoryName <- updatedItem.categoryName!,
-                        CategoryDataHelper.categoryType <- updatedItem.categoryType!,
+                        CategoryDataHelper.description <- updatedItem.description!,
                         CategoryDataHelper.createdDate <- updatedItem.createdDate
                 ])
              if try DB.run(updated) > 0 {
@@ -87,7 +87,7 @@ class CategoryDataHelper: DataHelperProtocol {
                 let caller = Category.createCategory(
                     categoryId: item[CategoryDataHelper.categoryId],
                     categoryName: item[CategoryDataHelper.categoryName],
-                    categoryType: item[CategoryDataHelper.categoryType],
+                    description: item[CategoryDataHelper.description],
                     createdDate: item[CategoryDataHelper.createdDate])
                 categories.append(caller)
             }
@@ -109,7 +109,7 @@ class CategoryDataHelper: DataHelperProtocol {
                 return Category.createCategory(
                     categoryId: item[CategoryDataHelper.categoryId],
                     categoryName: item[CategoryDataHelper.categoryName],
-                    categoryType: item[CategoryDataHelper.categoryType],
+                    description: item[CategoryDataHelper.description],
                     createdDate: item[CategoryDataHelper.createdDate])
             }
         }catch {
@@ -127,7 +127,7 @@ class CategoryDataHelper: DataHelperProtocol {
                 let insert = table.insert(
                         CategoryDataHelper.categoryId <- item.categoryId!,
                         CategoryDataHelper.categoryName <- item.categoryName!,
-                        CategoryDataHelper.categoryType <- item.categoryType!,
+                        CategoryDataHelper.description <- item.description!,
                         CategoryDataHelper.createdDate <- item.createdDate
                     )
                 let rowId = try DB.run(insert)

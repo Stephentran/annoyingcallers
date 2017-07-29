@@ -18,10 +18,11 @@ class ContactTableViewCell: UITableViewCell {
     var caller: Caller?
     @IBAction func blockedToggle(_ sender: Any) {
         if callerBlocked.isOn {
-            LocalDataManager.sharedInstance.insertBlockedCaller(caller: caller!)
+            caller?.isLocalBlocked = true;
         }else{
-            LocalDataManager.sharedInstance.deleteBlockedCaller(caller: caller)
+            caller?.isLocalBlocked = false;
         }
+        LocalDataManager.sharedInstance.updateCaller(caller: caller!)
         
     }
     

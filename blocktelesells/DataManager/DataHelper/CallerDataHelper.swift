@@ -9,7 +9,9 @@
 import Foundation
 import SQLite
 
- class CallerDataHelper: DataHelperProtocol {
+class CallerDataHelper: DataHelperProtocol {
+    
+
     var tableName = "Callers"
    
     var table: Table
@@ -17,8 +19,9 @@ import SQLite
     static let callerNumber = Expression<String?>("callerNumber")
     static let countryCode = Expression<String?>("countryCode")
     static let registeredDate = Expression<Date?>("registeredDate")
-    static let registeredDevice = Expression<String?>("registeredDevice")
-    static let category = Expression<String?>("category")
+    static let registeredByDevice = Expression<String?>("registeredByDevice")
+    static let isLocal = Expression<Bool>("isLocal")
+    static let isLocalBlocked = Expression<Bool>("isLocalBlocked")
     private init(){
         self.tableName = "Callers"
         self.table = Table(self.tableName)
@@ -37,8 +40,9 @@ import SQLite
                 table.column(CallerDataHelper.callerNumber)
                 table.column(CallerDataHelper.countryCode)
                 table.column(CallerDataHelper.registeredDate)
-                table.column(CallerDataHelper.registeredDevice)
-                table.column(CallerDataHelper.category)
+                table.column(CallerDataHelper.registeredByDevice)
+                table.column(CallerDataHelper.isLocal)
+                table.column(CallerDataHelper.isLocalBlocked)
             })
            
         } catch  {
@@ -68,9 +72,10 @@ import SQLite
             let updated = query.update([
                         CallerDataHelper.callerNumber <- updatedItem.callerNumber!,
                         CallerDataHelper.countryCode <- updatedItem.countryCode!,
-                        CallerDataHelper.registeredDevice <- updatedItem.registeredDevice,
+                        CallerDataHelper.registeredByDevice <- updatedItem.registeredByDevice,
                         CallerDataHelper.registeredDate <- updatedItem.registeredDate,
-                        CallerDataHelper.category <- updatedItem.categoryIds()
+                        CallerDataHelper.isLocal <- updatedItem.isLocal,
+                        CallerDataHelper.isLocalBlocked <- updatedItem.isLocalBlocked
                 ])
              if try DB.run(updated) > 0 {
                 return true
@@ -87,16 +92,20 @@ import SQLite
         }
         if (item.callerNumber != nil) {
             do{
-                
+                let existingCallers = try findByCallerNumber(callerNumber: item.callerNumber!)
+                if existingCallers.count > 0 {
+                    return existingCallers[0].callerId!
+                }
                 if try item.callerId == nil || ( find(id: item.callerId!)) == nil{
                     let rowId: Int64?
                     if item.callerId == nil {
                         let insert = table.insert(
                             CallerDataHelper.callerNumber <- item.callerNumber!,
                             CallerDataHelper.countryCode <- item.countryCode!,
-                            CallerDataHelper.registeredDevice <- item.registeredDevice,
+                            CallerDataHelper.registeredByDevice <- item.registeredByDevice,
                             CallerDataHelper.registeredDate <- item.registeredDate,
-                            CallerDataHelper.category <- item.categoryIds()
+                            CallerDataHelper.isLocal <- item.isLocal,
+                            CallerDataHelper.isLocalBlocked <- item.isLocalBlocked
                         )
                         rowId = try DB.run(insert)
                     }else {
@@ -104,9 +113,10 @@ import SQLite
                             CallerDataHelper.callerId <- item.callerId!,
                             CallerDataHelper.callerNumber <- item.callerNumber!,
                             CallerDataHelper.countryCode <- item.countryCode!,
-                            CallerDataHelper.registeredDevice <- item.registeredDevice,
+                            CallerDataHelper.registeredByDevice <- item.registeredByDevice,
                             CallerDataHelper.registeredDate <- item.registeredDate,
-                            CallerDataHelper.category <- item.categoryIds()
+                            CallerDataHelper.isLocal <- item.isLocal,
+                            CallerDataHelper.isLocalBlocked <- item.isLocalBlocked
                         )
                         rowId = try DB.run(insert)
                     }
@@ -175,13 +185,15 @@ import SQLite
             let items = try DB.prepare(query)
             for item in  items {
                 
-                return Caller.createCaller(
+                return try Caller.createCaller(
                     callerId: item[CallerDataHelper.callerId],
                     countryCode: item[CallerDataHelper.countryCode],
                     callerNumber: item[CallerDataHelper.callerNumber],
-                    registeredDevice: item[CallerDataHelper.registeredDevice],
+                    registeredByDevice: item[CallerDataHelper.registeredByDevice],
                     registeredDate: item[CallerDataHelper.registeredDate],
-                    categories: try getCategoriesForCaller(categoryIds: (item[CallerDataHelper.category])!)
+                    isLocal: item[CallerDataHelper.isLocal],
+                    isLocalBlocked: item[CallerDataHelper.isLocalBlocked],
+                    categories: LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])
                 )
             }
         }catch {
@@ -190,28 +202,87 @@ import SQLite
         return nil
        
     }
-    public func findBy(callerNumber: String) throws -> T? {
+    public func findByCallerNumber(callerNumber: String) throws -> [T] {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
+        var callers = [T]()
         let query = table.filter(CallerDataHelper.callerNumber == callerNumber)
         do{
             let items = try DB.prepare(query)
             for item in  items {
                 
-                return Caller.createCaller(
+                let caller = try Caller.createCaller(
                     callerId: item[CallerDataHelper.callerId],
                     countryCode: item[CallerDataHelper.countryCode],
                     callerNumber: item[CallerDataHelper.callerNumber],
-                    registeredDevice: item[CallerDataHelper.registeredDevice],
+                    registeredByDevice: item[CallerDataHelper.registeredByDevice],
                     registeredDate: item[CallerDataHelper.registeredDate],
-                    categories: try getCategoriesForCaller(categoryIds: (item[CallerDataHelper.category])!)
+                    isLocal: item[CallerDataHelper.isLocal],
+                    isLocalBlocked: item[CallerDataHelper.isLocalBlocked],
+                    categories: LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])
                 )
+                callers.append(caller)
             }
         }catch {
             throw DataAccessError.Find_Error
         }
-        return nil
+        return callers
+       
+    }
+    public func findAllByLocal(isLocal: Bool) throws -> [T] {
+        guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
+            throw DataAccessError.Datastore_Connection_Error
+        }
+        var callers = [T]()
+        let query = table.filter(CallerDataHelper.isLocal == isLocal)
+        do{
+            let items = try DB.prepare(query)
+            for item in  items {
+                
+                let caller = try Caller.createCaller(
+                    callerId: item[CallerDataHelper.callerId],
+                    countryCode: item[CallerDataHelper.countryCode],
+                    callerNumber: item[CallerDataHelper.callerNumber],
+                    registeredByDevice: item[CallerDataHelper.registeredByDevice],
+                    registeredDate: item[CallerDataHelper.registeredDate],
+                    isLocal: item[CallerDataHelper.isLocal],
+                    isLocalBlocked: item[CallerDataHelper.isLocalBlocked],
+                    categories: LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])
+                )
+                callers.append(caller)
+            }
+        }catch {
+            throw DataAccessError.Find_Error
+        }
+        return callers
+       
+    }
+    public func findAllByLocalBlocked(isLocalBlocked: Bool) throws -> [T] {
+        guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
+            throw DataAccessError.Datastore_Connection_Error
+        }
+        var callers = [T]()
+        let query = table.filter(CallerDataHelper.isLocalBlocked == isLocalBlocked)
+        do{
+            let items = try DB.prepare(query)
+            for item in  items {
+                let caller = try Caller.createCaller(
+                    callerId: item[CallerDataHelper.callerId],
+                    countryCode: item[CallerDataHelper.countryCode],
+                    callerNumber: item[CallerDataHelper.callerNumber],
+                    registeredByDevice: item[CallerDataHelper.registeredByDevice],
+                    registeredDate: item[CallerDataHelper.registeredDate],
+                    isLocal: item[CallerDataHelper.isLocal],
+                    isLocalBlocked: item[CallerDataHelper.isLocalBlocked],
+                    categories: LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])
+                )
+                callers.append(caller)
+            }
+        }catch {
+            throw DataAccessError.Find_Error
+        }
+        return callers
        
     }
    
@@ -224,13 +295,15 @@ import SQLite
             let items = try DB.prepare(table)
             for item in items {
                 
-                let caller = Caller.createCaller(
+                let caller = try Caller.createCaller(
                     callerId: item[CallerDataHelper.callerId],
                     countryCode: item[CallerDataHelper.countryCode],
                     callerNumber: item[CallerDataHelper.callerNumber],
-                    registeredDevice: item[CallerDataHelper.registeredDevice],
+                    registeredByDevice: item[CallerDataHelper.registeredByDevice],
                     registeredDate: item[CallerDataHelper.registeredDate],
-                    categories: try getCategoriesForCaller(categoryIds: (item[CallerDataHelper.category])!))
+                    isLocal: item[CallerDataHelper.isLocal],
+                    isLocalBlocked: item[CallerDataHelper.isLocalBlocked],
+                    categories: LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId]))
                 callers.append(caller)
             }
         }catch{

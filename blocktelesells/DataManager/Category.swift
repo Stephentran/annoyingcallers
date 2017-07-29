@@ -10,7 +10,7 @@ import ObjectMapper
 public class Category: Mappable {
     public var categoryId: Int64?
     public var categoryName: String?
-    public var categoryType: Int?
+    public var description: String?
     public var createdDate: Date?
     required public init?(map: Map) {
 
@@ -19,14 +19,15 @@ public class Category: Mappable {
     public func mapping(map: Map) {
         categoryId    <- map["id"]
         categoryName    <- map["name"]
-        categoryType    <- map["category_type"]
-        createdDate    <- map["created_date"]
+        description    <- map["description"]
+        createdDate    <- (map["created_date"], DateTransform())
+        
     }
-    public static func createCategory(categoryId: Int64?, categoryName: String? ,categoryType: Int?, createdDate: Date?) -> Category{
+    public static func createCategory(categoryId: Int64?, categoryName: String? ,description: String?, createdDate: Date?) -> Category{
         let category: Category = Mapper<Category>().map(JSON: [:])!
         category.categoryId = categoryId
         category.categoryName = categoryName
-        category.categoryType = categoryType
+        category.description = description
         category.createdDate = createdDate
         return category
         

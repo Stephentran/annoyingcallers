@@ -57,12 +57,7 @@ class ContactTableViewController: UITableViewController {
         cell.contactPhoneNumber.text = caller.callerNumber
         cell.contactDescription.text = caller.categoryNames()
         cell.caller = caller
-        let blockedCaller = LocalDataManager.sharedInstance.findOneBlockedCaller(callerId: caller.callerId!)
-        if blockedCaller != nil {
-            cell.callerBlocked.setOn(true, animated: false)
-        }else{
-            cell.callerBlocked.setOn(false, animated: false)
-        }
+        cell.callerBlocked.setOn(caller.isLocalBlocked, animated: false)
         return cell
     }
     

@@ -3,16 +3,138 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
          contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
+               value = "window?.rootViewController">
             </PersistentString>
             <PersistentString
                value = "window?.rootViewController.childViewControllers">
             </PersistentString>
             <PersistentString
-               value = "window?.rootViewController">
+               value = "window?.rootViewController as?MainViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProviderDelegate.reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ():ProviderDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NetworkManager.(requestIfReachableViaWiFi(reachability : Reachability, requestingHandler : () -&gt; (), alertWhenCellular : () -&gt; (), alertWhenNoNetwork : () -&gt; ()) -&gt; ()).(closure #1).(closure #1):NetworkManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.allowCellular">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(syncUpCallers(url : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LocalDataManager.formatPhoneNumber(callers : [Caller]) -&gt; [Int64 : String]:LocalDataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "caller.categoryNames()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(syncUpCallers(callerUrl : String, categoryUrl : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.(callObserver(CXCallObserver, callChanged : CXCall) -&gt; ()).(closure #1):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "callObserver.calls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CallerCategoryDataHelper.insert(item : CallerCategory) throws -&gt; Int64:CallerCategoryDataHelper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ContactViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():ContactViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pickerData[row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(getContacts() -&gt; [Caller]).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(requestCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.isSuccess">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CallerDataHelper.insert(item : Caller) throws -&gt; Int64:CallerDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item.categoryIds()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.handleCallerResponse(callerArray : [Caller]) -&gt; ():DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CallerDataHelper.findAll() throws -&gt; [Caller]?:CallerDataHelper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ProviderDelegate.(reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ()).(closure #1):ProviderDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CallerCategoryDataHelper.findBy(callerId : Int64) throws -&gt; [CallerCategory]:CallerCategoryDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item[CallerCategoryDataHelper.categoryId]">
+            </PersistentString>
+            <PersistentString
+               value = "item[CallerCategoryDataHelper.assignType]">
+            </PersistentString>
+            <PersistentString
+               value = "item[CallerCategoryDataHelper.assignedDate]">
+            </PersistentString>
+            <PersistentString
+               value = "item[CallerCategoryDataHelper.categoryName]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JSONStringArrayEncoding.encode(URLRequestConvertible, with : [String : Any]?) throws -&gt; URLRequest:JSONStringArrayEncoding.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataManager.getPhoneNumbers() -&gt; [Int64 : String]:DataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Int64(contact.phoneNumber).toString()">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: Int64(contact.phoneNumber)!)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,60 +147,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "JSONStringArrayEncoding.encode(URLRequestConvertible, with : [String : Any]?) throws -&gt; URLRequest:JSONStringArrayEncoding.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ProviderDelegate.reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ():ProviderDelegate.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DataService.(requestCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result.isSuccess">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
-      </ContextState>
-      <ContextState
-         contextName = "MainViewController.callObserver(CXCallObserver, callChanged : CXCall) -&gt; ():MainViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "callObserver.calls">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
-      </ContextState>
-      <ContextState
          contextName = "SQLiteDataStore.createTables() throws -&gt; ():SQLiteDataStore.swift">
-      </ContextState>
-      <ContextState
-         contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ContactTableViewController.(loadContacts() -&gt; ()).(closure #1):ContactTableViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ContactViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():ContactViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "pickerData[row]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ProviderDelegate.(reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ()).(closure #1):ProviderDelegate.swift">
       </ContextState>
       <ContextState
          contextName = "Common.formatDate(date : Date) -&gt; String:Common.swift">
@@ -95,26 +164,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CallerDataHelper.insert(item : Caller) throws -&gt; Int64:CallerDataHelper.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "item.categoryIds()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DataService.(postCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
-      </ContextState>
-      <ContextState
-         contextName = "NetworkManager.(requestIfReachableViaWiFi(reachability : Reachability, requestingHandler : () -&gt; (), alertWhenCellular : () -&gt; (), alertWhenNoNetwork : () -&gt; ()) -&gt; ()).(closure #1).(closure #1):NetworkManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.allowCellular">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "MainViewController.(callObserver(CXCallObserver, callChanged : CXCall) -&gt; ()).(closure #1):MainViewController.swift">
+         contextName = "MainViewController.callObserver(CXCallObserver, callChanged : CXCall) -&gt; ():MainViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "callObserver.calls">
@@ -122,32 +172,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DataService.(syncUpCallers(url : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LocalDataManager.getBlockedPhoneNumbers() -&gt; [Int64 : String]:LocalDataManager.swift">
          <PersistentStrings>
             <PersistentString
-               value = "response.result.value">
+               value = "CALLER_DATA_HELPER.findAll()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DataManager.getPhoneNumbers() -&gt; [Int64 : String]:DataManager.swift">
+         contextName = "DataService.(getContacts() -&gt; [Contact]).(closure #1):DataService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Int64(contact.phoneNumber).toString()">
-            </PersistentString>
-            <PersistentString
-               value = "String(describing: Int64(contact.phoneNumber)!)">
+               value = "response">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
+         contextName = "Caller.mapping(map : Map) -&gt; ():Caller.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ContactTableViewController.(loadContacts() -&gt; ()).(closure #1):ContactTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(postCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
          contextName = "DataService.(requestCategories(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DataService.(getContacts() -&gt; [Caller]).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
          contextName = "CallerDataHelper.delete(item : Caller) throws -&gt; ():CallerDataHelper.swift">
@@ -161,10 +214,7 @@
          contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
       </ContextState>
       <ContextState
-         contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
+         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
