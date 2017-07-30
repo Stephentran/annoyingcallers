@@ -34,9 +34,7 @@ public class DataService{
                         DataService.sharedInstance.requestCategories(url: categoryUrl, completionHandler: { Void in
                             self.handleCallerResponse(callerArray: response.result.value!)
                             completionHandler(response.result.isSuccess)
-                        })
-                        
-                    
+                        })                    
                     }
                 
                 }

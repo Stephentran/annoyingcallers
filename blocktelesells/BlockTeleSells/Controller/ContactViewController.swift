@@ -108,7 +108,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         validator.validate(self)
         
-            }
+    }
     func submitNewNumber()  {
         let phoneNumber = contactPhoneNumber.text ?? ""
         let countryCode = self.countryCode.text ?? ""
