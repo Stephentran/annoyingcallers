@@ -117,8 +117,22 @@ public class DataService{
         }
         
     }
-    
-    
+    public func requestToken(authUrl: String, uuid: String, completionHandler: @escaping () -> Void) {
+        
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
+
+        let headers: HTTPHeaders = [ "Content-Type": "application/json", "uuid": uuid]
+        Alamofire.request(authUrl, method: HTTPMethod.post, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseString{
+                (response: DataResponse<String>) in
+                    if(response.result.isSuccess) {
+                        
+                        
+                        
+                    
+                    }
+                
+                }
+    }
     
     
 }

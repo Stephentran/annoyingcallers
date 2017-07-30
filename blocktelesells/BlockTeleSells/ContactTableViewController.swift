@@ -15,6 +15,7 @@ class ContactTableViewController: UITableViewController {
     var callers = [Caller]()
     let reachability = Reachability()!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.tableView.allowsSelection = false
         //navigationItem.leftBarButtonItem = editButtonItem
@@ -108,22 +109,17 @@ class ContactTableViewController: UITableViewController {
  
 
     //MARK: Actions
-    @IBAction func unwindToContactList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? ContactViewController, let _ = sourceViewController.caller {
-            /*
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                // Update an existing contact.
-                contacts[selectedIndexPath.row] = contact
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            }
-            else {
-                // Add a new contact.
-                let newIndexPath = IndexPath(row: contacts.count, section: 0)
-                contacts.append(contact)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            }
-            */
-            
+    @IBAction func backToBlockList(_ sender: UIBarButtonItem) {
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+    
+        if isPresentingInAddMealMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("The ContactTableViewController is not inside a navigation controller.")
         }
     }
     //MARK: private

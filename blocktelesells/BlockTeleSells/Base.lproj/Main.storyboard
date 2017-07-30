@@ -74,7 +74,7 @@ list updates</string>
                     <navigationItem key="navigationItem" id="p6D-Fa-Chy">
                         <barButtonItem key="rightBarButtonItem" title="Go to list" id="3B1-V4-PZv">
                             <connections>
-                                <segue destination="30P-SL-tHZ" kind="show" identifier="Main" id="BVU-2b-E7i"/>
+                                <segue destination="0W2-ru-2K5" kind="show" identifier="GoToBlockListSegue" id="8j0-lN-Pdb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -85,7 +85,7 @@ list updates</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370.4000000000001" y="-697.60119940029995"/>
+            <point key="canvasLocation" x="1190" y="-716"/>
         </scene>
         <!--Blocking Caller Infor-->
         <scene sceneID="Qib-pb-OcU">
@@ -192,7 +192,7 @@ list updates</string>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Fpn-j0-s5l">
                             <connections>
-                                <segue destination="Hbe-cZ-31z" kind="unwind" unwindAction="unwindToContactListWithSender:" id="LfM-GC-jV8"/>
+                                <action selector="saveAction:" destination="EWu-wY-ahh" id="hAJ-MF-XLk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -210,9 +210,8 @@ list updates</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0I9-3w-amx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Hbe-cZ-31z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5744.8000000000002" y="-18.440779610194905"/>
+            <point key="canvasLocation" x="3500" y="-716"/>
         </scene>
         <!--Blocked Contact List-->
         <scene sceneID="yPG-ei-fdg">
@@ -227,7 +226,7 @@ list updates</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="147"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1W-4F-3yr" id="q1B-nr-ACV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-rk-E54">
@@ -281,37 +280,19 @@ list updates</string>
                     <navigationItem key="navigationItem" title="Blocked Contact List" id="Wkk-9T-yHd">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="LaS-Vp-nEG">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="x1O-13-NUi"/>
+                                <action selector="backToBlockList:" destination="0W2-ru-2K5" id="A6q-Yz-C12"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BIE-YZ-34i">
                             <connections>
-                                <segue destination="YS6-Sh-lM8" kind="presentation" identifier="AddItem" id="22n-Bx-K6a"/>
+                                <segue destination="EWu-wY-ahh" kind="show" identifier="BackToBlockListSegue" id="eJa-Vk-lel"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aY-eO-8S1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3912.8000000000002" y="-18.440779610194905"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GVp-kF-6Gd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YS6-Sh-lM8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIq-wD-WhL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="EWu-wY-ahh" kind="relationship" relationship="rootViewController" id="DVe-8e-Hz9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WTv-99-SPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3657" y="702"/>
+            <point key="canvasLocation" x="2351" y="-716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZJn-SD-7um">
@@ -329,29 +310,7 @@ list updates</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJP-au-wgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.60000000000002" y="-698.5007496251875"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="caS-cM-Pjn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="30P-SL-tHZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="0Oo-bp-XKd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBY-fq-0nc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0W2-ru-2K5" kind="relationship" relationship="rootViewController" id="Ss6-U5-l46"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gm-ge-ao1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2663" y="244"/>
+            <point key="canvasLocation" x="425" y="-716"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="x1O-13-NUi"/>
-    </inferredMetricsTieBreakers>
 </document>

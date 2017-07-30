@@ -15,9 +15,11 @@ import class DataManager.DataService
 import class DataManager.LocalDataManager
 import Reachability
 import MRCountryPicker
-class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+import SwiftValidator
+class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var countryName: UILabel!
+    
     @IBOutlet weak var category: UILabel!
 
     @IBOutlet weak var countryFlag: UIImageView!
@@ -32,8 +34,12 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     var pickerData: [Category]? = [Category]()
     var categorySelected: Category?
     let reachability = Reachability()!
+    let validator = Validator()
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.isEnabled = false
+        validator.registerField(contactPhoneNumber, rules: [RequiredRule(), PhoneNumberRule()])
+        
         countryPicker.countryPickerDelegate = self
         countryPicker.showPhoneNumbers = true
 
@@ -80,14 +86,30 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     }
     */
     //MARK: Actions
-    // This method lets you configure a view controller before it's presented.
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Configure the destination view controller only when the save button is pressed.
-        guard let button = sender as? UIBarButtonItem, button === saveButton else {
-            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
-            return
+    
+    
+    
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        backToBlockListView()
+    }
+    func backToBlockListView(){
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+    
+        if isPresentingInAddMealMode {
+            dismiss(animated: true, completion: nil)
         }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("The ContactViewController is not inside a navigation controller.")
+        }
+    }
+    @IBAction func saveAction(_ sender: UIBarButtonItem) {
+        validator.validate(self)
         
+            }
+    func submitNewNumber()  {
         let phoneNumber = contactPhoneNumber.text ?? ""
         let countryCode = self.countryCode.text ?? ""
         
@@ -111,30 +133,14 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
         }else {
             LocalDataManager.sharedInstance.startDataRequest(callerUrl: Constants.SERVICE_CALLER_URL, categoryUrl: Constants.SERVICE_CATEGORY_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         }
-        super.prepare(for: segue, sender: sender)
-    }
-    func handleAfterSyncedCallers(result: Bool) {
-        
-    }
-    
-    
-    func completionHandler(result: Bool){
-        
-    }
-    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMealMode = presentingViewController is UINavigationController
-    
-        if isPresentingInAddMealMode {
-            dismiss(animated: true, completion: nil)
-        }
-        else if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
-        }
-        else {
-            fatalError("The ContactViewController is not inside a navigation controller.")
-        }
-    }
 
+    }
+    func completionHandler(result: Bool){
+        if result == true {
+            backToBlockListView()
+        }
+        
+    }
      //MARK: UITextFieldDelegate 
      func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the Save button while editing.
@@ -173,15 +179,15 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
                 self.pickerData?.append(category)
             }
             self.categoryPicker.reloadAllComponents()
-            if(categories.count > 0){
-                self.categoryPicker.selectRow(0, inComponent:0, animated:false)
-         }
+        
+        
         
     }
     
     //MARK: UIPickerViewDelegate,UIPickerViewDataSource
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
         return 1
     }
     
@@ -198,5 +204,23 @@ class ContactViewController: UIViewController, UITextFieldDelegate, MRCountryPic
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.category.text = pickerData?[row].categoryName
         categorySelected = pickerData?[row]
+        saveButton.isEnabled = true
     }
+    
+    //MARK: ValidationDelegate
+    func validationSuccessful() {
+        submitNewNumber()
+    }
+
+    func validationFailed(_ errors:[(Validatable ,ValidationError)]) {
+        // turn the fields to red
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                field.layer.borderColor = UIColor.red.cgColor
+                field.layer.borderWidth = 1.0
+		}
+		error.errorLabel?.text = error.errorMessage // works if you added labels
+		error.errorLabel?.isHidden = false
+	}
+}
 }
