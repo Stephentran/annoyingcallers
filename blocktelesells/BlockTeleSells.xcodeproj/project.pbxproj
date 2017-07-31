@@ -10,6 +10,13 @@
 		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		615FBD8D1F2F9DFE0094D6EA /* settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD861F2F9DFE0094D6EA /* settings.jpg */; };
+		615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD871F2F9DFE0094D6EA /* settings2.jpg */; };
+		615FBD8F1F2F9DFE0094D6EA /* Splashscreen-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD881F2F9DFE0094D6EA /* Splashscreen-01.png */; };
+		615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD891F2F9DFE0094D6EA /* Splashscreen-02.png */; };
+		615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8A1F2F9DFE0094D6EA /* Splashscreen-03.png */; };
+		615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8B1F2F9DFE0094D6EA /* Splashscreen-04.png */; };
+		615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8C1F2F9DFE0094D6EA /* Splashscreen-05.png */; };
 		61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D261F08B0880033D4FB /* AppDelegate.swift */; };
 		61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D281F08B0880033D4FB /* ViewController.swift */; };
 		61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2A1F08B0880033D4FB /* Main.storyboard */; };
@@ -160,6 +167,13 @@
 
 /* Begin PBXFileReference section */
 		615FBD811F2E4A350094D6EA /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = Carthage/Build/iOS/SwiftValidator.framework; sourceTree = "<group>"; };
+		615FBD861F2F9DFE0094D6EA /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
+		615FBD871F2F9DFE0094D6EA /* settings2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings2.jpg; sourceTree = "<group>"; };
+		615FBD881F2F9DFE0094D6EA /* Splashscreen-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-01.png"; sourceTree = "<group>"; };
+		615FBD891F2F9DFE0094D6EA /* Splashscreen-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-02.png"; sourceTree = "<group>"; };
+		615FBD8A1F2F9DFE0094D6EA /* Splashscreen-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-03.png"; sourceTree = "<group>"; };
+		615FBD8B1F2F9DFE0094D6EA /* Splashscreen-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-04.png"; sourceTree = "<group>"; };
+		615FBD8C1F2F9DFE0094D6EA /* Splashscreen-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-05.png"; sourceTree = "<group>"; };
 		61AB7D231F08B0880033D4FB /* BlockTeleSells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTeleSells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D261F08B0880033D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AB7D281F08B0880033D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -288,9 +302,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		615FBD851F2F9DFE0094D6EA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				615FBD861F2F9DFE0094D6EA /* settings.jpg */,
+				615FBD871F2F9DFE0094D6EA /* settings2.jpg */,
+				615FBD881F2F9DFE0094D6EA /* Splashscreen-01.png */,
+				615FBD891F2F9DFE0094D6EA /* Splashscreen-02.png */,
+				615FBD8A1F2F9DFE0094D6EA /* Splashscreen-03.png */,
+				615FBD8B1F2F9DFE0094D6EA /* Splashscreen-04.png */,
+				615FBD8C1F2F9DFE0094D6EA /* Splashscreen-05.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		61AB7D1A1F08B0880033D4FB = {
 			isa = PBXGroup;
 			children = (
+				615FBD851F2F9DFE0094D6EA /* images */,
 				61AB7E071F19477A0033D4FB /* Cartfile */,
 				61AB7D251F08B0880033D4FB /* BlockTeleSells */,
 				61AB7D3A1F08B0890033D4FB /* BlockTeleSellsTests */,
@@ -701,11 +730,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
+				615FBD8D1F2F9DFE0094D6EA /* settings.jpg in Resources */,
+				615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */,
+				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
 				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
 				61AB7D2E1F08B0880033D4FB /* Assets.xcassets in Resources */,
+				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
+				615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */,
+				615FBD8F1F2F9DFE0094D6EA /* Splashscreen-01.png in Resources */,
+				615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
