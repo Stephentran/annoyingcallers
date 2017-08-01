@@ -17,6 +17,25 @@
 		615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8A1F2F9DFE0094D6EA /* Splashscreen-03.png */; };
 		615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8B1F2F9DFE0094D6EA /* Splashscreen-04.png */; };
 		615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD8C1F2F9DFE0094D6EA /* Splashscreen-05.png */; };
+		615FBD951F30D39E0094D6EA /* background1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD941F30D39E0094D6EA /* background1.jpeg */; };
+		615FBD971F30D4EC0094D6EA /* settings.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD961F30D4EC0094D6EA /* settings.jpeg */; };
+		615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD981F30D54D0094D6EA /* settings2.jpeg */; };
+		615FBD9B1F30D6700094D6EA /* settings_ios7_ios_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD9A1F30D6700094D6EA /* settings_ios7_ios_7.png */; };
+		615FBD9D1F30D7280094D6EA /* phone_ios7_ios_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD9C1F30D7280094D6EA /* phone_ios7_ios_7.png */; };
+		615FBD9F1F30D8AE0094D6EA /* onoff.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 615FBD9E1F30D8AE0094D6EA /* onoff.jpeg */; };
+		615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDA01F30DA7C0094D6EA /* OnOffSwitch.png */; };
+		615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDA21F30DAE40094D6EA /* phone-128.png */; };
+		615FBDA51F30DB460094D6EA /* gear-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDA41F30DB460094D6EA /* gear-set.png */; };
+		615FBDA71F30DC070094D6EA /* Apps-system-software-update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDA61F30DC070094D6EA /* Apps-system-software-update-icon.png */; };
+		615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDA81F30E1870094D6EA /* phone-call-icon.png */; };
+		615FBDAD1F30ED8B0094D6EA /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDAC1F30ED8B0094D6EA /* timer.png */; };
+		615FBDAF1F30EE310094D6EA /* timer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDAE1F30EE310094D6EA /* timer2.png */; };
+		615FBDB11F30EE950094D6EA /* Apps-text-editor-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDB01F30EE950094D6EA /* Apps-text-editor-icon.png */; };
+		615FBDB31F30EFAF0094D6EA /* application-pencil-icon-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDB21F30EFAF0094D6EA /* application-pencil-icon-icon.png */; };
+		615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDB41F30F2800094D6EA /* 05-Edit-icon.png */; };
+		615FBDB71F30F48E0094D6EA /* Left_arrow-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDB61F30F48E0094D6EA /* Left_arrow-128.png */; };
+		615FBDB91F30F5810094D6EA /* Arrow-undo-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */; };
+		615FBDBB1F30F6520094D6EA /* report-go-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FBDBA1F30F6520094D6EA /* report-go-icon.png */; };
 		61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D261F08B0880033D4FB /* AppDelegate.swift */; };
 		61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D281F08B0880033D4FB /* ViewController.swift */; };
 		61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2A1F08B0880033D4FB /* Main.storyboard */; };
@@ -174,6 +193,25 @@
 		615FBD8A1F2F9DFE0094D6EA /* Splashscreen-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-03.png"; sourceTree = "<group>"; };
 		615FBD8B1F2F9DFE0094D6EA /* Splashscreen-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-04.png"; sourceTree = "<group>"; };
 		615FBD8C1F2F9DFE0094D6EA /* Splashscreen-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splashscreen-05.png"; sourceTree = "<group>"; };
+		615FBD941F30D39E0094D6EA /* background1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpeg; sourceTree = "<group>"; };
+		615FBD961F30D4EC0094D6EA /* settings.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpeg; sourceTree = "<group>"; };
+		615FBD981F30D54D0094D6EA /* settings2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings2.jpeg; sourceTree = "<group>"; };
+		615FBD9A1F30D6700094D6EA /* settings_ios7_ios_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_ios7_ios_7.png; sourceTree = "<group>"; };
+		615FBD9C1F30D7280094D6EA /* phone_ios7_ios_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_ios7_ios_7.png; sourceTree = "<group>"; };
+		615FBD9E1F30D8AE0094D6EA /* onoff.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = onoff.jpeg; sourceTree = "<group>"; };
+		615FBDA01F30DA7C0094D6EA /* OnOffSwitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnOffSwitch.png; sourceTree = "<group>"; };
+		615FBDA21F30DAE40094D6EA /* phone-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-128.png"; sourceTree = "<group>"; };
+		615FBDA41F30DB460094D6EA /* gear-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear-set.png"; sourceTree = "<group>"; };
+		615FBDA61F30DC070094D6EA /* Apps-system-software-update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apps-system-software-update-icon.png"; sourceTree = "<group>"; };
+		615FBDA81F30E1870094D6EA /* phone-call-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-call-icon.png"; sourceTree = "<group>"; };
+		615FBDAC1F30ED8B0094D6EA /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
+		615FBDAE1F30EE310094D6EA /* timer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer2.png; sourceTree = "<group>"; };
+		615FBDB01F30EE950094D6EA /* Apps-text-editor-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apps-text-editor-icon.png"; sourceTree = "<group>"; };
+		615FBDB21F30EFAF0094D6EA /* application-pencil-icon-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "application-pencil-icon-icon.png"; sourceTree = "<group>"; };
+		615FBDB41F30F2800094D6EA /* 05-Edit-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Edit-icon.png"; sourceTree = "<group>"; };
+		615FBDB61F30F48E0094D6EA /* Left_arrow-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Left_arrow-128.png"; sourceTree = "<group>"; };
+		615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-undo-icon.png"; sourceTree = "<group>"; };
+		615FBDBA1F30F6520094D6EA /* report-go-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report-go-icon.png"; sourceTree = "<group>"; };
 		61AB7D231F08B0880033D4FB /* BlockTeleSells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTeleSells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D261F08B0880033D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AB7D281F08B0880033D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +492,25 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				615FBDBA1F30F6520094D6EA /* report-go-icon.png */,
+				615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */,
+				615FBDB61F30F48E0094D6EA /* Left_arrow-128.png */,
+				615FBDB41F30F2800094D6EA /* 05-Edit-icon.png */,
+				615FBDB21F30EFAF0094D6EA /* application-pencil-icon-icon.png */,
+				615FBDB01F30EE950094D6EA /* Apps-text-editor-icon.png */,
+				615FBDAE1F30EE310094D6EA /* timer2.png */,
+				615FBDAC1F30ED8B0094D6EA /* timer.png */,
+				615FBDA81F30E1870094D6EA /* phone-call-icon.png */,
+				615FBDA61F30DC070094D6EA /* Apps-system-software-update-icon.png */,
+				615FBDA41F30DB460094D6EA /* gear-set.png */,
+				615FBDA21F30DAE40094D6EA /* phone-128.png */,
+				615FBDA01F30DA7C0094D6EA /* OnOffSwitch.png */,
+				615FBD9E1F30D8AE0094D6EA /* onoff.jpeg */,
+				615FBD9C1F30D7280094D6EA /* phone_ios7_ios_7.png */,
+				615FBD9A1F30D6700094D6EA /* settings_ios7_ios_7.png */,
+				615FBD981F30D54D0094D6EA /* settings2.jpeg */,
+				615FBD961F30D4EC0094D6EA /* settings.jpeg */,
+				615FBD941F30D39E0094D6EA /* background1.jpeg */,
 				61AB7DDA1F0E9C100033D4FB /* settings2.jpg */,
 				61AB7DD81F0E9B820033D4FB /* settings.jpg */,
 			);
@@ -731,17 +788,36 @@
 			files = (
 				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
 				615FBD8D1F2F9DFE0094D6EA /* settings.jpg in Resources */,
+				615FBDAF1F30EE310094D6EA /* timer2.png in Resources */,
+				615FBDB91F30F5810094D6EA /* Arrow-undo-icon.png in Resources */,
+				615FBD9F1F30D8AE0094D6EA /* onoff.jpeg in Resources */,
 				615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */,
+				615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */,
+				615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */,
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
+				615FBDB71F30F48E0094D6EA /* Left_arrow-128.png in Resources */,
+				615FBDA71F30DC070094D6EA /* Apps-system-software-update-icon.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
+				615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */,
+				615FBDA51F30DB460094D6EA /* gear-set.png in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
+				615FBD971F30D4EC0094D6EA /* settings.jpeg in Resources */,
+				615FBDB31F30EFAF0094D6EA /* application-pencil-icon-icon.png in Resources */,
+				615FBDAD1F30ED8B0094D6EA /* timer.png in Resources */,
 				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
 				61AB7D2E1F08B0880033D4FB /* Assets.xcassets in Resources */,
+				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
+				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
+				615FBD9D1F30D7280094D6EA /* phone_ios7_ios_7.png in Resources */,
 				615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */,
+				615FBDBB1F30F6520094D6EA /* report-go-icon.png in Resources */,
 				615FBD8F1F2F9DFE0094D6EA /* Splashscreen-01.png in Resources */,
 				615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */,
+				615FBD951F30D39E0094D6EA /* background1.jpeg in Resources */,
+				615FBDB11F30EE950094D6EA /* Apps-text-editor-icon.png in Resources */,
+				615FBD9B1F30D6700094D6EA /* settings_ios7_ios_7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

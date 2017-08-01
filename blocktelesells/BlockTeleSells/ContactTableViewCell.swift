@@ -10,12 +10,12 @@ import UIKit
 import DataManager
 class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var contactPhoneNumber: UILabel!
-    @IBOutlet weak var contactDescription: UITextView!
         override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     var caller: Caller?
+    @IBOutlet weak var category: UILabel!
     @IBAction func blockedToggle(_ sender: Any) {
         if callerBlocked.isOn {
             caller?.isLocalBlocked = true;

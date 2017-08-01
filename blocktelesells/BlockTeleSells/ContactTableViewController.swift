@@ -31,6 +31,14 @@ class ContactTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Add a background view to the table view
+        let backgroundImage = UIImage(named: "background1.jpeg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        loadContacts()
@@ -56,7 +64,7 @@ class ContactTableViewController: UITableViewController {
         
         let caller = callers[indexPath.row]
         cell.contactPhoneNumber.text = caller.callerNumber
-        cell.contactDescription.text = caller.categoryNames()
+        cell.category.text = caller.categoryNames()
         cell.caller = caller
         cell.callerBlocked.setOn(caller.isLocalBlocked, animated: false)
         return cell
