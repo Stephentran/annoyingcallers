@@ -103,6 +103,9 @@
 		61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */; };
 		61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */; };
 		61DE17AF1F34DDCF00C32723 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17AE1F34DDCF00C32723 /* Device.swift */; };
+		61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
+		61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
+		61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +174,7 @@
 				61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */,
 				61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
+				61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */,
 				61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */,
 				61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */,
 				61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */,
@@ -271,6 +275,7 @@
 		61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerCategory.swift; path = Model/CallerCategory.swift; sourceTree = "<group>"; };
 		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
 		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
+		61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Carthage/Build/iOS/PhoneNumberKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,10 +283,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */,
 				615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */,
 				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
 				61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
 				61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */,
+				61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */,
 				61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */,
 				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
@@ -435,6 +442,7 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */,
 				615FBD811F2E4A350094D6EA /* SwiftValidator.framework */,
 				61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */,
 				61AB7E121F1A192F0033D4FB /* Reachability.framework */,

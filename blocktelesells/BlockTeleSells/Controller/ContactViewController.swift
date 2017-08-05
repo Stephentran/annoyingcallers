@@ -16,6 +16,7 @@ import class DataManager.LocalDataManager
 import Reachability
 import MRCountryPicker
 import SwiftValidator
+import PhoneNumberKit
 class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDelegate, MRCountryPickerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var countryName: UILabel!
@@ -38,11 +39,11 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
-        validator.registerField(contactPhoneNumber, rules: [RequiredRule(), PhoneNumberRule()])
+        
+        validator.registerField(contactPhoneNumber, rules: [RequiredRule()])
         
         countryPicker.countryPickerDelegate = self
         countryPicker.showPhoneNumbers = true
-
         // set country by its code
         countryPicker.setCountry(Constants.COUNTRY_CODE_DEFAULT)
         // Handle the text field’s user input through delegate callbacks.
@@ -118,7 +119,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
                         callerId: nil,
                         countryCode: countryCode,
                         callerNumber: phoneNumber,
-                        registeredByDevice: Constants.REGISTERED_DEVICE_ID,
+                        registeredByDevice: UIDevice.current.identifierForVendor!.uuidString,
                         registeredDate: Date(),
                         isLocal: true,
                         isLocalBlocked: false,

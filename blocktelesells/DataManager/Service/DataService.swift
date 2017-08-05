@@ -20,6 +20,7 @@ public class DataService{
     
     public func syncUpCallers(completionHandler: @escaping (_ result: Bool) -> Void){
         do{
+            print("UDDI " + UIDevice.current.identifierForVendor!.uuidString)
             let callers = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.findAllByLocal(isLocal: true)
             for caller in callers {
                 caller.callerId = nil
@@ -118,7 +119,7 @@ public class DataService{
     public func requestToken(completionHandler: @escaping () -> Void) {
         
         let uuid = UIDevice.current.identifierForVendor!.uuidString
-        let device = Device.createDevice(id: uuid, platform: "iOS", owner: nil, status: 1, api_request_key: nil)
+        let device = Device.createDevice(id: uuid, platform: LocalDataManager.PLATFORM, owner: nil, status: 1, api_request_key: nil)
         let headers: HTTPHeaders = [ "Content-Type": "application/json"]
             Alamofire.request(LocalDataManager.SERVICE_TOKEN_URL, method: HTTPMethod.post, parameters: device.toJSON(), encoding: JSONEncoding.default, headers: headers).responseObject{
                 (response: DataResponse<Device>) in

@@ -8,3 +8,4 @@ github "xTrinch/MRCountryPicker" ~> 0.0.7
 github "ashleymills/Reachability.swift" ~> 3.0
 github "radex/SwiftyUserDefaults"
 github "jpotts18/SwiftValidator"
+github "marmelroy/PhoneNumberKit"

@@ -17,6 +17,8 @@ class Device: Mappable {
     
     required public init?(map: Map) {
         status = 1
+        platform = LocalDataManager.PLATFORM
+        id = UIDevice.current.identifierForVendor!.uuidString
     }
     
     // Mappable
