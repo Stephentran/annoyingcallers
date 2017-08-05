@@ -12,11 +12,8 @@ public class NetworkManager {
     var allowCellular = false;
     public func requestIfReachableViaWiFi(reachability: Reachability,allowCell: Bool, requestingHandler: @escaping (_ completionHandler: @escaping (_ result: Bool) -> Void) -> Void, completionHandler: @escaping (_ result: Bool) -> Void) {
         NetworkManager.sharedInstance.configureAllowCellular(allowCell: allowCell)
-        reachability.whenReachable = { reachability in
-            // this is called on a background thread, but UI updates must
-            // be on the main thread, like this:
-            DispatchQueue.main.async {
-                if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
+        if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
+            if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
                     if LocalDataManager.sharedInstance.loadKeytToken() != nil {
                         requestingHandler(completionHandler)
                     }else{
@@ -28,21 +25,40 @@ public class NetworkManager {
                 } else {
                     print("Reachable via Cellular")
                 }
+        }else{
+            reachability.whenReachable = { reachability in
+                // this is called on a background thread, but UI updates must
+                // be on the main thread, like this:
+                DispatchQueue.main.async {
+                    if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
+                        if LocalDataManager.sharedInstance.loadKeytToken() != nil {
+                            requestingHandler(completionHandler)
+                        }else{
+                                DataService.sharedInstance.requestToken(completionHandler: {
+                                requestingHandler(completionHandler)
+                            })
+                        }
+                    
+                    } else {
+                        print("Reachable via Cellular")
+                    }
+                }
             }
-        }
-        reachability.whenUnreachable = { reachability in
-            // this is called on a background thread, but UI updates must
-            // be on the main thread, like this:
-            DispatchQueue.main.async {
-                print("Unreachable via Network")
+            reachability.whenUnreachable = { reachability in
+                // this is called on a background thread, but UI updates must
+                // be on the main thread, like this:
+                DispatchQueue.main.async {
+                    print("Unreachable via Network")
+                }
             }
-        }
 
-        do {
-            try reachability.startNotifier()
-        } catch {
-            print("Unable to start notifier")
+            do {
+                try reachability.startNotifier()
+            } catch {
+                print("Unable to start notifier")
+            }
         }
+        
         
         
     }

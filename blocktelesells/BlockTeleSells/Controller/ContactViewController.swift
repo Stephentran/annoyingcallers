@@ -66,9 +66,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DataService.sharedInstance.requestCategories(completionHandler: { Void in
-            self.loadDataForCategoryPicker()
-        })
+        loadDataForCategoryPicker()
         
     }
     override func didReceiveMemoryWarning() {
@@ -111,7 +109,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
         
     }
     func submitNewNumber()  {
-        let phoneNumber = contactPhoneNumber.text ?? ""
+        let phoneNumber = contactPhoneNumber.text?.replacingOccurrences(of: " ", with: "") ?? ""
         let countryCode = self.countryCode.text ?? ""
         
         let callerCategory = CallerCategory.createCallerCategory(id: nil, callerId: nil, categoryId: categorySelected?.categoryId, assignType: Caller.ASSIGN_TYPE_PRIVATE, assignedDate: Date(), isLocal: true, categoryName: categorySelected?.categoryName)
@@ -127,6 +125,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
                     )
         
         let ret = LocalDataManager.sharedInstance.insertCaller(caller: caller)
+        
         if ret == false {
             let alert = UIAlertController(title: "Alert", message: "Can not report this number", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
@@ -137,9 +136,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
 
     }
     func completionHandler(result: Bool){
-        if result == true {
-            backToBlockListView()
-        }
+        backToBlockListView()
         
     }
      //MARK: UITextFieldDelegate 

@@ -59,7 +59,7 @@ public final class LocalDataManager {
                 let range = countryCode.index(after: countryCode.startIndex)..<countryCode.endIndex
                 countryCode = countryCode[range]
             }
-            let number = Int64(countryCode + String(describing: Int64(caller.callerNumber!)!))
+            let number = Int64(countryCode + String(describing: Int64(caller.callerNumber!.replacingOccurrences(of: " ", with: ""))!))
             dictionary.updateValue(caller.categoryNames() , forKey:number!)
         }
         return dictionary

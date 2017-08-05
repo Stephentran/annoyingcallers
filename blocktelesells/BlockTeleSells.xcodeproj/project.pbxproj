@@ -106,6 +106,7 @@
 		61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17B41F35A3E500C32723 /* Data-List-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +277,7 @@
 		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
 		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
 		61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Carthage/Build/iOS/PhoneNumberKit.framework; sourceTree = "<group>"; };
+		61DE17B41F35A3E500C32723 /* Data-List-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data-List-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +505,7 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17B41F35A3E500C32723 /* Data-List-icon.png */,
 				615FBDBA1F30F6520094D6EA /* report-go-icon.png */,
 				615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */,
 				615FBDB61F30F48E0094D6EA /* Left_arrow-128.png */,
@@ -803,6 +806,7 @@
 				615FBDB91F30F5810094D6EA /* Arrow-undo-icon.png in Resources */,
 				615FBD9F1F30D8AE0094D6EA /* onoff.jpeg in Resources */,
 				615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */,
+				61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */,
 				615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */,
 				615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */,
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,

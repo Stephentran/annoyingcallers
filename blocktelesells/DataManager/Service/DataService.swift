@@ -36,6 +36,8 @@ public class DataService{
                             self.handleCallerResponse(callerArray: response.result.value!)
                             completionHandler(response.result.isSuccess)
                         })                    
+                    }else{
+                        completionHandler(false)
                     }
                 
                 }

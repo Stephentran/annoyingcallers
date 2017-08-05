@@ -6,6 +6,9 @@
          contextName = "ContactViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:ContactViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "Caller.categoryNames() -&gt; String:Caller.swift">
+      </ContextState>
+      <ContextState
          contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
@@ -34,11 +37,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LocalDataManager.insertCaller(caller : Caller) -&gt; Bool:LocalDataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.getPhoneNumbers()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
       </ContextState>
       <ContextState
          contextName = "LocalDataManager.formatPhoneNumber(callers : [Caller]) -&gt; [Int64 : String]:LocalDataManager.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "caller.callerNumber!.trimmingCharacters(in: .whitespaces)">
+            </PersistentString>
             <PersistentString
                value = "caller.categoryNames()">
             </PersistentString>
@@ -203,6 +217,14 @@
       </ContextState>
       <ContextState
          contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NetworkManager.requestIfReachableViaWiFi(reachability : Reachability, allowCell : Bool, requestingHandler : ((Bool) -&gt; ()) -&gt; (), completionHandler : (Bool) -&gt; ()) -&gt; ():NetworkManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "reachability.isReachable">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "LocalDataManager.getBlockedPhoneNumbers() -&gt; [Int64 : String]:LocalDataManager.swift">

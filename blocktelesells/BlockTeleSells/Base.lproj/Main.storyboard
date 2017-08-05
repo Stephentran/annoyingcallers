@@ -94,7 +94,7 @@ list updates</string>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="p6D-Fa-Chy">
-                        <barButtonItem key="rightBarButtonItem" title="Go to list" id="3B1-V4-PZv">
+                        <barButtonItem key="rightBarButtonItem" image="Data-List-icon.png" id="3B1-V4-PZv">
                             <connections>
                                 <segue destination="0W2-ru-2K5" kind="show" identifier="GoToBlockListSegue" id="8j0-lN-Pdb"/>
                             </connections>
@@ -347,6 +347,7 @@ list updates</string>
     <resources>
         <image name="05-Edit-icon.png" width="24" height="24"/>
         <image name="Arrow-undo-icon.png" width="24" height="24"/>
+        <image name="Data-List-icon.png" width="24" height="24"/>
         <image name="OnOffSwitch.png" width="128" height="128"/>
         <image name="background1.jpeg" width="183" height="275"/>
         <image name="gear-set.png" width="128" height="128"/>
