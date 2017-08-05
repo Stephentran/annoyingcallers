@@ -12,13 +12,13 @@
          contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController">
+               value = "window?.rootViewController as?MainViewController">
             </PersistentString>
             <PersistentString
                value = "window?.rootViewController.childViewControllers">
             </PersistentString>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
+               value = "window?.rootViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -37,14 +37,6 @@
          contextName = "static CategoryDataHelper.insert(item : Category) throws -&gt; Int64:CategoryDataHelper.swift">
       </ContextState>
       <ContextState
-         contextName = "DataService.(syncUpCallers(url : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result.value">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "LocalDataManager.formatPhoneNumber(callers : [Caller]) -&gt; [Int64 : String]:LocalDataManager.swift">
          <PersistentStrings>
             <PersistentString
@@ -53,13 +45,40 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "DataService.(syncUpCallers(url : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataService.(syncUpCallers(callerUrl : String, categoryUrl : String, completionHandler : (Bool) -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataService.requestToken(authUrl : String, completionHandler : () -&gt; ()) -&gt; ():DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "device.toJSON()">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "MainViewController.(callObserver(CXCallObserver, callChanged : CXCall) -&gt; ()).(closure #1):MainViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "callObserver.calls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(requestToken(authUrl : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+            <PersistentString
+               value = "response.result.value?.api_request_key">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

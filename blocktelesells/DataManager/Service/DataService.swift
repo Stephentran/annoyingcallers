@@ -18,20 +18,20 @@ public class DataService{
     private init() {
     }
     
-    public func syncUpCallers(callerUrl: String, categoryUrl: String, completionHandler: @escaping (_ result: Bool) -> Void){
+    public func syncUpCallers(completionHandler: @escaping (_ result: Bool) -> Void){
         do{
             let callers = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.findAllByLocal(isLocal: true)
             for caller in callers {
                 caller.callerId = nil
             }
             let jsonStringArrayEncoding = JSONStringArrayEncoding(array: Mapper<Caller>().toJSONArray(callers))
-        
-            let headers: HTTPHeaders = [ "Content-Type": "application/json"]
-            Alamofire.request(callerUrl, method: HTTPMethod.post, parameters: [:], encoding: jsonStringArrayEncoding, headers: headers).responseArray{
+            
+            let headers: HTTPHeaders = [ "Content-Type": "application/json", LocalDataManager.API_REQUEST_KEY:LocalDataManager.sharedInstance.loadKeytToken()!]
+            Alamofire.request(LocalDataManager.SERVICE_CALLER_URL, method: HTTPMethod.post, parameters: [:], encoding: jsonStringArrayEncoding, headers: headers).responseArray{
                 (response: DataResponse<[Caller]>) in
                     if(response.result.isSuccess) {
                         
-                        DataService.sharedInstance.requestCategories(url: categoryUrl, completionHandler: { Void in
+                        DataService.sharedInstance.requestCategories(completionHandler: { Void in
                             self.handleCallerResponse(callerArray: response.result.value!)
                             completionHandler(response.result.isSuccess)
                         })                    
@@ -60,7 +60,6 @@ public class DataService{
                 }
                 callerCategories = callerCategories + caller.categories!
             }
-            //_ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.updateAll(items: updateCallers)
             _ = try LocalDataManager.sharedInstance.CALLER_DATA_HELPER.insertAll(items: newCallers)
             _ = try LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.insertAll(items: callerCategories)
             
@@ -72,9 +71,10 @@ public class DataService{
         }
     }
     
-    public func requestCallers(url: String, completionHandler: @escaping () -> Void) {
+    public func requestCallers(completionHandler: @escaping () -> Void) {
         
-        Alamofire.request(url).responseArray { (response: DataResponse<[Caller]>) in
+        let headers: HTTPHeaders = [ "Content-Type": "application/json", LocalDataManager.API_REQUEST_KEY:LocalDataManager.sharedInstance.loadKeytToken()!]
+        Alamofire.request(LocalDataManager.SERVICE_CALLER_URL, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseArray { (response: DataResponse<[Caller]>) in
             if(response.result.isSuccess) {
                 self.handleCallerResponse(callerArray: response.result.value!)
                 
@@ -85,11 +85,11 @@ public class DataService{
         
     }
     
-    public func requestCategories(url: String, completionHandler: @escaping () -> Void) {
+    public func requestCategories(completionHandler: @escaping () -> Void) {
         var newCategories = [Category]();
         var updateCategories = [Category]();
-        
-        Alamofire.request(url).responseArray { (response: DataResponse<[Category]>) in
+        let headers: HTTPHeaders = [ "Content-Type": "application/json", LocalDataManager.API_REQUEST_KEY:LocalDataManager.sharedInstance.loadKeytToken()!]
+        Alamofire.request(LocalDataManager.SERVICE_CATEGORY_URL,parameters: [:], encoding: JSONEncoding.default, headers: headers).responseArray { (response: DataResponse<[Category]>) in
             if(response.result.isSuccess) {
                 let categoryArray = response.result.value
                 do{
@@ -115,21 +115,22 @@ public class DataService{
         }
         
     }
-    public func requestToken(authUrl: String, uuid: String, completionHandler: @escaping () -> Void) {
+    public func requestToken(completionHandler: @escaping () -> Void) {
         
         let uuid = UIDevice.current.identifierForVendor!.uuidString
-
-        let headers: HTTPHeaders = [ "Content-Type": "application/json", "uuid": uuid]
-        Alamofire.request(authUrl, method: HTTPMethod.post, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseString{
-                (response: DataResponse<String>) in
+        let device = Device.createDevice(id: uuid, platform: "iOS", owner: nil, status: 1, api_request_key: nil)
+        let headers: HTTPHeaders = [ "Content-Type": "application/json"]
+            Alamofire.request(LocalDataManager.SERVICE_TOKEN_URL, method: HTTPMethod.post, parameters: device.toJSON(), encoding: JSONEncoding.default, headers: headers).responseObject{
+                (response: DataResponse<Device>) in
                     if(response.result.isSuccess) {
+                        LocalDataManager.sharedInstance.saveKeytToken(keytToken: (response.result.value?.api_request_key)!)
+                        completionHandler()
                         
-                        
-                        
-                    
                     }
                 
                 }
+        
+        
     }
     
     

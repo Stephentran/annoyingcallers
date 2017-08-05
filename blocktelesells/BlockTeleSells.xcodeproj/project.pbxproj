@@ -102,6 +102,7 @@
 		61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */; };
 		61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */; };
 		61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */; };
+		61DE17AF1F34DDCF00C32723 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17AE1F34DDCF00C32723 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +270,7 @@
 		61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStringArrayEncoding.swift; sourceTree = "<group>"; };
 		61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerCategory.swift; path = Model/CallerCategory.swift; sourceTree = "<group>"; };
 		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
+		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +487,7 @@
 				61AB7DD21F0958690033D4FB /* Caller.swift */,
 				61AB7E101F19F6020033D4FB /* Category.swift */,
 				61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */,
+				61DE17AE1F34DDCF00C32723 /* Device.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */,
 				61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */,
 				61AB7DD31F0958690033D4FB /* Caller.swift in Sources */,
+				61DE17AF1F34DDCF00C32723 /* Device.swift in Sources */,
 				61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */,
 				61AB7DCF1F0957E00033D4FB /* LocalDataManager.swift in Sources */,
 				61AB7E111F19F6020033D4FB /* Category.swift in Sources */,

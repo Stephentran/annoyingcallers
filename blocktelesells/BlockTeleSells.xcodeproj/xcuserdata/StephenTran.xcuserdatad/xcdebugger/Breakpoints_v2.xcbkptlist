@@ -234,7 +234,7 @@
                   moduleName = "DataManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/StephenTran/Desktop/working/mobile/ios/annoyingcallers/blocktelesells/DataManager/DataHelper/SQLiteDataStore.swift"
-                  timestampString = "523130279.109391"
+                  timestampString = "523597611.279088"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -249,7 +249,7 @@
                   moduleName = "DataManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/StephenTran/Desktop/working/mobile/ios/annoyingcallers/blocktelesells/DataManager/DataHelper/SQLiteDataStore.swift"
-                  timestampString = "523130279.113477"
+                  timestampString = "523597611.282348"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -682,12 +682,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Network/NetworkManager.swift"
-            timestampString = "522498930.38054"
+            timestampString = "523561580.942952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "requestIfReachableViaWiFi(url:reachability:allowCell:requestingHandler:completionHandler:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "requestIfReachableViaWiFi(reachability:allowCell:requestingHandler:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -762,12 +762,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
-            landmarkName = "requestCategories(url:completionHandler:)"
+            landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -794,12 +794,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -810,12 +810,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -826,12 +826,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -906,12 +906,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "requestCategories(url:completionHandler:)"
+            landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -938,12 +938,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -954,12 +954,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "requestCategories(url:completionHandler:)"
+            landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1094,16 +1094,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1114,12 +1114,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1162,12 +1162,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "requestCallers(url:completionHandler:)"
+            landmarkName = "requestCallers(completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1247,7 +1247,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1302,7 +1302,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
@@ -1354,12 +1354,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523003743.015436"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "startDataRequest(callerUrl:categoryUrl:reachability:allowCell:completionHandler:)"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "startDataRequest(reachability:allowCell:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1370,12 +1370,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Network/NetworkManager.swift"
-            timestampString = "522502555.673929"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "requestIfReachableViaWiFi(url:reachability:allowCell:requestingHandler:completionHandler:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "requestIfReachableViaWiFi(reachability:allowCell:requestingHandler:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1512,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523003743.015436"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "updateCaller(caller:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1819,7 +1819,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1835,7 +1835,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1846,11 +1846,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523561580.942952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "handleCallerResponse(callerArray:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1867,7 +1867,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1878,12 +1878,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "requestCategories(url:completionHandler:)"
+            landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1947,7 +1947,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1963,7 +1963,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2006,12 +2006,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "523130125.200488"
+            timestampString = "523562762.990196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "requestCategories(url:completionHandler:)"
+            landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2123,7 +2123,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "syncUpCallers(callerUrl:categoryUrl:completionHandler:)"
+            landmarkName = "syncUpCallers(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2134,11 +2134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523003743.015436"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "insertCaller(caller:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2150,11 +2150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523003743.015436"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "insertCaller(caller:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2198,7 +2198,7 @@
                   moduleName = "DataManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/StephenTran/Desktop/working/mobile/ios/annoyingcallers/blocktelesells/DataManager/DataHelper/EntityHelper/CallerCategoryDataHelper.swift"
-                  timestampString = "523130279.2121"
+                  timestampString = "523597611.359649"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -2213,7 +2213,7 @@
                   moduleName = "DataManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/StephenTran/Desktop/working/mobile/ios/annoyingcallers/blocktelesells/DataManager/DataHelper/EntityHelper/CallerCategoryDataHelper.swift"
-                  timestampString = "523130279.215713"
+                  timestampString = "523597611.371332"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -2230,11 +2230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523003743.015436"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "insertCaller(caller:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2278,11 +2278,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523004428.4204"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "formatPhoneNumber(callers:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2310,11 +2310,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/LocalDataManager.swift"
-            timestampString = "523004569.136109"
+            timestampString = "523598607.177979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "formatPhoneNumber(callers:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2380,6 +2380,86 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager/Network/NetworkManager.swift"
+            timestampString = "523598607.177979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "requestIfReachableViaWiFi(reachability:allowCell:requestingHandler:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager/Network/NetworkManager.swift"
+            timestampString = "523561493.392038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "requestIfReachableViaWiFi(reachability:allowCell:requestingHandler:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager/Service/DataService.swift"
+            timestampString = "523562762.990196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "requestToken(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager/Service/DataService.swift"
+            timestampString = "523562762.990196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "requestToken(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager/Service/DataService.swift"
+            timestampString = "523562762.990196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "requestToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

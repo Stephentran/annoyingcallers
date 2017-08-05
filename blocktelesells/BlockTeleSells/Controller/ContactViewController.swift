@@ -65,7 +65,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DataService.sharedInstance.requestCategories(url: Constants.SERVICE_CATEGORY_URL, completionHandler: { Void in
+        DataService.sharedInstance.requestCategories(completionHandler: { Void in
             self.loadDataForCategoryPicker()
         })
         
@@ -131,7 +131,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else {
-            LocalDataManager.sharedInstance.startDataRequest(callerUrl: Constants.SERVICE_CALLER_URL, categoryUrl: Constants.SERVICE_CATEGORY_URL, reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
+            LocalDataManager.sharedInstance.startDataRequest(reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         }
 
     }

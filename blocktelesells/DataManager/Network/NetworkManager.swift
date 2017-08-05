@@ -10,14 +10,21 @@ import Reachability
 public class NetworkManager {
     public static let sharedInstance = NetworkManager()
     var allowCellular = false;
-    public func requestIfReachableViaWiFi(callerUrl: String,categoryUrl: String, reachability: Reachability,allowCell: Bool, requestingHandler: @escaping (_ callerUrl: String,_ categoryUrl: String, _ completionHandler: @escaping (_ result: Bool) -> Void) -> Void, completionHandler: @escaping (_ result: Bool) -> Void) {
+    public func requestIfReachableViaWiFi(reachability: Reachability,allowCell: Bool, requestingHandler: @escaping (_ completionHandler: @escaping (_ result: Bool) -> Void) -> Void, completionHandler: @escaping (_ result: Bool) -> Void) {
         NetworkManager.sharedInstance.configureAllowCellular(allowCell: allowCell)
         reachability.whenReachable = { reachability in
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
             DispatchQueue.main.async {
                 if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
-                    requestingHandler(callerUrl, categoryUrl, completionHandler)
+                    if LocalDataManager.sharedInstance.loadKeytToken() != nil {
+                        requestingHandler(completionHandler)
+                    }else{
+                        DataService.sharedInstance.requestToken(completionHandler: {
+                            requestingHandler(completionHandler)
+                        })
+                    }
+                    
                 } else {
                     print("Reachable via Cellular")
                 }

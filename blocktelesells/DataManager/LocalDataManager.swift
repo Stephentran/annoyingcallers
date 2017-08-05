@@ -11,14 +11,19 @@ import CallKit
 import Reachability
 extension DefaultsKeys {
     static let updatedStatus = DefaultsKey<Date?>("updatedStatus")
+    static let keytToken = DefaultsKey<String?>("keyToken")
 }
 public final class LocalDataManager {
-    
+    public static let SERVICE_URL = "http://192.168.1.9:8000/api/"
+    public static let SERVICE_CALLER_URL = SERVICE_URL + "callers/"
+    public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
+    public static let SERVICE_TOKEN_URL = SERVICE_URL + "devices/"
     public static let CBX_IDENTIFIER = "com.ste.CallBlock.CallBlockExtension"
     public static let APP_GROUP_CALL_BLOCK_IDENTIFIER = "group.stephentran.callblock"
     public static let APP_GROUP_CALL_BLOCK_FOLDER = "callers"
     public static let APP_GROUP_CALL_BLOCK_SQLITE_FILE_NAME = "callblock.sqlite3"
     public static let COUNTRY_CODE_DEFAULT = "84"
+    public static let  API_REQUEST_KEY = "API-REQUEST-KEY"
     let CALLER_DATA_HELPER = CallerDataHelper(tableName: "Callers")
     let CATEGORY_DATA_HELPER = CategoryDataHelper(tableName: "Categories")
     let CALLER_CATEGORY_DATA_HELPER = CallerCategoryDataHelper(tableName: "CallerCategories")
@@ -64,6 +69,17 @@ public final class LocalDataManager {
     public func loadUpdatedStatus() -> Date?{
         if Defaults[.updatedStatus] != nil {
             return Defaults[.updatedStatus]!
+        }
+        return nil
+        
+    }
+    
+    public func saveKeytToken(keytToken: String){
+        Defaults[.keytToken] = keytToken
+    }
+    public func loadKeytToken() -> String?{
+        if Defaults[.keytToken] != nil {
+            return Defaults[.keytToken]!
         }
         return nil
         
@@ -135,12 +151,12 @@ public final class LocalDataManager {
         })
     }
     
-    public func startDataRequest(callerUrl: String, categoryUrl: String, reachability: Reachability,allowCell: Bool, completionHandler: @escaping (_ result: Bool) -> Void){
+    public func startDataRequest(reachability: Reachability,allowCell: Bool, completionHandler: @escaping (_ result: Bool) -> Void){
     
-        NetworkManager.sharedInstance.requestIfReachableViaWiFi(callerUrl: callerUrl, categoryUrl: categoryUrl, reachability: reachability,allowCell: allowCell, requestingHandler: syncUpCallers, completionHandler: completionHandler)
+        NetworkManager.sharedInstance.requestIfReachableViaWiFi(reachability: reachability,allowCell: allowCell, requestingHandler: syncUpCallers, completionHandler: completionHandler)
     }
-    public func syncUpCallers(callerUrl: String, categoryUrl: String, completionHandler: @escaping (_ result: Bool) -> Void){
-        DataService.sharedInstance.syncUpCallers(callerUrl: callerUrl, categoryUrl: categoryUrl, completionHandler:completionHandler)
+    public func syncUpCallers(completionHandler: @escaping (_ result: Bool) -> Void){
+        DataService.sharedInstance.syncUpCallers(completionHandler:completionHandler)
     }
     
 }

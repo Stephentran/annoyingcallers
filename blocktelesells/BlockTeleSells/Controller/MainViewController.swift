@@ -56,7 +56,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         
     }
     public func updateData(){
-        LocalDataManager.sharedInstance.startDataRequest(callerUrl: Constants.SERVICE_CALLER_URL, categoryUrl:Constants.SERVICE_CATEGORY_URL , reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
+        LocalDataManager.sharedInstance.startDataRequest(reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         
     }
     

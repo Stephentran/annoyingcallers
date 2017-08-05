@@ -24,10 +24,10 @@ public class CallerCategory: Mappable {
     public func mapping(map: Map) {
         id    <- map["id"]
         callerId    <- map["callerId"]
-        categoryId    <- map["category_id"]
+        categoryId    <- map["id"]
         assignType    <- map["assign_type"]
         assignedDate    <- (map["assigned_date"], DateTransform())
-        categoryName    <- map["category_name"]
+        categoryName    <- map["name"]
     }
     public static func createCallerCategory(id: Int64?,callerId: Int64?, categoryId: Int64? ,assignType: Int?, assignedDate: Date?, isLocal: Bool, categoryName: String?) -> CallerCategory{
         let calleCategory: CallerCategory = Mapper<CallerCategory>().map(JSON: [:])!

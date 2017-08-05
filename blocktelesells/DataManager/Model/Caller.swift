@@ -25,9 +25,9 @@ public class Caller: Mappable{
     }
     // Mappable
     public func mapping(map: Map) {
-        callerId    <- map["callerId"]
+        callerId    <- map["id"]
         countryCode    <- map["country_code"]
-        callerNumber    <- map["caller_number"]
+        callerNumber    <- map["number"]
         registeredByDevice    <- map["registered_by_device"]
         registeredDate    <-  (map["registered_date"], DateTransform())
         categories    <- map["category"]
