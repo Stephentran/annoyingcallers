@@ -127,6 +127,9 @@
          contextName = "ProviderDelegate.(reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ()).(closure #1):ProviderDelegate.swift">
       </ContextState>
       <ContextState
+         contextName = "ContactViewController.validationFailed([(Validatable, ValidationError)]) -&gt; ():ContactViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "CallerCategoryDataHelper.findBy(callerId : Int64) throws -&gt; [CallerCategory]:CallerCategoryDataHelper.swift">
          <PersistentStrings>
             <PersistentString
@@ -179,6 +182,14 @@
             </PersistentString>
             <PersistentString
                value = "usDateFormat.locale">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataService.(requestToken(completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

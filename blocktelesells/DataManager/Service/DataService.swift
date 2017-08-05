@@ -65,6 +65,7 @@ public class DataService{
             _ = try LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.insertAll(items: callerCategories)
             
             LocalDataManager.sharedInstance.saveUpdatedStatus(latestDate: Date())
+            
             LocalDataManager.sharedInstance.reloadExtension()
                 
         }catch{

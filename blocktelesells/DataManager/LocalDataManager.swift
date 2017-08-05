@@ -24,7 +24,7 @@ public final class LocalDataManager {
     public static let APP_GROUP_CALL_BLOCK_SQLITE_FILE_NAME = "callblock.sqlite3"
     public static let COUNTRY_CODE_DEFAULT = "84"
     public static let  API_REQUEST_KEY = "API-REQUEST-KEY"
-    public static let  PLATFORM = "platform"
+    public static let  PLATFORM = "iOS"
     let CALLER_DATA_HELPER = CallerDataHelper(tableName: "Callers")
     let CATEGORY_DATA_HELPER = CategoryDataHelper(tableName: "Categories")
     let CALLER_CATEGORY_DATA_HELPER = CallerCategoryDataHelper(tableName: "CallerCategories")
