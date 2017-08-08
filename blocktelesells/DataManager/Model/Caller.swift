@@ -17,9 +17,10 @@ public class Caller: Mappable{
     public var isLocal: Bool = false
     public var isLocalBlocked: Bool = false
     static let CATEGORY_ID_SEPARATOR = "_"
-    static let CATEGORY_NAME_SEPARATOR = "\n"
+    static let CATEGORY_NAME_SEPARATOR = "-"
     public static let ASSIGN_TYPE_PRIVATE = 1
     public static let ASSIGN_TYPE_GLOBAL = 2
+    public static let COUNTRY_CODE_VN = "+84"
     required public init?(map: Map) {
         
     }
@@ -36,9 +37,24 @@ public class Caller: Mappable{
                 category.callerId = callerId
             }
         }
+        if callerNumber != nil {
+            callerNumber = Caller.trimPrefixPhoneNumber(input: callerNumber!)
+        }
         
     }
-    
+    public static func trimPrefixPhoneNumber(input: String) -> String{
+        var result = input
+        if input.hasPrefix("0"){
+            let index = input.index(after: input.startIndex)
+            result = input.substring(from: index)
+        }
+        if input.hasPrefix(Caller.COUNTRY_CODE_VN){
+            let index = input.index(input.startIndex, offsetBy: 3)
+            result = input.substring(from: index)
+        }
+        print("Phone Number " + result)
+        return result
+    }
     public func categoryIds() -> String{
         var s = ""
         if categories != nil {
@@ -57,7 +73,12 @@ public class Caller: Mappable{
     public func categoryNames() -> String{
         var s = ""
         for cat in categories! {
-            s += String(cat.categoryName!) + Caller.CATEGORY_NAME_SEPARATOR
+            if s == "" {
+                s += String(cat.categoryName!)
+            }else{
+                s += Caller.CATEGORY_NAME_SEPARATOR + String(cat.categoryName!)
+            }
+            
         }
         return s
     }
@@ -71,7 +92,7 @@ public class Caller: Mappable{
         }
         
         caller.countryCode = countryCode
-        caller.callerNumber = callerNumber
+        caller.callerNumber = trimPrefixPhoneNumber(input: callerNumber!)
         caller.registeredDate = registeredDate
         caller.registeredByDevice = registeredByDevice
         caller.isLocal = isLocal

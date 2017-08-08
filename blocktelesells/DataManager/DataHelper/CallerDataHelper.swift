@@ -94,7 +94,11 @@ class CallerDataHelper: DataHelperProtocol {
             do{
                 let existingCallers = try findByCallerNumber(callerNumber: item.callerNumber!)
                 if existingCallers.count > 0 {
-                    return existingCallers[0].callerId!
+                    existingCallers[0].isLocal = true
+                    if try update(cid: existingCallers[0].callerId!, updatedItem: existingCallers[0]){
+                        return existingCallers[0].callerId!
+                    }
+                    
                 }
                 if try item.callerId == nil || ( find(id: item.callerId!)) == nil{
                     let rowId: Int64?

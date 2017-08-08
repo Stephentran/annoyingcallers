@@ -15,13 +15,13 @@
          contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
+               value = "window?.rootViewController">
             </PersistentString>
             <PersistentString
                value = "window?.rootViewController.childViewControllers">
             </PersistentString>
             <PersistentString
-               value = "window?.rootViewController">
+               value = "window?.rootViewController as?MainViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -33,6 +33,17 @@
          <PersistentStrings>
             <PersistentString
                value = "self.allowCellular">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Caller.createCaller(callerId : Int64?, countryCode : String?, callerNumber : String?, registeredByDevice : String?, registeredDate : Date?, isLocal : Bool, isLocalBlocked : Bool, categories : [CallerCategory?]) -&gt; Caller:Caller.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "trimPrefixPhoneNumber(input: callerNumber!)">
+            </PersistentString>
+            <PersistentString
+               value = "caller.callerNumber">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -136,6 +147,11 @@
       </ContextState>
       <ContextState
          contextName = "CallerDataHelper.findAll() throws -&gt; [Caller]?:CallerDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item[CallerDataHelper.callerNumber]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "ProviderDelegate.(reportIncomingCall(uuid : UUID, handle : String, hasVideo : Bool, completion : (NSError?) -&gt; ()?) -&gt; ()).(closure #1):ProviderDelegate.swift">
@@ -264,6 +280,17 @@
       </ContextState>
       <ContextState
          contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CallerDataHelper.findAllByLocal(isLocal : Bool) throws -&gt; [Caller]:CallerDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: 36)">
+            </PersistentString>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">

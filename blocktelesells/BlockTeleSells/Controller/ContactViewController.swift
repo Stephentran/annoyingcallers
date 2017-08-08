@@ -40,7 +40,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
         super.viewDidLoad()
         saveButton.isEnabled = false
         
-        validator.registerField(contactPhoneNumber, rules: [RequiredRule()])
+        validator.registerField(contactPhoneNumber, rules: [RequiredRule(), MinLengthRule(length: 13), MaxLengthRule(length: 16)])
         
         countryPicker.countryPickerDelegate = self
         countryPicker.showPhoneNumbers = true
@@ -101,7 +101,7 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
             owningNavigationController.popViewController(animated: true)
         }
         else {
-            fatalError("The ContactViewController is not inside a navigation controller.")
+            print("The ContactViewController is not inside a navigation controller.")
         }
     }
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
@@ -131,12 +131,13 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else {
+            backToBlockListView()
             LocalDataManager.sharedInstance.startDataRequest(reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)
         }
 
     }
     func completionHandler(result: Bool){
-        backToBlockListView()
+        
         
     }
      //MARK: UITextFieldDelegate 

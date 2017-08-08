@@ -63,7 +63,7 @@ class ContactTableViewController: UITableViewController {
         }
         
         let caller = callers[indexPath.row]
-        cell.contactPhoneNumber.text = caller.callerNumber
+        cell.contactPhoneNumber.text = "0" + caller.callerNumber!
         cell.category.text = caller.categoryNames()
         cell.caller = caller
         cell.callerBlocked.setOn(caller.isLocalBlocked, animated: false)

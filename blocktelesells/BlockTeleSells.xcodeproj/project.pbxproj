@@ -45,7 +45,6 @@
 		61AB7D471F08B0890033D4FB /* BlockTeleSellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */; };
 		61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */; };
 		61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */; };
-		61AB7D5F1F08B28C0033D4FB /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */; };
 		61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D581F08B28C0033D4FB /* ContactViewController.swift */; };
 		61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D6F1F08BE960033D4FB /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D6E1F08BE960033D4FB /* CallDirectoryHandler.swift */; };
@@ -233,7 +232,6 @@
 		61AB7D481F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
 		61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ../ContactTableViewController.swift; sourceTree = "<group>"; };
-		61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		61AB7D581F08B28C0033D4FB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		61AB7D641F08BE690033D4FB /* MMWormhole.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMWormhole.framework; path = Carthage/Build/iOS/MMWormhole.framework; sourceTree = "<group>"; };
 		61AB7D651F08BE690033D4FB /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
@@ -397,6 +395,7 @@
 		61AB7D251F08B0880033D4FB /* BlockTeleSells */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17B61F3630D500C32723 /* Validation */,
 				61AB7E021F193C6C0033D4FB /* Common */,
 				61AB7D821F08C8270033D4FB /* BlockTeleSells.entitlements */,
 				61AB7D561F08B28C0033D4FB /* Controller */,
@@ -434,7 +433,6 @@
 			children = (
 				61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */,
 				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
-				61AB7D571F08B28C0033D4FB /* ContactDetailViewController.swift */,
 				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
 				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
 			);
@@ -586,6 +584,13 @@
 				61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		61DE17B61F3630D500C32723 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -880,7 +885,6 @@
 			files = (
 				61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */,
 				61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */,
-				61AB7D5F1F08B28C0033D4FB /* ContactDetailViewController.swift in Sources */,
 				61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */,
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,

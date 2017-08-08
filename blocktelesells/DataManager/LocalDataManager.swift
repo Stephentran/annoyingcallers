@@ -14,7 +14,7 @@ extension DefaultsKeys {
     static let keytToken = DefaultsKey<String?>("keyToken")
 }
 public final class LocalDataManager {
-    public static let SERVICE_URL = "http://192.168.1.9:8000/api/"
+    public static let SERVICE_URL = "http://192.168.1.11:8000/api/"
     public static let SERVICE_CALLER_URL = SERVICE_URL + "callers/"
     public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
     public static let SERVICE_TOKEN_URL = SERVICE_URL + "devices/"
