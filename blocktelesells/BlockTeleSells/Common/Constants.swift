@@ -16,6 +16,8 @@ class Constants {
     public static let USING_CELLULAR_FOR_REQUEST = true
     public static let REGISTERED_DEVICE_ID = "IphoneDuong"
     public static let KEY_CHECK_FIRST_TIME = "isAppAlreadyLaunchedOnce"
+    public static let BLOCK_CALL_NOT_ENABLED = "Chưa bật chế độ chặn cuộc gọi"
+    public static let LATEST_UPDATED = "Mới nhất: "
     
 
 }

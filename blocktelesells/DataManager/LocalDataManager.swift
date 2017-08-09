@@ -9,12 +9,14 @@ import SwiftyUserDefaults
 import SwiftyJSON
 import CallKit
 import Reachability
+import MMWormhole
 extension DefaultsKeys {
     static let updatedStatus = DefaultsKey<Date?>("updatedStatus")
     static let keytToken = DefaultsKey<String?>("keyToken")
+    static let autoUpdate = DefaultsKey<Bool?>("autoUpdate")
 }
 public final class LocalDataManager {
-    public static let SERVICE_URL = "http://192.168.1.11:8000/api/"
+    public static let SERVICE_URL = "http://192.168.1.9:8000/api/"
     public static let SERVICE_CALLER_URL = SERVICE_URL + "callers/"
     public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
     public static let SERVICE_TOKEN_URL = SERVICE_URL + "devices/"
@@ -25,6 +27,7 @@ public final class LocalDataManager {
     public static let COUNTRY_CODE_DEFAULT = "84"
     public static let  API_REQUEST_KEY = "API-REQUEST-KEY"
     public static let  PLATFORM = "iOS"
+    public static let wormhole = MMWormhole(applicationGroupIdentifier: "group.stephentran.callblock", optionalDirectory: "blockcall")
     let CALLER_DATA_HELPER = CallerDataHelper(tableName: "Callers")
     let CATEGORY_DATA_HELPER = CategoryDataHelper(tableName: "Categories")
     let CALLER_CATEGORY_DATA_HELPER = CallerCategoryDataHelper(tableName: "CallerCategories")
@@ -32,7 +35,11 @@ public final class LocalDataManager {
     public static let sharedInstance = LocalDataManager()
     public func getPhoneNumbers() -> [Int64: String] {
         do{
-            let callers = try CALLER_DATA_HELPER.findAllByLocalBlocked(isLocalBlocked: false);
+            var callers = [Caller]()
+            if LocalDataManager.sharedInstance.loadBlockCall() == false {
+                callers = try CALLER_DATA_HELPER.findAll()!
+            }
+            
             return formatPhoneNumber(callers: callers)
         }catch{
             print("Unable to load phone numbers")
@@ -43,7 +50,10 @@ public final class LocalDataManager {
     public func getBlockedPhoneNumbers() -> [Int64: String] {
         
         do{
-            let callers = try CALLER_DATA_HELPER.findAllByLocalBlocked(isLocalBlocked: true);
+            var callers = [Caller]()
+            if LocalDataManager.sharedInstance.loadBlockCall() == true {
+                callers += try CALLER_DATA_HELPER.findAll()!
+            }
             return formatPhoneNumber(callers: callers)
         }catch{
             print("Unable to load phone numbers")
@@ -86,6 +96,27 @@ public final class LocalDataManager {
         
     }
     
+    public func saveBlockCall(blockCall: Bool){
+        LocalDataManager.wormhole.passMessageObject(blockCall as NSCoding, identifier: "allowBlockFlag")
+    }
+    public func loadBlockCall() -> Bool?{
+        let obj = LocalDataManager.wormhole.message(withIdentifier: "allowBlockFlag")
+        if obj != nil {
+            return obj as? Bool
+        }
+        return nil
+        
+    }
+    public func saveAutoUpdate(autoUpdate: Bool){
+        Defaults[.autoUpdate] = autoUpdate
+    }
+    public func loadAutoUpdate() -> Bool?{
+        if Defaults[.autoUpdate] != nil {
+            return Defaults[.autoUpdate]!
+        }
+        return nil
+        
+    }
     public func getLoadedCallers() -> [Caller]{
         var callers = [Caller]()
         do{

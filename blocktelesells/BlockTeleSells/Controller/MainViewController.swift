@@ -13,6 +13,7 @@ import CallKit
 import AVFoundation
 class MainViewController: UIViewController , CXCallObserverDelegate{
     
+    
     @IBOutlet weak var gotoList: UIButton!
     var callObserver: CXCallObserver?
     let reachability = Reachability()!
@@ -22,8 +23,13 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         self.callObserver?.setDelegate(self, queue: nil)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-       
+        if LocalDataManager.sharedInstance.loadBlockCall() == nil {
+            LocalDataManager.sharedInstance.saveBlockCall(blockCall: false)
+        }
+        if LocalDataManager.sharedInstance.loadAutoUpdate() == nil {
+            LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: true)
+        }
+        setUpdatedStatus()
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -47,12 +53,24 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     */
     
     private func loadData(){
+        setUpdatedStatus()
         self.updateData()
-        let latestDate = LocalDataManager.sharedInstance.loadUpdatedStatus()
-        if(latestDate != nil){
-            self.updatedStatus.text = Common.sharedInstance.formatDate(date: latestDate!)
-        }
         
+    }
+    private func setUpdatedStatus(){
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: LocalDataManager.CBX_IDENTIFIER, completionHandler: {(status, error) -> Void in
+            var message = Constants.LATEST_UPDATED + Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if status != CXCallDirectoryManager.EnabledStatus.enabled {
+                message = Constants.BLOCK_CALL_NOT_ENABLED
+            }
+            let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
+            if nav?.visibleViewController is MainViewController {
+                self.updatedStatus.text = message
+            }
+        })
         
     }
     public func updateData(){
@@ -61,9 +79,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     }
     
     func completionHandler(result: Bool){
-        if result == true {
-            self.updatedStatus.text = Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
-        }
+        setUpdatedStatus()
     }
     
     //MARK: CallObserver
@@ -77,20 +93,6 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         if call.isOutgoing == false && call.hasConnected == false && call.hasEnded == false {
             print("Incoming " + call.uuid.uuidString + " " + call.uuid.description)
             
-            /*
-            let cXSetMutedCallAction = CXSetMutedCallAction(call:call.uuid, muted: true)
-            let callController = CXCallController()
-            // 2.
-            let transaction = CXTransaction(action: cXSetMutedCallAction)
-            callController.request(transaction) {
-                error in
-                if let error = error {
-                    print("Error requesting transaction: \(error)")
-                } else {
-                    print("Requested transaction successfully")
-                }
-            }
-            */
         }
 
         if call.hasConnected == true && call.hasEnded == false {

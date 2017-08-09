@@ -106,6 +106,9 @@
 		61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17B41F35A3E500C32723 /* Data-List-icon.png */; };
+		61DE17BA1F3A20A300C32723 /* info-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17B91F3A20A300C32723 /* info-icon.png */; };
+		61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17BB1F3A218E00C32723 /* Help-icon.png */; };
+		61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +279,9 @@
 		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
 		61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Carthage/Build/iOS/PhoneNumberKit.framework; sourceTree = "<group>"; };
 		61DE17B41F35A3E500C32723 /* Data-List-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data-List-icon.png"; sourceTree = "<group>"; };
+		61DE17B91F3A20A300C32723 /* info-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-icon.png"; sourceTree = "<group>"; };
+		61DE17BB1F3A218E00C32723 /* Help-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Help-icon.png"; sourceTree = "<group>"; };
+		61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +441,7 @@
 				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
 				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
 				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
+				61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -503,6 +510,8 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17BB1F3A218E00C32723 /* Help-icon.png */,
+				61DE17B91F3A20A300C32723 /* info-icon.png */,
 				61DE17B41F35A3E500C32723 /* Data-List-icon.png */,
 				615FBDBA1F30F6520094D6EA /* report-go-icon.png */,
 				615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */,
@@ -813,6 +822,7 @@
 				615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */,
 				61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */,
 				615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */,
+				61DE17BA1F3A20A300C32723 /* info-icon.png in Resources */,
 				615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */,
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
 				615FBDB71F30F48E0094D6EA /* Left_arrow-128.png in Resources */,
@@ -827,6 +837,7 @@
 				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
 				61AB7D2E1F08B0880033D4FB /* Assets.xcassets in Resources */,
 				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
+				61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */,
 				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
@@ -886,6 +897,7 @@
 				61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */,
 				61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */,
 				61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */,
+				61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */,
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import  UserNotifications
+import DataManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -61,8 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             for viewController in viewControllers {
                 if let mainViewController = viewController as? MainViewController {
-                    mainViewController.updateData()
-                    completionHandler(UIBackgroundFetchResult.newData)
+                    if LocalDataManager.sharedInstance.loadAutoUpdate() == true {
+                        mainViewController.updateData()
+                        completionHandler(UIBackgroundFetchResult.newData)
+                    }
+                    
                 }
             }
         }

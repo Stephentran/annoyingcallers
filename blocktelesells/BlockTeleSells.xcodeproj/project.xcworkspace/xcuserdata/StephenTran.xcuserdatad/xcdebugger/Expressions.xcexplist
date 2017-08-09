@@ -9,6 +9,14 @@
          contextName = "Caller.categoryNames() -&gt; String:Caller.swift">
       </ContextState>
       <ContextState
+         contextName = "MainViewController.viewDidLoad() -&gt; ():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.loadBlockCall()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
@@ -119,6 +127,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LocalDataManager.loadBlockCall() -&gt; Bool?:LocalDataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.wormhole.message(withIdentifier: &quot;allowBlockFlag&quot;) as! Bool">
+            </PersistentString>
+            <PersistentString
+               value = "Defaults[.blockCall]!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataService.(getContacts() -&gt; [Caller]).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
@@ -220,6 +239,14 @@
          <PersistentStrings>
             <PersistentString
                value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.blockCalls(UISwitch) -&gt; ():SettingsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.loadBlockCall()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
