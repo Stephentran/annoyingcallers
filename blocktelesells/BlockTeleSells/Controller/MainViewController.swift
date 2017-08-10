@@ -29,7 +29,6 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         if LocalDataManager.sharedInstance.loadAutoUpdate() == nil {
             LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: true)
         }
-        setUpdatedStatus()
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +67,10 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
             }
             let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
             if nav?.visibleViewController is MainViewController {
-                self.updatedStatus.text = message
+                DispatchQueue.main.async() {
+                    self.updatedStatus.text = message
+                }
+                
             }
         })
         

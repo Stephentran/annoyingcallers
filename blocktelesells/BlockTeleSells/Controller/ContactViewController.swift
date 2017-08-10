@@ -49,18 +49,15 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
         // Handle the text field’s user input through delegate callbacks.
         contactPhoneNumber.delegate = self
         
-         // Enable the Save button only if the text field has a valid Meal name.
-        //updateSaveButtonState()
-
+        
 
         // Connect data:
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
+        countryPicker.setLocale(Constants.LOCALE_DEFAULT)
         
-        //let tap = UITapGestureRecognizer(target: self, action: "handleKeyboard:")
-        //view.addGestureRecognizer(tap)
+        //Handling tap on screen for exit keyboad
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapView(_:)))
-        //tapRecognizer.addTarget(self, action: #selector(ViewController.didTapView))
         self.view.addGestureRecognizer(tapRecognizer)
         
     }
@@ -110,12 +107,11 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     }
     func submitNewNumber()  {
         let phoneNumber = contactPhoneNumber.text?.replacingOccurrences(of: " ", with: "") ?? ""
-        let countryCode = self.countryCode.text ?? ""
         
         let callerCategory = CallerCategory.createCallerCategory(id: nil, callerId: nil, categoryId: categorySelected?.categoryId, assignType: Caller.ASSIGN_TYPE_PRIVATE, assignedDate: Date(), isLocal: true, categoryName: categorySelected?.categoryName)
         let caller = Caller.createCaller(
                         callerId: nil,
-                        countryCode: countryCode,
+                        countryCode: Constants.COUNTRY_CODE_DEFAULT,
                         callerNumber: phoneNumber,
                         registeredByDevice: UIDevice.current.identifierForVendor!.uuidString,
                         registeredDate: Date(),
@@ -166,8 +162,10 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     //MARK: MRCountryPickerDelegate
     // a picker item was selected
     func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+        /*
         self.countryName.text = name
         self.countryCode.text = countryCode
+        */
         self.phoneCode.text = phoneCode
         self.countryFlag.image = flag
     }
