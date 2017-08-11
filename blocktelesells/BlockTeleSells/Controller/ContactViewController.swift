@@ -39,7 +39,6 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
-        
         validator.registerField(contactPhoneNumber, rules: [RequiredRule(), MinLengthRule(length: 13), MaxLengthRule(length: 16)])
         
         countryPicker.countryPickerDelegate = self
@@ -203,7 +202,11 @@ class ContactViewController: UIViewController, UITextFieldDelegate, ValidationDe
         categorySelected = pickerData?[row]
         saveButton.isEnabled = true
     }
-    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData?[row]
+        let myTitle = NSAttributedString(string: (titleData?.categoryName)!, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 19.0),NSForegroundColorAttributeName:UIColor.yellow])
+        return myTitle
+    }
     //MARK: ValidationDelegate
     func validationSuccessful() {
         submitNewNumber()

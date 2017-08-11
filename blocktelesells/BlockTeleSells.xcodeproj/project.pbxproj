@@ -109,6 +109,8 @@
 		61DE17BA1F3A20A300C32723 /* info-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17B91F3A20A300C32723 /* info-icon.png */; };
 		61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17BB1F3A218E00C32723 /* Help-icon.png */; };
 		61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */; };
+		61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17CD1F3E20DF00C32723 /* main_bg.png */; };
+		61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +284,8 @@
 		61DE17B91F3A20A300C32723 /* info-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-icon.png"; sourceTree = "<group>"; };
 		61DE17BB1F3A218E00C32723 /* Help-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Help-icon.png"; sourceTree = "<group>"; };
 		61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		61DE17CD1F3E20DF00C32723 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
+		61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_bk_final_choice.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,6 +514,8 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17CD1F3E20DF00C32723 /* main_bg.png */,
+				61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */,
 				61DE17BB1F3A218E00C32723 /* Help-icon.png */,
 				61DE17B91F3A20A300C32723 /* info-icon.png */,
 				61DE17B41F35A3E500C32723 /* Data-List-icon.png */,
@@ -827,6 +833,7 @@
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
 				615FBDB71F30F48E0094D6EA /* Left_arrow-128.png in Resources */,
 				615FBDA71F30DC070094D6EA /* Apps-system-software-update-icon.png in Resources */,
+				61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */,
 				615FBDA51F30DB460094D6EA /* gear-set.png in Resources */,
@@ -845,6 +852,7 @@
 				615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */,
 				615FBDBB1F30F6520094D6EA /* report-go-icon.png in Resources */,
 				615FBD8F1F2F9DFE0094D6EA /* Splashscreen-01.png in Resources */,
+				61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */,
 				615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */,
 				615FBD951F30D39E0094D6EA /* background1.jpeg in Resources */,
 				615FBDB11F30EE950094D6EA /* Apps-text-editor-icon.png in Resources */,
