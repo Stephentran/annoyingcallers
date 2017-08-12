@@ -16,7 +16,7 @@ extension DefaultsKeys {
     static let autoUpdate = DefaultsKey<Bool?>("autoUpdate")
 }
 public final class LocalDataManager {
-    public static let SERVICE_URL = "http://192.168.1.7:8000/api/"
+    public static let SERVICE_URL = "http://103.48.191.84:8000/api/"
     public static let SERVICE_CALLER_URL = SERVICE_URL + "callers/"
     public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
     public static let SERVICE_TOKEN_URL = SERVICE_URL + "devices/"

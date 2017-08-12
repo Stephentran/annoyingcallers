@@ -58,7 +58,10 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     }
     private func setUpdatedStatus(){
         CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: LocalDataManager.CBX_IDENTIFIER, completionHandler: {(status, error) -> Void in
-            var message = Constants.LATEST_UPDATED + Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
+            var message = Constants.NOT_CONNECT_SERVER
+            if LocalDataManager.sharedInstance.loadUpdatedStatus() != nil {
+                message = Constants.LATEST_UPDATED + Common.sharedInstance.formatDate(date: LocalDataManager.sharedInstance.loadUpdatedStatus()!)
+            }
             if let error = error {
                 print(error.localizedDescription)
             }

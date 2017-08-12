@@ -18,6 +18,7 @@ class Constants {
     public static let KEY_CHECK_FIRST_TIME = "isAppAlreadyLaunchedOnce"
     public static let BLOCK_CALL_NOT_ENABLED = "Chưa bật chế độ chặn cuộc gọi"
     public static let LATEST_UPDATED = "Mới nhất: "
+    public static let NOT_CONNECT_SERVER = "Chưa kết nối được trung tâm dữ liệu"
     
 
 }
