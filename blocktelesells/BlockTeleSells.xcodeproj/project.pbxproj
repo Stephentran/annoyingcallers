@@ -111,6 +111,10 @@
 		61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */; };
 		61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17CD1F3E20DF00C32723 /* main_bg.png */; };
 		61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */; };
+		61DE17EB1F41FD4100C32723 /* arrow2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E71F41FD4100C32723 /* arrow2424.png */; };
+		61DE17EC1F41FD4100C32723 /* hoi2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E81F41FD4100C32723 /* hoi2424.png */; };
+		61DE17ED1F41FD4100C32723 /* note2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E91F41FD4100C32723 /* note2424.png */; };
+		61DE17EE1F41FD4100C32723 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17EA1F41FD4100C32723 /* save.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +290,10 @@
 		61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		61DE17CD1F3E20DF00C32723 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
 		61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_bk_final_choice.png; sourceTree = "<group>"; };
+		61DE17E71F41FD4100C32723 /* arrow2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow2424.png; sourceTree = "<group>"; };
+		61DE17E81F41FD4100C32723 /* hoi2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoi2424.png; sourceTree = "<group>"; };
+		61DE17E91F41FD4100C32723 /* note2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note2424.png; sourceTree = "<group>"; };
+		61DE17EA1F41FD4100C32723 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +522,10 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61DE17E71F41FD4100C32723 /* arrow2424.png */,
+				61DE17E81F41FD4100C32723 /* hoi2424.png */,
+				61DE17E91F41FD4100C32723 /* note2424.png */,
+				61DE17EA1F41FD4100C32723 /* save.png */,
 				61DE17CD1F3E20DF00C32723 /* main_bg.png */,
 				61DE17CE1F3E20DF00C32723 /* new_bk_final_choice.png */,
 				61DE17BB1F3A218E00C32723 /* Help-icon.png */,
@@ -821,6 +833,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
+				61DE17ED1F41FD4100C32723 /* note2424.png in Resources */,
+				61DE17EB1F41FD4100C32723 /* arrow2424.png in Resources */,
 				615FBD8D1F2F9DFE0094D6EA /* settings.jpg in Resources */,
 				615FBDAF1F30EE310094D6EA /* timer2.png in Resources */,
 				615FBDB91F30F5810094D6EA /* Arrow-undo-icon.png in Resources */,
@@ -843,11 +857,13 @@
 				615FBDAD1F30ED8B0094D6EA /* timer.png in Resources */,
 				61AB7DDB1F0E9C100033D4FB /* settings2.jpg in Resources */,
 				61AB7D2E1F08B0880033D4FB /* Assets.xcassets in Resources */,
+				61DE17EE1F41FD4100C32723 /* save.png in Resources */,
 				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
 				61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */,
 				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
+				61DE17EC1F41FD4100C32723 /* hoi2424.png in Resources */,
 				615FBD9D1F30D7280094D6EA /* phone_ios7_ios_7.png in Resources */,
 				615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */,
 				615FBDBB1F30F6520094D6EA /* report-go-icon.png in Resources */,

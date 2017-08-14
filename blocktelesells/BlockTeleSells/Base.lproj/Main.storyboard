@@ -66,12 +66,12 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="p6D-Fa-Chy">
-                        <barButtonItem key="leftBarButtonItem" image="Help-icon.png" id="n20-Tk-00F">
+                        <barButtonItem key="leftBarButtonItem" image="hoi2424.png" id="n20-Tk-00F">
                             <connections>
                                 <segue destination="KQH-n9-t8A" kind="show" id="K2b-28-t3i"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="05-Edit-icon.png" id="3B1-V4-PZv">
+                        <barButtonItem key="rightBarButtonItem" image="note2424.png" id="3B1-V4-PZv">
                             <connections>
                                 <segue destination="EWu-wY-ahh" kind="show" id="uHg-UJ-qC3"/>
                             </connections>
@@ -153,7 +153,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cấu hình" id="Heg-oX-wl0">
-                        <barButtonItem key="leftBarButtonItem" image="Arrow-undo-icon.png" id="XwT-5u-d9y">
+                        <barButtonItem key="leftBarButtonItem" image="arrow2424.png" id="XwT-5u-d9y">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="AcB-78-hVF"/>
                             </connections>
@@ -249,13 +249,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Thông tin số mới" id="b0F-LN-W0n">
-                        <barButtonItem key="leftBarButtonItem" image="Arrow-undo-icon.png" id="Kk5-sl-aul">
+                        <barButtonItem key="leftBarButtonItem" image="arrow2424.png" id="Kk5-sl-aul">
                             <connections>
                                 <action selector="cancelButton:" destination="EWu-wY-ahh" id="CcD-FN-oJn"/>
                                 <segue destination="BYZ-38-t0r" kind="show" id="f6W-ji-AQm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="report-go-icon.png" id="Fpn-j0-s5l">
+                        <barButtonItem key="rightBarButtonItem" image="save.png" id="Fpn-j0-s5l">
                             <connections>
                                 <action selector="saveAction:" destination="EWu-wY-ahh" id="hAJ-MF-XLk"/>
                             </connections>
@@ -374,10 +374,12 @@
     <resources>
         <image name="05-Edit-icon.png" width="24" height="24"/>
         <image name="Arrow-undo-icon.png" width="24" height="24"/>
-        <image name="Help-icon.png" width="24" height="24"/>
+        <image name="arrow2424.png" width="24" height="24"/>
+        <image name="hoi2424.png" width="24" height="24"/>
         <image name="main_bg.png" width="1152" height="2048"/>
         <image name="new_bk_final_choice.png" width="1085" height="1926"/>
-        <image name="report-go-icon.png" width="24" height="24"/>
+        <image name="note2424.png" width="24" height="24"/>
+        <image name="save.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AcB-78-hVF"/>
