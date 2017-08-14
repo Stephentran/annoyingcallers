@@ -17,7 +17,7 @@
                BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
                BuildableName = "DataManager.framework"
                BlueprintName = "DataManager"
-               ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+               ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +48,7 @@
             BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
             BuildableName = "DataManager.framework"
             BlueprintName = "DataManager"
-            ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+            ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,7 +66,7 @@
             BlueprintIdentifier = "61AB7DB01F0957C40033D4FB"
             BuildableName = "DataManager.framework"
             BlueprintName = "DataManager"
-            ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+            ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -226,17 +226,17 @@
 		615FBDB61F30F48E0094D6EA /* Left_arrow-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Left_arrow-128.png"; sourceTree = "<group>"; };
 		615FBDB81F30F5810094D6EA /* Arrow-undo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-undo-icon.png"; sourceTree = "<group>"; };
 		615FBDBA1F30F6520094D6EA /* report-go-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report-go-icon.png"; sourceTree = "<group>"; };
-		61AB7D231F08B0880033D4FB /* BlockTeleSells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTeleSells.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AB7D231F08B0880033D4FB /* Phiền.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phiền.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D261F08B0880033D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61AB7D281F08B0880033D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61AB7D2B1F08B0880033D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61AB7D2D1F08B0880033D4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61AB7D301F08B0880033D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61AB7D321F08B0880033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61AB7D371F08B0890033D4FB /* BlockTeleSellsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTeleSellsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AB7D371F08B0890033D4FB /* PhiềnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PhiềnTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D3B1F08B0890033D4FB /* BlockTeleSellsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTeleSellsTests.swift; sourceTree = "<group>"; };
 		61AB7D3D1F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61AB7D421F08B0890033D4FB /* BlockTeleSellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTeleSellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AB7D421F08B0890033D4FB /* PhiềnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PhiềnUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTeleSellsUITests.swift; sourceTree = "<group>"; };
 		61AB7D481F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -400,9 +400,9 @@
 		61AB7D241F08B0880033D4FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61AB7D231F08B0880033D4FB /* BlockTeleSells.app */,
-				61AB7D371F08B0890033D4FB /* BlockTeleSellsTests.xctest */,
-				61AB7D421F08B0890033D4FB /* BlockTeleSellsUITests.xctest */,
+				61AB7D231F08B0880033D4FB /* Phiền.app */,
+				61AB7D371F08B0890033D4FB /* PhiềnTests.xctest */,
+				61AB7D421F08B0890033D4FB /* PhiềnUITests.xctest */,
 				61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */,
 				61AB7DB11F0957C40033D4FB /* DataManager.framework */,
 				61AB7DB91F0957C40033D4FB /* DataManagerTests.xctest */,
@@ -634,9 +634,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		61AB7D221F08B0880033D4FB /* BlockTeleSells */ = {
+		61AB7D221F08B0880033D4FB /* Phiền */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61AB7D4B1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSells" */;
+			buildConfigurationList = 61AB7D4B1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "Phiền" */;
 			buildPhases = (
 				61AB7D1F1F08B0880033D4FB /* Sources */,
 				61AB7D201F08B0880033D4FB /* Frameworks */,
@@ -650,14 +650,14 @@
 				61AB7D721F08BE960033D4FB /* PBXTargetDependency */,
 				61AB7DC51F0957C50033D4FB /* PBXTargetDependency */,
 			);
-			name = BlockTeleSells;
+			name = "Phiền";
 			productName = BlockTeleSells;
-			productReference = 61AB7D231F08B0880033D4FB /* BlockTeleSells.app */;
+			productReference = 61AB7D231F08B0880033D4FB /* Phiền.app */;
 			productType = "com.apple.product-type.application";
 		};
-		61AB7D361F08B0890033D4FB /* BlockTeleSellsTests */ = {
+		61AB7D361F08B0890033D4FB /* PhiềnTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61AB7D4E1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsTests" */;
+			buildConfigurationList = 61AB7D4E1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "PhiềnTests" */;
 			buildPhases = (
 				61AB7D331F08B0890033D4FB /* Sources */,
 				61AB7D341F08B0890033D4FB /* Frameworks */,
@@ -668,14 +668,14 @@
 			dependencies = (
 				61AB7D391F08B0890033D4FB /* PBXTargetDependency */,
 			);
-			name = BlockTeleSellsTests;
+			name = "PhiềnTests";
 			productName = BlockTeleSellsTests;
-			productReference = 61AB7D371F08B0890033D4FB /* BlockTeleSellsTests.xctest */;
+			productReference = 61AB7D371F08B0890033D4FB /* PhiềnTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		61AB7D411F08B0890033D4FB /* BlockTeleSellsUITests */ = {
+		61AB7D411F08B0890033D4FB /* PhiềnUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61AB7D511F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsUITests" */;
+			buildConfigurationList = 61AB7D511F08B0890033D4FB /* Build configuration list for PBXNativeTarget "PhiềnUITests" */;
 			buildPhases = (
 				61AB7D3E1F08B0890033D4FB /* Sources */,
 				61AB7D3F1F08B0890033D4FB /* Frameworks */,
@@ -686,9 +686,9 @@
 			dependencies = (
 				61AB7D441F08B0890033D4FB /* PBXTargetDependency */,
 			);
-			name = BlockTeleSellsUITests;
+			name = "PhiềnUITests";
 			productName = BlockTeleSellsUITests;
-			productReference = 61AB7D421F08B0890033D4FB /* BlockTeleSellsUITests.xctest */;
+			productReference = 61AB7D421F08B0890033D4FB /* PhiềnUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		61AB7D6B1F08BE960033D4FB /* BTSExtension */ = {
@@ -804,7 +804,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 61AB7D1E1F08B0880033D4FB /* Build configuration list for PBXProject "BlockTeleSells" */;
+			buildConfigurationList = 61AB7D1E1F08B0880033D4FB /* Build configuration list for PBXProject "Phiền" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -817,9 +817,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				61AB7D221F08B0880033D4FB /* BlockTeleSells */,
-				61AB7D361F08B0890033D4FB /* BlockTeleSellsTests */,
-				61AB7D411F08B0890033D4FB /* BlockTeleSellsUITests */,
+				61AB7D221F08B0880033D4FB /* Phiền */,
+				61AB7D361F08B0890033D4FB /* PhiềnTests */,
+				61AB7D411F08B0890033D4FB /* PhiềnUITests */,
 				61AB7D6B1F08BE960033D4FB /* BTSExtension */,
 				61AB7DB01F0957C40033D4FB /* DataManager */,
 				61AB7DB81F0957C40033D4FB /* DataManagerTests */,
@@ -989,12 +989,12 @@
 /* Begin PBXTargetDependency section */
 		61AB7D391F08B0890033D4FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 61AB7D221F08B0880033D4FB /* BlockTeleSells */;
+			target = 61AB7D221F08B0880033D4FB /* Phiền */;
 			targetProxy = 61AB7D381F08B0890033D4FB /* PBXContainerItemProxy */;
 		};
 		61AB7D441F08B0890033D4FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 61AB7D221F08B0880033D4FB /* BlockTeleSells */;
+			target = 61AB7D221F08B0880033D4FB /* Phiền */;
 			targetProxy = 61AB7D431F08B0890033D4FB /* PBXContainerItemProxy */;
 		};
 		61AB7D721F08BE960033D4FB /* PBXTargetDependency */ = {
@@ -1009,7 +1009,7 @@
 		};
 		61AB7DBE1F0957C50033D4FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 61AB7D221F08B0880033D4FB /* BlockTeleSells */;
+			target = 61AB7D221F08B0880033D4FB /* Phiền */;
 			targetProxy = 61AB7DBD1F0957C50033D4FB /* PBXContainerItemProxy */;
 		};
 		61AB7DC51F0957C50033D4FB /* PBXTargetDependency */ = {
@@ -1183,7 +1183,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ste.BlockTeleSellsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockTeleSells.app/BlockTeleSells";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phiền.app/Phiền";
 			};
 			name = Debug;
 		};
@@ -1198,7 +1198,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ste.BlockTeleSellsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockTeleSells.app/BlockTeleSells";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phiền.app/Phiền";
 			};
 			name = Release;
 		};
@@ -1343,7 +1343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ste.DataManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockTeleSells.app/BlockTeleSells";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phiền.app/Phiền";
 			};
 			name = Debug;
 		};
@@ -1357,14 +1357,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ste.DataManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockTeleSells.app/BlockTeleSells";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phiền.app/Phiền";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		61AB7D1E1F08B0880033D4FB /* Build configuration list for PBXProject "BlockTeleSells" */ = {
+		61AB7D1E1F08B0880033D4FB /* Build configuration list for PBXProject "Phiền" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61AB7D491F08B0890033D4FB /* Debug */,
@@ -1373,7 +1373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61AB7D4B1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSells" */ = {
+		61AB7D4B1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "Phiền" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61AB7D4C1F08B0890033D4FB /* Debug */,
@@ -1382,7 +1382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61AB7D4E1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsTests" */ = {
+		61AB7D4E1F08B0890033D4FB /* Build configuration list for PBXNativeTarget "PhiềnTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61AB7D4F1F08B0890033D4FB /* Debug */,
@@ -1391,7 +1391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61AB7D511F08B0890033D4FB /* Build configuration list for PBXNativeTarget "BlockTeleSellsUITests" */ = {
+		61AB7D511F08B0890033D4FB /* Build configuration list for PBXNativeTarget "PhiềnUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61AB7D521F08B0890033D4FB /* Debug */,

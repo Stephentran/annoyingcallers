@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0830"
+   wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +15,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "61AB7D6B1F08BE960033D4FB"
+               BuildableName = "BTSExtension.appex"
+               BlueprintName = "BTSExtension"
+               ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "61AB7D221F08B0880033D4FB"
-               BuildableName = "BlockTeleSells.app"
-               BlueprintName = "BlockTeleSells"
-               ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+               BuildableName = "Phie&#x302;&#x300;n.app"
+               BlueprintName = "Phie&#x302;&#x300;n"
+               ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +47,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "61AB7D361F08B0890033D4FB"
-               BuildableName = "BlockTeleSellsTests.xctest"
-               BlueprintName = "BlockTeleSellsTests"
-               ReferencedContainer = "container:BlockTeleSells.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "61AB7D411F08B0890033D4FB"
-               BuildableName = "BlockTeleSellsUITests.xctest"
-               BlueprintName = "BlockTeleSellsUITests"
-               ReferencedContainer = "container:BlockTeleSells.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "61AB7DB81F0957C40033D4FB"
                BuildableName = "DataManagerTests.xctest"
                BlueprintName = "DataManagerTests"
-               ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+               ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61AB7D221F08B0880033D4FB"
-            BuildableName = "BlockTeleSells.app"
-            BlueprintName = "BlockTeleSells"
-            ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+            BuildableName = "Phie&#x302;&#x300;n.app"
+            BlueprintName = "Phie&#x302;&#x300;n"
+            ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -73,23 +68,23 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "1">
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61AB7D221F08B0880033D4FB"
-            BuildableName = "BlockTeleSells.app"
-            BlueprintName = "BlockTeleSells"
-            ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+            BuildableName = "Phie&#x302;&#x300;n.app"
+            BlueprintName = "Phie&#x302;&#x300;n"
+            ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -100,15 +95,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61AB7D221F08B0880033D4FB"
-            BuildableName = "BlockTeleSells.app"
-            BlueprintName = "BlockTeleSells"
-            ReferencedContainer = "container:BlockTeleSells.xcodeproj">
+            BuildableName = "Phie&#x302;&#x300;n.app"
+            BlueprintName = "Phie&#x302;&#x300;n"
+            ReferencedContainer = "container:Phie&#x302;&#x300;n.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
