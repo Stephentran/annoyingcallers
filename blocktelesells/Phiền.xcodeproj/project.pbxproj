@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6134B9761F434C6D00A0DFA7 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9751F434C6D00A0DFA7 /* splash.png */; };
+		6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9771F43524C00A0DFA7 /* splash1.jpg */; };
+		6134B97A1F43524C00A0DFA7 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9781F43524C00A0DFA7 /* splash.jpg */; };
 		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -199,6 +202,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6134B9751F434C6D00A0DFA7 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		6134B9771F43524C00A0DFA7 /* splash1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash1.jpg; sourceTree = "<group>"; };
+		6134B9781F43524C00A0DFA7 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash.jpg; sourceTree = "<group>"; };
 		615FBD811F2E4A350094D6EA /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = Carthage/Build/iOS/SwiftValidator.framework; sourceTree = "<group>"; };
 		615FBD861F2F9DFE0094D6EA /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
 		615FBD871F2F9DFE0094D6EA /* settings2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings2.jpg; sourceTree = "<group>"; };
@@ -522,6 +528,9 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6134B9771F43524C00A0DFA7 /* splash1.jpg */,
+				6134B9781F43524C00A0DFA7 /* splash.jpg */,
+				6134B9751F434C6D00A0DFA7 /* splash.png */,
 				61DE17E71F41FD4100C32723 /* arrow2424.png */,
 				61DE17E81F41FD4100C32723 /* hoi2424.png */,
 				61DE17E91F41FD4100C32723 /* note2424.png */,
@@ -834,11 +843,13 @@
 			files = (
 				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
 				61DE17ED1F41FD4100C32723 /* note2424.png in Resources */,
+				6134B9761F434C6D00A0DFA7 /* splash.png in Resources */,
 				61DE17EB1F41FD4100C32723 /* arrow2424.png in Resources */,
 				615FBD8D1F2F9DFE0094D6EA /* settings.jpg in Resources */,
 				615FBDAF1F30EE310094D6EA /* timer2.png in Resources */,
 				615FBDB91F30F5810094D6EA /* Arrow-undo-icon.png in Resources */,
 				615FBD9F1F30D8AE0094D6EA /* onoff.jpeg in Resources */,
+				6134B97A1F43524C00A0DFA7 /* splash.jpg in Resources */,
 				615FBD931F2F9DFE0094D6EA /* Splashscreen-05.png in Resources */,
 				61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */,
 				615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */,
@@ -860,6 +871,7 @@
 				61DE17EE1F41FD4100C32723 /* save.png in Resources */,
 				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
 				61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */,
+				6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */,
 				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,
 				61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */,
