@@ -10,6 +10,10 @@
 		6134B9761F434C6D00A0DFA7 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9751F434C6D00A0DFA7 /* splash.png */; };
 		6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9771F43524C00A0DFA7 /* splash1.jpg */; };
 		6134B97A1F43524C00A0DFA7 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9781F43524C00A0DFA7 /* splash.jpg */; };
+		6134B97F1F44B64000A0DFA7 /* autoupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97B1F44B64000A0DFA7 /* autoupdate.png */; };
+		6134B9801F44B64000A0DFA7 /* block_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97C1F44B64000A0DFA7 /* block_c.png */; };
+		6134B9811F44B64000A0DFA7 /* phone_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97D1F44B64000A0DFA7 /* phone_c.png */; };
+		6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97E1F44B64000A0DFA7 /* settings_c.png */; };
 		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -205,6 +209,10 @@
 		6134B9751F434C6D00A0DFA7 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		6134B9771F43524C00A0DFA7 /* splash1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash1.jpg; sourceTree = "<group>"; };
 		6134B9781F43524C00A0DFA7 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash.jpg; sourceTree = "<group>"; };
+		6134B97B1F44B64000A0DFA7 /* autoupdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autoupdate.png; sourceTree = "<group>"; };
+		6134B97C1F44B64000A0DFA7 /* block_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_c.png; sourceTree = "<group>"; };
+		6134B97D1F44B64000A0DFA7 /* phone_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_c.png; sourceTree = "<group>"; };
+		6134B97E1F44B64000A0DFA7 /* settings_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_c.png; sourceTree = "<group>"; };
 		615FBD811F2E4A350094D6EA /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = Carthage/Build/iOS/SwiftValidator.framework; sourceTree = "<group>"; };
 		615FBD861F2F9DFE0094D6EA /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
 		615FBD871F2F9DFE0094D6EA /* settings2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings2.jpg; sourceTree = "<group>"; };
@@ -528,6 +536,10 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6134B97B1F44B64000A0DFA7 /* autoupdate.png */,
+				6134B97C1F44B64000A0DFA7 /* block_c.png */,
+				6134B97D1F44B64000A0DFA7 /* phone_c.png */,
+				6134B97E1F44B64000A0DFA7 /* settings_c.png */,
 				6134B9771F43524C00A0DFA7 /* splash1.jpg */,
 				6134B9781F43524C00A0DFA7 /* splash.jpg */,
 				6134B9751F434C6D00A0DFA7 /* splash.png */,
@@ -856,10 +868,12 @@
 				61DE17BA1F3A20A300C32723 /* info-icon.png in Resources */,
 				615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */,
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
+				6134B9811F44B64000A0DFA7 /* phone_c.png in Resources */,
 				615FBDB71F30F48E0094D6EA /* Left_arrow-128.png in Resources */,
 				615FBDA71F30DC070094D6EA /* Apps-system-software-update-icon.png in Resources */,
 				61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
+				6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */,
 				615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */,
 				615FBDA51F30DB460094D6EA /* gear-set.png in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
@@ -883,6 +897,8 @@
 				61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */,
 				615FBD911F2F9DFE0094D6EA /* Splashscreen-03.png in Resources */,
 				615FBD951F30D39E0094D6EA /* background1.jpeg in Resources */,
+				6134B97F1F44B64000A0DFA7 /* autoupdate.png in Resources */,
+				6134B9801F44B64000A0DFA7 /* block_c.png in Resources */,
 				615FBDB11F30EE950094D6EA /* Apps-text-editor-icon.png in Resources */,
 				615FBD9B1F30D6700094D6EA /* settings_ios7_ios_7.png in Resources */,
 			);
