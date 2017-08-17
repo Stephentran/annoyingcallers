@@ -21,13 +21,13 @@ public final class LocalDataManager {
     public static let SERVICE_CATEGORY_URL = SERVICE_URL + "categories"
     public static let SERVICE_TOKEN_URL = SERVICE_URL + "devices/"
     public static let CBX_IDENTIFIER = "com.ste.CallBlock.CallBlockExtension"
-    public static let APP_GROUP_CALL_BLOCK_IDENTIFIER = "group.stephentran.callblock"
+    public static let APP_GROUP_CALL_BLOCK_IDENTIFIER = "group.hungduong.callblock"
     public static let APP_GROUP_CALL_BLOCK_FOLDER = "callers"
     public static let APP_GROUP_CALL_BLOCK_SQLITE_FILE_NAME = "callblock.sqlite3"
     public static let COUNTRY_CODE_DEFAULT = "84"
     public static let  API_REQUEST_KEY = "API-REQUEST-KEY"
     public static let  PLATFORM = "iOS"
-    public static let wormhole = MMWormhole(applicationGroupIdentifier: "group.stephentran.callblock", optionalDirectory: "blockcall")
+    public static let wormhole = MMWormhole(applicationGroupIdentifier: APP_GROUP_CALL_BLOCK_IDENTIFIER, optionalDirectory: "blockcall")
     let CALLER_DATA_HELPER = CallerDataHelper(tableName: "Callers")
     let CATEGORY_DATA_HELPER = CategoryDataHelper(tableName: "Categories")
     let CALLER_CATEGORY_DATA_HELPER = CallerCategoryDataHelper(tableName: "CallerCategories")
