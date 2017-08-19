@@ -133,6 +133,7 @@ class CallerCategoryDataHelper: DataHelperProtocol {
         var ret = [Int64]()
         do{
             for item in items {
+            item.id = nil
             try ret.append(insert(item: item))
         }
         }catch{
