@@ -13,19 +13,22 @@ public class NetworkManager {
     public func requestIfReachableViaWiFi(reachability: Reachability,allowCell: Bool, requestingHandler: @escaping (_ completionHandler: @escaping (_ result: Bool) -> Void) -> Void, completionHandler: @escaping (_ result: Bool) -> Void) {
         NetworkManager.sharedInstance.configureAllowCellular(allowCell: allowCell)
         if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
-            if reachability.isReachableViaWiFi || (reachability.isReachable && self.allowCellular)  {
-                    if LocalDataManager.sharedInstance.loadKeytToken() != nil {
-                        requestingHandler(completionHandler)
-                    }else{
-                        DataService.sharedInstance.requestToken(completionHandler: {
-                            requestingHandler(completionHandler)
-                        })
-                    }
+            if LocalDataManager.sharedInstance.loadKeytToken() != nil {
+                requestingHandler(completionHandler)
+            }else{
+                DataService.sharedInstance.requestToken(completionHandler: {
+                    requestingHandler(completionHandler)
+                })
+            }
                     
-                } else {
-                    print("Reachable via Cellular")
-                }
-        }else{
+        } else if(reachability.isReachable){
+            print("Reachable via Cellular")
+                
+        }else {
+            completionHandler(false)
+        }
+        /*
+        else{
             reachability.whenReachable = { reachability in
                 // this is called on a background thread, but UI updates must
                 // be on the main thread, like this:
@@ -58,7 +61,7 @@ public class NetworkManager {
                 print("Unable to start notifier")
             }
         }
-        
+        */
         
         
     }

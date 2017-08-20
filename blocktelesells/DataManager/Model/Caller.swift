@@ -7,7 +7,7 @@
 //
 
 import ObjectMapper
-public class Caller: Mappable{
+public class Caller: Mappable, Equatable{
     public var callerId: Int64?
     public var countryCode: String?
     public var callerNumber: String?
@@ -101,5 +101,8 @@ public class Caller: Mappable{
         return caller
         
     }
-
+    public static func ==(lhs: Caller, rhs: Caller) -> Bool {
+        return lhs.callerId ==  rhs.callerId
+    }
+    
 }

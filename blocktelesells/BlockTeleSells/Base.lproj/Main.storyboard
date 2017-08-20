@@ -89,7 +89,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="note2424.png" id="3B1-V4-PZv">
                             <connections>
-                                <segue destination="EWu-wY-ahh" kind="show" id="uHg-UJ-qC3"/>
+                                <segue destination="aPZ-Qn-cRR" kind="show" id="Ktu-8g-Iab"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -183,6 +183,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqT-JO-0HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196.25" y="-1243.3098591549297"/>
+        </scene>
+        <!--New Contact View Controller-->
+        <scene sceneID="xqP-iN-ZGk">
+            <objects>
+                <viewController id="aPZ-Qn-cRR" customClass="NewContactViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G8c-sc-SAj"/>
+                        <viewControllerLayoutGuide type="bottom" id="WlU-r0-bzM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9it-4C-G1K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvr-fp-jqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="-1240"/>
         </scene>
         <!--Thông tin số mới-->
         <scene sceneID="Qib-pb-OcU">

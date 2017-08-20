@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class Device: Mappable {
+class Device: Mappable, Equatable {
     public var id: String?
     public var platform: String?
     public var owner: String?
@@ -42,5 +42,8 @@ class Device: Mappable {
         device.api_request_key = api_request_key
         return device
         
+    }
+    public static func ==(lhs: Device, rhs: Device) -> Bool {
+        return lhs.id ==  rhs.id && lhs.api_request_key ==  rhs.api_request_key
     }
 }

@@ -19,6 +19,10 @@ class Constants {
     public static let BLOCK_CALL_NOT_ENABLED = "Chưa bật chế độ chặn cuộc gọi"
     public static let LATEST_UPDATED = "Mới nhất: "
     public static let NOT_CONNECT_SERVER = "Chưa kết nối được trung tâm dữ liệu"
-    
+    public static let INSERT_DB_ERROR = "Có chút vấn đề và bạn có thể chia sẻ lại?"
+    public static let SHARED_SUCCESFULLY = "Cảm ơn bạn đã chia sẻ thông tin!"
+    public static let NO_NETWORK_CONNECTION = "Hiện tại thông tin bạn chia sẻ đã được lưu và sẽ được đồng bộ lên trung tâm dữ liệu sau!"
+    public static let ALERT_TITLE = "Thông báo"
+    public static let ALERT_BUTTON = "Thông báo"
 
 }

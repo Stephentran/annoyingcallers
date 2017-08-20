@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-public class CallerCategory: Mappable {
+public class CallerCategory: Mappable, Equatable {
     public var id: Int64?
     public var callerId: Int64?
     public var categoryId: Int64?
@@ -43,5 +43,7 @@ public class CallerCategory: Mappable {
         calleCategory.isLocal = isLocal
         return calleCategory
     }
-
+    public static func ==(lhs: CallerCategory, rhs: CallerCategory) -> Bool {
+        return lhs.categoryId ==  rhs.categoryId && lhs.callerId ==  rhs.callerId
+    }
 }

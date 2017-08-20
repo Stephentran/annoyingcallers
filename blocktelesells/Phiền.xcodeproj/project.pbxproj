@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613279E71F494CD000FFE45E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
+		613279E91F494E4E00FFE45E /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613279E81F494E4E00FFE45E /* NewContactViewController.swift */; };
 		6134B9761F434C6D00A0DFA7 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9751F434C6D00A0DFA7 /* splash.png */; };
 		6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9771F43524C00A0DFA7 /* splash1.jpg */; };
 		6134B97A1F43524C00A0DFA7 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9781F43524C00A0DFA7 /* splash.jpg */; };
@@ -14,6 +16,9 @@
 		6134B9801F44B64000A0DFA7 /* block_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97C1F44B64000A0DFA7 /* block_c.png */; };
 		6134B9811F44B64000A0DFA7 /* phone_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97D1F44B64000A0DFA7 /* phone_c.png */; };
 		6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97E1F44B64000A0DFA7 /* settings_c.png */; };
+		6134B9841F48B59D00A0DFA7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
+		6134B9851F48B5A600A0DFA7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
+		6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
 		615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -197,6 +202,7 @@
 				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
 				615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */,
 				61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */,
+				6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */,
 				61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */,
 				61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */,
 			);
@@ -206,6 +212,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		613279E81F494E4E00FFE45E /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		6134B9751F434C6D00A0DFA7 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		6134B9771F43524C00A0DFA7 /* splash1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash1.jpg; sourceTree = "<group>"; };
 		6134B9781F43524C00A0DFA7 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash.jpg; sourceTree = "<group>"; };
@@ -213,6 +220,7 @@
 		6134B97C1F44B64000A0DFA7 /* block_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_c.png; sourceTree = "<group>"; };
 		6134B97D1F44B64000A0DFA7 /* phone_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_c.png; sourceTree = "<group>"; };
 		6134B97E1F44B64000A0DFA7 /* settings_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_c.png; sourceTree = "<group>"; };
+		6134B9831F48B59D00A0DFA7 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		615FBD811F2E4A350094D6EA /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = Carthage/Build/iOS/SwiftValidator.framework; sourceTree = "<group>"; };
 		615FBD861F2F9DFE0094D6EA /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
 		615FBD871F2F9DFE0094D6EA /* settings2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings2.jpg; sourceTree = "<group>"; };
@@ -315,6 +323,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6134B9841F48B59D00A0DFA7 /* Eureka.framework in Frameworks */,
 				61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */,
 				615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */,
 				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
@@ -323,6 +332,7 @@
 				61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */,
 				61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */,
+				6134B9851F48B5A600A0DFA7 /* Eureka.framework in Frameworks */,
 				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
 				615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */,
 				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
@@ -360,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613279E71F494CD000FFE45E /* Eureka.framework in Frameworks */,
 				61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
@@ -468,6 +479,7 @@
 				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
 				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
 				61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */,
+				613279E81F494E4E00FFE45E /* NewContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -475,6 +487,7 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6134B9831F48B59D00A0DFA7 /* Eureka.framework */,
 				61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */,
 				615FBD811F2E4A350094D6EA /* SwiftValidator.framework */,
 				61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */,
@@ -947,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */,
+				613279E91F494E4E00FFE45E /* NewContactViewController.swift in Sources */,
 				61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */,
 				61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */,
 				61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */,

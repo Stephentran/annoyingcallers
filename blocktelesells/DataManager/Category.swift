@@ -7,7 +7,7 @@
 //
 
 import ObjectMapper
-public class Category: Mappable {
+public class Category: Mappable, Equatable {
     public var categoryId: Int64?
     public var categoryName: String?
     public var description: String?
@@ -31,5 +31,8 @@ public class Category: Mappable {
         category.createdDate = createdDate
         return category
         
+    }
+    public static func ==(lhs: Category, rhs: Category) -> Bool {
+        return lhs.categoryId ==  rhs.categoryId
     }
 }
