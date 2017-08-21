@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "0365c178673b6b9be2329ecc41ad83aedb6fbd1fab05319f3c00cdbba77844f1",
+      "name" : "Presentation"
+    }
+  ],
+  "commitish" : "3.1.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

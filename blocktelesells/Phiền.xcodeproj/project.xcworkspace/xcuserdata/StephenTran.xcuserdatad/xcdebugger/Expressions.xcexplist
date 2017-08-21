@@ -9,22 +9,38 @@
          contextName = "Caller.categoryNames() -&gt; String:Caller.swift">
       </ContextState>
       <ContextState
-         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
+         contextName = "CallerDataHelper.findAllByLocal(isLocal : Bool) throws -&gt; [Caller]:CallerDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: 36)">
+            </PersistentString>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
+         contextName = "AppDelegate.configureSlides() -&gt; ():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "slide1 as! UIViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
+               value = "window?.rootViewController">
             </PersistentString>
             <PersistentString
                value = "window?.rootViewController.childViewControllers">
             </PersistentString>
             <PersistentString
-               value = "window?.rootViewController">
+               value = "window?.rootViewController as?MainViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -328,15 +344,7 @@
          contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
       </ContextState>
       <ContextState
-         contextName = "CallerDataHelper.findAllByLocal(isLocal : Bool) throws -&gt; [Caller]:CallerDataHelper.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: 36)">
-            </PersistentString>
-            <PersistentString
-               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -16,7 +16,6 @@
 		6134B9801F44B64000A0DFA7 /* block_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97C1F44B64000A0DFA7 /* block_c.png */; };
 		6134B9811F44B64000A0DFA7 /* phone_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97D1F44B64000A0DFA7 /* phone_c.png */; };
 		6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B97E1F44B64000A0DFA7 /* settings_c.png */; };
-		6134B9841F48B59D00A0DFA7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
 		6134B9851F48B5A600A0DFA7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
 		6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
@@ -113,8 +112,20 @@
 		61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */; };
 		61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */; };
 		61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */; };
+		61D2A2131F49F7E300844DE1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; };
+		61D2A2141F49F7EA00844DE1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; };
+		61D2A2151F49F7EA00844DE1 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61D2A2171F49FD2900844DE1 /* Pages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; };
+		61D2A2191F49FD3F00844DE1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; };
+		61D2A21A1F49FD4400844DE1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; };
+		61D2A21B1F49FD4400844DE1 /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61D2A21C1F49FD4400844DE1 /* Pages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; };
+		61D2A21D1F49FD4400844DE1 /* Pages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61D2A2211F49FF1000844DE1 /* Phien_guideline_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D2A21E1F49FF1000844DE1 /* Phien_guideline_1.png */; };
+		61D2A2221F49FF1000844DE1 /* Phien_guideline_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D2A21F1F49FF1000844DE1 /* Phien_guideline_2.png */; };
+		61D2A2231F49FF1000844DE1 /* Phien_guideline_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D2A2201F49FF1000844DE1 /* Phien_guideline_3.png */; };
+		61D2A2251F4B5E1700844DE1 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2A2241F4B5E1700844DE1 /* Guideline.swift */; };
 		61DE17AF1F34DDCF00C32723 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17AE1F34DDCF00C32723 /* Device.swift */; };
-		61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17B41F35A3E500C32723 /* Data-List-icon.png */; };
@@ -194,6 +205,7 @@
 			files = (
 				61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */,
 				61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */,
+				61D2A21B1F49FD4400844DE1 /* Cartography.framework in Embed Frameworks */,
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
 				61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */,
 				61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */,
@@ -202,8 +214,10 @@
 				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
 				615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */,
 				61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */,
+				61D2A21D1F49FD4400844DE1 /* Pages.framework in Embed Frameworks */,
 				6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */,
 				61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */,
+				61D2A2151F49F7EA00844DE1 /* Presentation.framework in Embed Frameworks */,
 				61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -304,6 +318,13 @@
 		61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStringArrayEncoding.swift; sourceTree = "<group>"; };
 		61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerCategory.swift; path = Model/CallerCategory.swift; sourceTree = "<group>"; };
 		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
+		61D2A20D1F49F52A00844DE1 /* Presentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Presentation.framework; path = Carthage/Build/iOS/Presentation.framework; sourceTree = "<group>"; };
+		61D2A2161F49FD2900844DE1 /* Pages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pages.framework; path = Carthage/Build/iOS/Pages.framework; sourceTree = "<group>"; };
+		61D2A2181F49FD3F00844DE1 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
+		61D2A21E1F49FF1000844DE1 /* Phien_guideline_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_1.png; sourceTree = "<group>"; };
+		61D2A21F1F49FF1000844DE1 /* Phien_guideline_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_2.png; sourceTree = "<group>"; };
+		61D2A2201F49FF1000844DE1 /* Phien_guideline_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_3.png; sourceTree = "<group>"; };
+		61D2A2241F4B5E1700844DE1 /* Guideline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
 		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
 		61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Carthage/Build/iOS/PhoneNumberKit.framework; sourceTree = "<group>"; };
 		61DE17B41F35A3E500C32723 /* Data-List-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data-List-icon.png"; sourceTree = "<group>"; };
@@ -323,8 +344,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6134B9841F48B59D00A0DFA7 /* Eureka.framework in Frameworks */,
-				61DE17B11F3583E200C32723 /* PhoneNumberKit.framework in Frameworks */,
+				61D2A2191F49FD3F00844DE1 /* Cartography.framework in Frameworks */,
+				61D2A2171F49FD2900844DE1 /* Pages.framework in Frameworks */,
+				61D2A2131F49F7E300844DE1 /* Presentation.framework in Frameworks */,
+				61D2A21C1F49FD4400844DE1 /* Pages.framework in Frameworks */,
 				615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */,
 				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
 				61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
@@ -336,8 +359,10 @@
 				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
 				615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */,
 				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
+				61D2A21A1F49FD4400844DE1 /* Cartography.framework in Frameworks */,
 				61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */,
 				61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */,
+				61D2A2141F49F7EA00844DE1 /* Presentation.framework in Frameworks */,
 				61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +505,7 @@
 				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
 				61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */,
 				613279E81F494E4E00FFE45E /* NewContactViewController.swift */,
+				61D2A2241F4B5E1700844DE1 /* Guideline.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -487,6 +513,9 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61D2A2181F49FD3F00844DE1 /* Cartography.framework */,
+				61D2A2161F49FD2900844DE1 /* Pages.framework */,
+				61D2A20D1F49F52A00844DE1 /* Presentation.framework */,
 				6134B9831F48B59D00A0DFA7 /* Eureka.framework */,
 				61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */,
 				615FBD811F2E4A350094D6EA /* SwiftValidator.framework */,
@@ -549,6 +578,9 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61D2A21E1F49FF1000844DE1 /* Phien_guideline_1.png */,
+				61D2A21F1F49FF1000844DE1 /* Phien_guideline_2.png */,
+				61D2A2201F49FF1000844DE1 /* Phien_guideline_3.png */,
 				6134B97B1F44B64000A0DFA7 /* autoupdate.png */,
 				6134B97C1F44B64000A0DFA7 /* block_c.png */,
 				6134B97D1F44B64000A0DFA7 /* phone_c.png */,
@@ -887,6 +919,7 @@
 				61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */,
+				61D2A2211F49FF1000844DE1 /* Phien_guideline_1.png in Resources */,
 				615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */,
 				615FBDA51F30DB460094D6EA /* gear-set.png in Resources */,
 				61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */,
@@ -905,6 +938,7 @@
 				61DE17EC1F41FD4100C32723 /* hoi2424.png in Resources */,
 				615FBD9D1F30D7280094D6EA /* phone_ios7_ios_7.png in Resources */,
 				615FBD8E1F2F9DFE0094D6EA /* settings2.jpg in Resources */,
+				61D2A2231F49FF1000844DE1 /* Phien_guideline_3.png in Resources */,
 				615FBDBB1F30F6520094D6EA /* report-go-icon.png in Resources */,
 				615FBD8F1F2F9DFE0094D6EA /* Splashscreen-01.png in Resources */,
 				61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */,
@@ -913,6 +947,7 @@
 				6134B97F1F44B64000A0DFA7 /* autoupdate.png in Resources */,
 				6134B9801F44B64000A0DFA7 /* block_c.png in Resources */,
 				615FBDB11F30EE950094D6EA /* Apps-text-editor-icon.png in Resources */,
+				61D2A2221F49FF1000844DE1 /* Phien_guideline_2.png in Resources */,
 				615FBD9B1F30D6700094D6EA /* settings_ios7_ios_7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -967,6 +1002,7 @@
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,
+				61D2A2251F4B5E1700844DE1 /* Guideline.swift in Sources */,
 				61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */,
 				61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */,
 				61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */,

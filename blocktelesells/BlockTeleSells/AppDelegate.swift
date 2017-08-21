@@ -9,10 +9,54 @@
 import UIKit
 import  UserNotifications
 import DataManager
+//import Hue
+import Presentation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , PresentationControllerDelegate{
 
     var window: UIWindow?
+    lazy var navigationController: UINavigationController = { [unowned self] in
+        let controller = UINavigationController(rootViewController: self.presentationController)
+        controller.view.backgroundColor = UIColor.brown
+
+        return controller
+    }()
+    
+    lazy var presentationController: PresentationController = {
+        let controller = PresentationController(pages: [])
+        controller.setNavigationTitle = false
+        
+        return controller
+    }()
+    
+    lazy var leftButton: UIBarButtonItem = { [unowned self] in
+        let button = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: self.presentationController,
+            action: #selector(PresentationController.moveBack))
+    
+        button.setTitleTextAttributes(
+            [NSForegroundColorAttributeName : UIColor.gray],
+            for: .normal)
+
+            return button
+        }()
+
+    lazy var rightButton: UIBarButtonItem = { [unowned self] in
+        let button = UIBarButtonItem(
+            title: "Trang kế",
+            style: .plain,
+            target: self.presentationController,
+            action: #selector(PresentationController.moveForward))
+    
+    
+        button.setTitleTextAttributes(
+            [NSForegroundColorAttributeName : UIColor.gray],
+            for: .normal)
+
+            return button
+        }()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -25,12 +69,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let isAppAlreadyLaunchedOnce = defaults.string(forKey: Constants.KEY_CHECK_FIRST_TIME){
             print("App already launched : \(isAppAlreadyLaunchedOnce)")
-            return true
         }else{
+            presentationController.navigationItem.leftBarButtonItem = leftButton
+            presentationController.navigationItem.rightBarButtonItem = rightButton
+            presentationController.presentationDelegate = self
+            configureSlides()
+            //configureBackground()
+
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            
             defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
             print("App launched first time")
-            //request token
-            return false
         }
         return true
     }
@@ -71,6 +122,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    func configureSlides() {
+        var slides = [UIViewController]()
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc1 = mainStoryboard.instantiateViewController(withIdentifier: "slide1")
+        let vc2 = mainStoryboard.instantiateViewController(withIdentifier: "slide2")
+        let vc3 = mainStoryboard.instantiateViewController(withIdentifier: "slide3")
+        slides.append(vc1)
+        slides.append(vc2)
+        slides.append(vc3)
+        presentationController.add(slides)
+    }
+    public func presentationController(_ presentationController: Presentation.PresentationController, didSetViewController viewController: UIViewController, atPage page: Int){
+        if page == 2 {
+            rightButton.title = "Kết thúc"
+            rightButton.target =  self
+            rightButton.action = #selector(self.finishGuideline)
+        }else if page == 0 {
+            leftButton.title = ""
+            rightButton.target = self.presentationController
+            rightButton.action = #selector(PresentationController.moveForward)
+            leftButton.action = #selector(PresentationController.moveBack)
+        }else{
+            rightButton.title = "Trang kế"
+            leftButton.title = "Trang trước"
+            rightButton.target = self.presentationController
+            rightButton.action = #selector(PresentationController.moveForward)
+            leftButton.action = #selector(PresentationController.moveBack)
+        }
+    }
+    @objc public func finishGuideline(){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainNav = mainStoryboard.instantiateViewController(withIdentifier: "mainNav")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = mainNav
+        window?.makeKeyAndVisible()
+    }
 
 }
-

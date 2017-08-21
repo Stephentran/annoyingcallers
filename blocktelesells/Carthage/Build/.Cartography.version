@@ -1,0 +1,24 @@
+{
+  "iOS" : [
+    {
+      "hash" : "b99bc5939567dd3d9845dc0aa1a54ed76513c7abbbb7fe6fccb7c319beed4b81",
+      "name" : "Cartography"
+    }
+  ],
+  "commitish" : "1.1.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "038853646a846d1b58f62dc6ab3469c31e8e28a9b5dff96200632c0b14623526",
+      "name" : "Cartography"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "6e39a1d1527ac4a7eaa5b214650fe8ddd469f48bf58b314f8f88cfb5df255e9f",
+      "name" : "Cartography"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "37d4d9d87b3cb5120140069625ea3df4d5ae6f00fca18ef6335294075876958e",
+      "name" : "Pages"
+    }
+  ],
+  "commitish" : "1.0.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}
