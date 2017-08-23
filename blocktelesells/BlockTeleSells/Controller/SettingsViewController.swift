@@ -8,24 +8,50 @@
 
 import UIKit
 import DataManager
-class SettingsViewController: UIViewController {
-    @IBOutlet weak var switchBlockCall: UISwitch!
-    @IBOutlet weak var switchAutoUpdate: UISwitch!
-
-    @IBAction func blockCalls(_ sender: UISwitch) {
-        LocalDataManager.sharedInstance.saveBlockCall(blockCall: switchBlockCall.isOn)
+import Eureka
+class SettingsViewController: FormViewController {
+    var switchBlockCall: SwitchRow?
+    var switchAutoUpdate: SwitchRow?
+    func blockCalls() {
+        LocalDataManager.sharedInstance.saveBlockCall(blockCall: (switchBlockCall?.value)!)
         LocalDataManager.sharedInstance.reloadExtension()
         
     }
-    @IBAction func allowAutoUpdate(_ sender: UISwitch) {
-        LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: switchAutoUpdate.isOn)
+    func allowAutoUpdate() {
+        LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: (switchAutoUpdate?.value)!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
         
-        switchBlockCall.setOn(LocalDataManager.sharedInstance.loadBlockCall()!, animated: false)
-        switchAutoUpdate.setOn(LocalDataManager.sharedInstance.loadAutoUpdate()!, animated: false)
-        // Do any additional setup after loading the view.
+        switchBlockCall  = SwitchRow("SwitchRow") { row in      // initializer
+                        row.title = "Bật để chặn các số phiền phức"
+                    }.onChange { row in
+                        row.updateCell()
+                        self.blockCalls()
+                    }.cellSetup { cell, row in
+                        cell.backgroundColor = .lightGray
+                    }.cellUpdate { cell, row in
+                        cell.textLabel?.font = .italicSystemFont(ofSize: 18.0)
+                }
+        switchBlockCall?.value = LocalDataManager.sharedInstance.loadBlockCall()!
+        switchAutoUpdate  = SwitchRow("SwitchRow") { row in      // initializer
+                        row.title = "Bật để tự động cập nhật"
+                    }.onChange { row in
+                        row.updateCell()
+                        self.allowAutoUpdate()
+                        
+                    }.cellSetup { cell, row in
+                        cell.backgroundColor = .lightGray
+                    }.cellUpdate { cell, row in
+                        cell.textLabel?.font = .italicSystemFont(ofSize: 18.0)
+                }
+        switchAutoUpdate?.value = LocalDataManager.sharedInstance.loadAutoUpdate()!
+        form
+            +++ Section("Tự động cập nhật")
+            <<< switchAutoUpdate!
+            +++ Section("Chặn số phiền phức")
+            <<< switchBlockCall!
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,5 +69,17 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    private func initialize() {
+        
+        let deleteButton = UIBarButtonItem(image: UIImage(named: "arrow2424.png"), style: .plain, target: self, action: .deleteButtonPressed)
+        navigationItem.leftBarButtonItem = deleteButton
+    }
+    @objc fileprivate func deleteButtonPressed(_ sender: UIBarButtonItem) {
+        
+        _ = navigationController?.popViewController(animated: true)
+    }
+}
+// MARK: - Selectors
+extension Selector {
+    fileprivate static let deleteButtonPressed = #selector(SettingsViewController.deleteButtonPressed(_:))
 }

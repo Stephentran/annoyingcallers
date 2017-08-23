@@ -67,17 +67,6 @@ class NewContactViewController: FormViewController {
         
         form
             +++ Section("Số điện thoại")
-            /*{ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = section.header?.height
-                header.onSetupView = {view, _ in
-                    view.textColor = .yellow
-                    view.text = "Số điện thoại"
-                    view.font = UIFont.boldSystemFont(ofSize: 29)
-                }
-                section.header = header
-            }*/
-        
             <<< contactPhoneNumber!
             +++ Section("Thể loại phiền")
             <<< categoryPicker!
@@ -212,5 +201,5 @@ class NewContactViewController: FormViewController {
 // MARK: - Selectors
 extension Selector {
     fileprivate static let saveButtonPressed = #selector(NewContactViewController.saveButtonPressed(_:))
-        fileprivate static let deleteButtonPressed = #selector(NewContactViewController.deleteButtonPressed(_:))
-    }
+    fileprivate static let deleteButtonPressed = #selector(NewContactViewController.deleteButtonPressed(_:))
+}

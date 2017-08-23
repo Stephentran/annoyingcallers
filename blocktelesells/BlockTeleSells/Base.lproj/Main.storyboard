@@ -61,7 +61,7 @@
                     <navigationItem key="navigationItem" id="p6D-Fa-Chy">
                         <barButtonItem key="leftBarButtonItem" image="hoi2424.png" id="n20-Tk-00F">
                             <connections>
-                                <segue destination="KQH-n9-t8A" kind="show" id="K2b-28-t3i"/>
+                                <segue destination="YlF-Gf-Nys" kind="show" id="Hlp-aU-qyN"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="note2424.png" id="3B1-V4-PZv">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306.875" y="-2021.8309859154929"/>
+            <point key="canvasLocation" x="1554" y="-2028"/>
         </scene>
         <!--Settings-->
         <scene sceneID="LgK-km-mUe">
@@ -160,7 +160,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqT-JO-0HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196.25" y="-1243.3098591549297"/>
+            <point key="canvasLocation" x="814" y="-1259"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Grf-Zb-6zj">
+            <objects>
+                <viewController id="YlF-Gf-Nys" customClass="SettingsViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B5J-og-q4s"/>
+                        <viewControllerLayoutGuide type="bottom" id="EKd-XV-HzP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FD6-fC-q6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwa-BG-Tu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="-1196"/>
         </scene>
         <!--New Contact View Controller-->
         <scene sceneID="xqP-iN-ZGk">
@@ -178,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvr-fp-jqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="-1240"/>
+            <point key="canvasLocation" x="2524" y="-1160"/>
         </scene>
         <!--Thông tin số mới-->
         <scene sceneID="Qib-pb-OcU">
@@ -469,6 +487,6 @@
         <image name="save.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="75U-kO-7Cl"/>
+        <segue reference="AcB-78-hVF"/>
     </inferredMetricsTieBreakers>
 </document>

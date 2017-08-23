@@ -12,7 +12,7 @@ class Guideline: NSObject {
     var window: UIWindow?
     public lazy var navigationController: UINavigationController = { [unowned self] in
         let controller = UINavigationController(rootViewController: self.presentationController)
-        controller.view.backgroundColor = UIColor.brown
+        controller.view.backgroundColor = UIColor.gray
 
         return controller
     }()
