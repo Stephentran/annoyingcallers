@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613047D91F4DEA0A0060449E /* Circle-PNG-Image-279x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 613047D81F4DEA0A0060449E /* Circle-PNG-Image-279x279.png */; };
+		613047DB1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 613047DA1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png */; };
 		613279E71F494CD000FFE45E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
 		613279E91F494E4E00FFE45E /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613279E81F494E4E00FFE45E /* NewContactViewController.swift */; };
 		6134B9761F434C6D00A0DFA7 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9751F434C6D00A0DFA7 /* splash.png */; };
@@ -226,6 +228,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		613047D81F4DEA0A0060449E /* Circle-PNG-Image-279x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle-PNG-Image-279x279.png"; sourceTree = "<group>"; };
+		613047DA1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle-PNG-Photos-263x279.png"; sourceTree = "<group>"; };
 		613279E81F494E4E00FFE45E /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		6134B9751F434C6D00A0DFA7 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		6134B9771F43524C00A0DFA7 /* splash1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash1.jpg; sourceTree = "<group>"; };
@@ -578,6 +582,8 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				613047DA1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png */,
+				613047D81F4DEA0A0060449E /* Circle-PNG-Image-279x279.png */,
 				61D2A21E1F49FF1000844DE1 /* Phien_guideline_1.png */,
 				61D2A21F1F49FF1000844DE1 /* Phien_guideline_2.png */,
 				61D2A2201F49FF1000844DE1 /* Phien_guideline_3.png */,
@@ -899,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB7E081F19477A0033D4FB /* Cartfile in Resources */,
+				613047D91F4DEA0A0060449E /* Circle-PNG-Image-279x279.png in Resources */,
 				61DE17ED1F41FD4100C32723 /* note2424.png in Resources */,
 				6134B9761F434C6D00A0DFA7 /* splash.png in Resources */,
 				61DE17EB1F41FD4100C32723 /* arrow2424.png in Resources */,
@@ -931,6 +938,7 @@
 				61DE17EE1F41FD4100C32723 /* save.png in Resources */,
 				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
 				61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */,
+				613047DB1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png in Resources */,
 				6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */,
 				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,

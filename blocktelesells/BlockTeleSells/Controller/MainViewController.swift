@@ -13,6 +13,7 @@ import CallKit
 import AVFoundation
 class MainViewController: UIViewController , CXCallObserverDelegate{
     
+    @IBOutlet weak var reportedNumberCount: UILabel!
     
     @IBOutlet weak var gotoList: UIButton!
     var callObserver: CXCallObserver?
@@ -72,6 +73,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
             if nav?.visibleViewController is MainViewController {
                 DispatchQueue.main.async() {
                     self.updatedStatus.text = message
+                    self.reportedNumberCount.text = String(LocalDataManager.sharedInstance.getLoadedCallers().count)
                 }
                 
             }

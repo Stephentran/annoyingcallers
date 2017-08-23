@@ -23,30 +23,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1A2-wF-Pm5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mở cấu hình điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0D-so-X9l">
-                                <rect key="frame" x="102" y="83" width="218" height="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bấm điện thoại và chọn chế độ định danh và chặn cuộc gọi" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-dk-Rxa">
-                                <rect key="frame" x="102" y="182" width="218" height="96"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cho phép &quot;Phiền Quá&quot;" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQV-AI-wDQ">
-                                <rect key="frame" x="102" y="277" width="218" height="71"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chưa cập nhật" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcU-X2-Vgk">
                                 <rect key="frame" x="16" y="466" width="288" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -54,29 +33,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bật chế độ tự động cập nhật danh sách cuộc gọi phiền phức" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-n5-ehV">
-                                <rect key="frame" x="102" y="332" width="218" height="130"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Circle-PNG-Photos-263x279.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-hS-5fy">
+                                <rect key="frame" x="110" y="113" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0e-zE-dbH">
+                                <rect key="frame" x="114" y="144" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Số đã được chia sẻ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-g1-1w5">
+                                <rect key="frame" x="42" y="231" width="236" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_c.png" translatesAutoresizingMaskIntoConstraints="NO" id="t60-Hg-Qak">
-                                <rect key="frame" x="16" y="112" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone_c.png" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-t9-7IY">
-                                <rect key="frame" x="16" y="201" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="block_c.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZW-EB-KCJ">
-                                <rect key="frame" x="16" y="287" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="autoupdate.png" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-8M-HrI">
-                                <rect key="frame" x="16" y="372" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -95,6 +72,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="reportedNumberCount" destination="L0e-zE-dbH" id="OY3-BA-as5"/>
                         <outlet property="updatedStatus" destination="qcU-X2-Vgk" id="CoY-zf-YGH"/>
                     </connections>
                 </viewController>
@@ -310,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="2523.75" y="-1984.8591549295775"/>
         </scene>
-        <!--Slide Controller-->
+        <!--View Controller-->
         <scene sceneID="ein-Uo-PF4">
             <objects>
-                <viewController storyboardIdentifier="slide1" id="dZ1-b8-0qn" customClass="SlideController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="slide1" id="dZ1-b8-0qn" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QJM-c7-Eo0"/>
                         <viewControllerLayoutGuide type="bottom" id="c8F-3R-naY"/>
@@ -334,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="3300" y="-2270.0704225352115"/>
         </scene>
-        <!--Slide Controller-->
+        <!--View Controller-->
         <scene sceneID="Js3-bu-Ivj">
             <objects>
-                <viewController storyboardIdentifier="slide2" id="Li6-vg-agK" customClass="SlideController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="slide2" id="Li6-vg-agK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gi6-3P-vUF"/>
                         <viewControllerLayoutGuide type="bottom" id="NJ2-ym-D2g"/>
@@ -358,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="4020" y="-2270.0704225352115"/>
         </scene>
-        <!--Slide Controller-->
+        <!--View Controller-->
         <scene sceneID="ojj-Yr-s1T">
             <objects>
-                <viewController storyboardIdentifier="slide3" id="3nZ-4h-rcM" customClass="SlideController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="slide3" id="3nZ-4h-rcM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RqS-bk-the"/>
                         <viewControllerLayoutGuide type="bottom" id="f7D-Ms-HaX"/>
@@ -480,18 +458,15 @@
     <resources>
         <image name="05-Edit-icon.png" width="24" height="24"/>
         <image name="Arrow-undo-icon.png" width="24" height="24"/>
+        <image name="Circle-PNG-Photos-263x279.png" width="263" height="279"/>
         <image name="Phien_guideline_1.png" width="1152" height="2048"/>
         <image name="Phien_guideline_2.png" width="1152" height="2048"/>
         <image name="Phien_guideline_3.png" width="1152" height="2048"/>
         <image name="arrow2424.png" width="24" height="24"/>
-        <image name="autoupdate.png" width="44" height="44"/>
-        <image name="block_c.png" width="44" height="44"/>
         <image name="hoi2424.png" width="24" height="24"/>
         <image name="main_bg.png" width="1152" height="2048"/>
         <image name="note2424.png" width="24" height="24"/>
-        <image name="phone_c.png" width="44" height="44"/>
         <image name="save.png" width="24" height="24"/>
-        <image name="settings_c.png" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="75U-kO-7Cl"/>
