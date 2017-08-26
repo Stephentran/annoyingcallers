@@ -6,31 +6,28 @@
 	<dict>
 		<key>BTSExtension.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 		<key>BlockTeleSells Fetch.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>BlockTeleSells.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>DataManager.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>PhienAction.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -55,22 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61AB7D8E1F0956910033D4FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>61AB7D961F0956910033D4FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>61AB7DB01F0957C40033D4FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>61AB7DB81F0957C40033D4FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61EA12661F507DDE0092FDC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

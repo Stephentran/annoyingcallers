@@ -140,6 +140,13 @@
 		61DE17EC1F41FD4100C32723 /* hoi2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E81F41FD4100C32723 /* hoi2424.png */; };
 		61DE17ED1F41FD4100C32723 /* note2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E91F41FD4100C32723 /* note2424.png */; };
 		61DE17EE1F41FD4100C32723 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17EA1F41FD4100C32723 /* save.png */; };
+		61E111321F51480600BE64F7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
+		61E111331F5172CF00BE64F7 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
+		61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EA12691F507DDE0092FDC2 /* ActionViewController.swift */; };
+		61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */; };
+		61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		61EA12771F5092950092FDC2 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EA12751F5092950092FDC2 /* Contacts.framework */; };
+		61EA12781F5092950092FDC2 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EA12761F5092950092FDC2 /* ContactsUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +192,13 @@
 			remoteGlobalIDString = 61AB7DB01F0957C40033D4FB;
 			remoteInfo = DataManager;
 		};
+		61EA126F1F507DDE0092FDC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61AB7D1B1F08B0880033D4FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61EA12661F507DDE0092FDC2;
+			remoteInfo = PhienAction;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -195,6 +209,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				61AB7D731F08BE960033D4FB /* BTSExtension.appex in Embed App Extensions */,
+				61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +356,13 @@
 		61DE17E81F41FD4100C32723 /* hoi2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoi2424.png; sourceTree = "<group>"; };
 		61DE17E91F41FD4100C32723 /* note2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note2424.png; sourceTree = "<group>"; };
 		61DE17EA1F41FD4100C32723 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		61E111311F513A5000BE64F7 /* PhienAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhienAction.entitlements; sourceTree = "<group>"; };
+		61EA12671F507DDE0092FDC2 /* PhienAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhienAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		61EA12691F507DDE0092FDC2 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		61EA126C1F507DDE0092FDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		61EA126E1F507DDE0092FDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61EA12751F5092950092FDC2 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		61EA12761F5092950092FDC2 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +440,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61EA12641F507DDE0092FDC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E111331F5172CF00BE64F7 /* PhoneNumberKit.framework in Frameworks */,
+				61E111321F51480600BE64F7 /* Eureka.framework in Frameworks */,
+				61EA12771F5092950092FDC2 /* Contacts.framework in Frameworks */,
+				61EA12781F5092950092FDC2 /* ContactsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -446,6 +479,7 @@
 				61AB7D6D1F08BE960033D4FB /* BTSExtension */,
 				61AB7DB21F0957C40033D4FB /* DataManager */,
 				61AB7DBF1F0957C50033D4FB /* DataManagerTests */,
+				61EA12681F507DDE0092FDC2 /* PhienAction */,
 				61AB7D241F08B0880033D4FB /* Products */,
 				61AB7D631F08BE640033D4FB /* Frameworks */,
 			);
@@ -460,6 +494,7 @@
 				61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */,
 				61AB7DB11F0957C40033D4FB /* DataManager.framework */,
 				61AB7DB91F0957C40033D4FB /* DataManagerTests.xctest */,
+				61EA12671F507DDE0092FDC2 /* PhienAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -517,6 +552,8 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61EA12751F5092950092FDC2 /* Contacts.framework */,
+				61EA12761F5092950092FDC2 /* ContactsUI.framework */,
 				61D2A2181F49FD3F00844DE1 /* Cartography.framework */,
 				61D2A2161F49FD2900844DE1 /* Pages.framework */,
 				61D2A20D1F49F52A00844DE1 /* Presentation.framework */,
@@ -692,6 +729,17 @@
 			name = Validation;
 			sourceTree = "<group>";
 		};
+		61EA12681F507DDE0092FDC2 /* PhienAction */ = {
+			isa = PBXGroup;
+			children = (
+				61E111311F513A5000BE64F7 /* PhienAction.entitlements */,
+				61EA12691F507DDE0092FDC2 /* ActionViewController.swift */,
+				61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */,
+				61EA126E1F507DDE0092FDC2 /* Info.plist */,
+			);
+			path = PhienAction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -721,6 +769,7 @@
 			dependencies = (
 				61AB7D721F08BE960033D4FB /* PBXTargetDependency */,
 				61AB7DC51F0957C50033D4FB /* PBXTargetDependency */,
+				61EA12701F507DDE0092FDC2 /* PBXTargetDependency */,
 			);
 			name = "Phiền";
 			productName = BlockTeleSells;
@@ -817,6 +866,23 @@
 			productReference = 61AB7DB91F0957C40033D4FB /* DataManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		61EA12661F507DDE0092FDC2 /* PhienAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61EA12741F507DDE0092FDC2 /* Build configuration list for PBXNativeTarget "PhienAction" */;
+			buildPhases = (
+				61EA12631F507DDE0092FDC2 /* Sources */,
+				61EA12641F507DDE0092FDC2 /* Frameworks */,
+				61EA12651F507DDE0092FDC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhienAction;
+			productName = PhienAction;
+			productReference = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -874,6 +940,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 61AB7D221F08B0880033D4FB;
 					};
+					61EA12661F507DDE0092FDC2 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = N587TKJV47;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 61AB7D1E1F08B0880033D4FB /* Build configuration list for PBXProject "Phiền" */;
@@ -895,6 +971,7 @@
 				61AB7D6B1F08BE960033D4FB /* BTSExtension */,
 				61AB7DB01F0957C40033D4FB /* DataManager */,
 				61AB7DB81F0957C40033D4FB /* DataManagerTests */,
+				61EA12661F507DDE0092FDC2 /* PhienAction */,
 			);
 		};
 /* End PBXProject section */
@@ -995,6 +1072,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61EA12651F507DDE0092FDC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1070,6 +1155,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61EA12631F507DDE0092FDC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1103,6 +1196,11 @@
 			target = 61AB7DB01F0957C40033D4FB /* DataManager */;
 			targetProxy = 61AB7DC41F0957C50033D4FB /* PBXContainerItemProxy */;
 		};
+		61EA12701F507DDE0092FDC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61EA12661F507DDE0092FDC2 /* PhienAction */;
+			targetProxy = 61EA126F1F507DDE0092FDC2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1120,6 +1218,14 @@
 				61AB7D301F08B0880033D4FB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61EA126C1F507DDE0092FDC2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1447,6 +1553,44 @@
 			};
 			name = Release;
 		};
+		61EA12721F507DDE0092FDC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhienAction/PhienAction.entitlements;
+				DEVELOPMENT_TEAM = N587TKJV47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PhienAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ste.CallBlock.PhienAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		61EA12731F507DDE0092FDC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhienAction/PhienAction.entitlements;
+				DEVELOPMENT_TEAM = N587TKJV47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PhienAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ste.CallBlock.PhienAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1509,6 +1653,15 @@
 			buildConfigurations = (
 				61AB7DCC1F0957C50033D4FB /* Debug */,
 				61AB7DCD1F0957C50033D4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61EA12741F507DDE0092FDC2 /* Build configuration list for PBXNativeTarget "PhienAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61EA12721F507DDE0092FDC2 /* Debug */,
+				61EA12731F507DDE0092FDC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

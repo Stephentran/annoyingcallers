@@ -36,5 +36,18 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>Contact use</string>
+	<key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.ste.CallBlock</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>call-block-main-screen</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>
