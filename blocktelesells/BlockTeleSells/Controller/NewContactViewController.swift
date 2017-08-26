@@ -72,6 +72,10 @@ class NewContactViewController: FormViewController {
             <<< categoryPicker!
         
         ///////////////////////////////////////
+        
+        if LocalDataManager.sharedInstance.loadCopiedPhoneNumber() != nil {
+            contactPhoneNumber?.value = LocalDataManager.sharedInstance.loadCopiedPhoneNumber()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,17 +92,7 @@ class NewContactViewController: FormViewController {
         
         navigationItem.rightBarButtonItem = saveButton
         navigationItem.rightBarButtonItem?.isEnabled = false
-        /*
-        UIGraphicsBeginImageContext(self.view.frame.size)
-
-        UIImage(named: "main_bg.png")?.draw(in: self.view.bounds)
-
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-
-        UIGraphicsEndImageContext()
-
-        tableView.backgroundColor = UIColor(patternImage: image)
-        */
+        
     }
     /*
     // MARK: - Navigation
@@ -125,7 +119,6 @@ class NewContactViewController: FormViewController {
             for category in categories {
                 self.pickerData?.append(category)
             }
-            //self.categoryPicker.reloadAllComponents()
         
         
         
@@ -172,6 +165,7 @@ class NewContactViewController: FormViewController {
     }
     func completionHandler(result: Bool){
         if result == true {
+            LocalDataManager.sharedInstance.clearCopiedPhoneNumber()
             let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.SHARED_SUCCESFULLY, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON, style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.backToBlockListView()}))
             self.present(alert, animated: true, completion: nil)

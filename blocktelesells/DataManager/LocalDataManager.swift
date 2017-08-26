@@ -14,6 +14,7 @@ extension DefaultsKeys {
     static let updatedStatus = DefaultsKey<Date?>("updatedStatus")
     static let keytToken = DefaultsKey<String?>("keyToken")
     static let autoUpdate = DefaultsKey<Bool?>("autoUpdate")
+    static let copiedPhoneNumber = DefaultsKey<String?>("copiedPhoneNumber")
 }
 public final class LocalDataManager {
     public static let SERVICE_URL = "http://103.48.191.84:8000/api/"
@@ -93,9 +94,31 @@ public final class LocalDataManager {
             return Defaults[.keytToken]!
         }
         return nil
-        
+    }
+    public func saveCopiedPhoneNumber(copiedPhoneNumber: String){
+        LocalDataManager.wormhole.passMessageObject(copiedPhoneNumber as NSCoding, identifier: "copiedPhoneNumber")
+    }
+    public func clearCopiedPhoneNumber(){
+        LocalDataManager.wormhole.clearMessageContents(forIdentifier: "copiedPhoneNumber")
+    }
+    public func loadCopiedPhoneNumber() -> String?{
+        let obj = LocalDataManager.wormhole.message(withIdentifier: "copiedPhoneNumber")
+        if obj != nil {
+            return obj as? String
+        }
+        return nil
     }
     
+    public func saveComeFromActionExtensionFlag(comeFromActionExtensionFlag: Bool){
+        LocalDataManager.wormhole.passMessageObject(comeFromActionExtensionFlag as NSCoding, identifier: "comeFromActionExtensionFlag")
+    }
+    public func loadComeFromActionExtensionFlag() -> Bool?{
+        let obj = LocalDataManager.wormhole.message(withIdentifier: "comeFromActionExtensionFlag")
+        if obj != nil {
+            return obj as? Bool
+        }
+        return nil
+    }
     public func saveBlockCall(blockCall: Bool){
         LocalDataManager.wormhole.passMessageObject(blockCall as NSCoding, identifier: "allowBlockFlag")
     }

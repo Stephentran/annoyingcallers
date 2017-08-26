@@ -80,88 +80,6 @@
             </objects>
             <point key="canvasLocation" x="1554" y="-2028"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="LgK-km-mUe">
-            <objects>
-                <viewController id="KQH-n9-t8A" userLabel="Settings" customClass="SettingsViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mqI-IN-s1N"/>
-                        <viewControllerLayoutGuide type="bottom" id="KXT-Af-zNA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mpy-go-hs5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-qK-O0f">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Tự động cập nhật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-tV-yQF">
-                                <rect key="frame" x="0.0" y="131" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-uU-er8">
-                                <rect key="frame" x="255" y="137" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="allowAutoUpdate:" destination="KQH-n9-t8A" eventType="valueChanged" id="G1D-F4-ENE"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Chặn cuộc gọi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-MB-fM9">
-                                <rect key="frame" x="0.0" y="263" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tự động cập nhật danh sách phiền phức" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCy-rD-ZB2">
-                                <rect key="frame" x="8" y="176" width="312" height="54"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sẽ chặn tất cả cuộc gọi trong danh sách phiền phức" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-gO-ZMm">
-                                <rect key="frame" x="16" y="307" width="304" height="64"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PB7-Je-JZr">
-                                <rect key="frame" x="255" y="269" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="blockCalls:" destination="KQH-n9-t8A" eventType="valueChanged" id="1Sy-wV-hfW"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Cấu hình" id="Heg-oX-wl0">
-                        <barButtonItem key="leftBarButtonItem" image="arrow2424.png" id="XwT-5u-d9y">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="AcB-78-hVF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="switchAutoUpdate" destination="P7n-uU-er8" id="fxr-Oq-MTs"/>
-                        <outlet property="switchBlockCall" destination="PB7-Je-JZr" id="UfZ-Bd-wDs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PqT-JO-0HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="814" y="-1259"/>
-        </scene>
         <!--Settings View Controller-->
         <scene sceneID="Grf-Zb-6zj">
             <objects>
@@ -183,7 +101,7 @@
         <!--New Contact View Controller-->
         <scene sceneID="xqP-iN-ZGk">
             <objects>
-                <viewController id="aPZ-Qn-cRR" customClass="NewContactViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newContactViewController" id="aPZ-Qn-cRR" customClass="NewContactViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G8c-sc-SAj"/>
                         <viewControllerLayoutGuide type="bottom" id="WlU-r0-bzM"/>
@@ -197,114 +115,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvr-fp-jqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2524" y="-1160"/>
-        </scene>
-        <!--Thông tin số mới-->
-        <scene sceneID="Qib-pb-OcU">
-            <objects>
-                <viewController id="EWu-wY-ahh" customClass="ContactViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dhx-4n-UaN"/>
-                        <viewControllerLayoutGuide type="bottom" id="Huw-5t-eg4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="33g-ey-Yu7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="DcO-uU-81m">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Số điện thoại:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XE-DW-Skv">
-                                <rect key="frame" x="11" y="72" width="122" height="23"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mã quốc gia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-BG-rqc">
-                                <rect key="frame" x="102" y="386" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+84" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl3-Ir-MtC">
-                                <rect key="frame" x="86" y="495" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-ix-9UC">
-                                <rect key="frame" x="120" y="415" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thể loại phiền: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHH-EZ-2yB">
-                                <rect key="frame" x="11" y="160" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8U-X3-DG0">
-                                <rect key="frame" x="157" y="148" width="216" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Yk-rx-Wnv">
-                                <rect key="frame" x="45" y="212" width="228" height="126"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-OJ-tlH" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                <rect key="frame" x="14" y="101" width="293" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olf-74-7Wx" customClass="MRCountryPicker" customModule="MRCountryPicker">
-                                <rect key="frame" x="0.0" y="426" width="375" height="163"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="olf-74-7Wx"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="Thông tin số mới" id="b0F-LN-W0n">
-                        <barButtonItem key="leftBarButtonItem" image="arrow2424.png" id="Kk5-sl-aul">
-                            <connections>
-                                <action selector="cancelButton:" destination="EWu-wY-ahh" id="CcD-FN-oJn"/>
-                                <segue destination="BYZ-38-t0r" kind="show" id="f6W-ji-AQm"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="save.png" id="Fpn-j0-s5l">
-                            <connections>
-                                <action selector="saveAction:" destination="EWu-wY-ahh" id="hAJ-MF-XLk"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="cancelButton" destination="Kk5-sl-aul" id="h9B-hp-H3v"/>
-                        <outlet property="category" destination="F8U-X3-DG0" id="B1X-YU-8hU"/>
-                        <outlet property="categoryPicker" destination="3Yk-rx-Wnv" id="nhj-LI-004"/>
-                        <outlet property="contactPhoneNumber" destination="aDp-OJ-tlH" id="ajg-EL-371"/>
-                        <outlet property="countryFlag" destination="Fqs-ix-9UC" id="VxQ-50-ZPe"/>
-                        <outlet property="countryPicker" destination="olf-74-7Wx" id="Oep-Gd-Hgg"/>
-                        <outlet property="phoneCode" destination="vl3-Ir-MtC" id="REM-fa-WMw"/>
-                        <outlet property="saveButton" destination="Fpn-j0-s5l" id="L4G-xl-5IY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0I9-3w-amx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2523.75" y="-1984.8591549295775"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ein-Uo-PF4">
@@ -480,13 +290,8 @@
         <image name="Phien_guideline_1.png" width="1152" height="2048"/>
         <image name="Phien_guideline_2.png" width="1152" height="2048"/>
         <image name="Phien_guideline_3.png" width="1152" height="2048"/>
-        <image name="arrow2424.png" width="24" height="24"/>
         <image name="hoi2424.png" width="24" height="24"/>
         <image name="main_bg.png" width="1152" height="2048"/>
         <image name="note2424.png" width="24" height="24"/>
-        <image name="save.png" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="f6W-ji-AQm"/>
-    </inferredMetricsTieBreakers>
 </document>

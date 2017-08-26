@@ -30,11 +30,17 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         if LocalDataManager.sharedInstance.loadAutoUpdate() == nil {
             LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: true)
         }
-
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadData()
+        if LocalDataManager.sharedInstance.loadComeFromActionExtensionFlag() == true {
+            LocalDataManager.sharedInstance.saveComeFromActionExtensionFlag(comeFromActionExtensionFlag: false)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "newContactViewController") as! NewContactViewController
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

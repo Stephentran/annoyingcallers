@@ -142,6 +142,7 @@
 		61DE17EE1F41FD4100C32723 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17EA1F41FD4100C32723 /* save.png */; };
 		61E111321F51480600BE64F7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
 		61E111331F5172CF00BE64F7 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
+		61E111341F51D57C00BE64F7 /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
 		61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EA12691F507DDE0092FDC2 /* ActionViewController.swift */; };
 		61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */; };
 		61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -444,6 +445,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E111341F51D57C00BE64F7 /* DataManager.framework in Frameworks */,
 				61E111331F5172CF00BE64F7 /* PhoneNumberKit.framework in Frameworks */,
 				61E111321F51480600BE64F7 /* Eureka.framework in Frameworks */,
 				61EA12771F5092950092FDC2 /* Contacts.framework in Frameworks */,

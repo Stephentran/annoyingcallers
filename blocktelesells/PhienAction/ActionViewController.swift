@@ -13,6 +13,7 @@ import ContactsUI
 import  Foundation
 import Eureka
 import PhoneNumberKit
+import DataManager
 class ActionViewController: FormViewController {
 
     @IBOutlet weak var phoneNumber: UILabel!
@@ -20,11 +21,6 @@ class ActionViewController: FormViewController {
     var contactPhoneNumber: LabelRow?
     var contactInfo : LabelRow?
     let phoneNumberKit = PhoneNumberKit()
-    @IBAction func goToApp(_ sender: Any) {
-        //let url = URL(string: "BlockTeleSells://main-screen") //com.ste.CallBlock
-        let url = URL(string: "call-block-main-screen://NewContactViewController")!
-        self.openURL(url)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,36 +85,32 @@ class ActionViewController: FormViewController {
                 if provider.hasItemConformingToTypeIdentifier(kUTTypeContact as String) {
                     provider.loadItem(forTypeIdentifier: kUTTypeContact as String, options: nil, completionHandler: { (contact, error) in
                         if error == nil {
-                                do {
-                                    let contacts = try CNContactVCardSerialization.contacts(with: contact as! Data)
-                                    if contacts.count > 0 {
-                                        let cnContact = contacts[0]
-                                        if (cnContact.phoneNumbers.count) > 0 {
-                                            
-                                            DispatchQueue.main.async {
-                                                self.contactPhoneNumber?.value = cnContact.phoneNumbers[0].value.stringValue
-                                                do {
-                                                        let phoneNumber = try self.phoneNumberKit.parse((self.contactPhoneNumber?.value)!)
-                                                        if phoneNumber.type == PhoneNumberType.mobile {
-                                                            self.contactInfo?.value = "Di động"
-                                                        }else {
-                                                            self.contactInfo?.value = "Cố định"
-                                                        }
+                           do {
+                                let contacts = try CNContactVCardSerialization.contacts(with: contact as! Data)
+                                if contacts.count > 0 {
+                                    let cnContact = contacts[0]
+                                    if (cnContact.phoneNumbers.count) > 0 {
+                                        DispatchQueue.main.async {
+                                            self.contactPhoneNumber?.value = cnContact.phoneNumbers[0].value.stringValue
+                                            do {
+                                                let phoneNumber = try self.phoneNumberKit.parse((self.contactPhoneNumber?.value)!)
+                                                if phoneNumber.type == PhoneNumberType.mobile {
+                                                    self.contactInfo?.value = "Số di động"
+                                                }else {
+                                                    self.contactInfo?.value = "Số cố định"
                                                 }
-                                                catch {
+                                                LocalDataManager.sharedInstance.saveCopiedPhoneNumber(copiedPhoneNumber: (self.contactPhoneNumber?.value)!)
+                                            }
+                                            catch {
                                                     print("Generic parser error")
                                                 }
-                                                
-                                                
                                             }
-                                            
                                         }
-                                        
                                     }
                                         
-                                } catch {
+                            } catch {
                                     print("There is a error during loading item")
-                                }
+                            }
                         }
                     })
                 }
@@ -135,6 +127,7 @@ class ActionViewController: FormViewController {
             if (responder as? UIApplication) != nil {
                 
                 if ((responder as? UIApplication)?.canOpenURL(url))! == true {
+                    LocalDataManager.sharedInstance.saveComeFromActionExtensionFlag(comeFromActionExtensionFlag: true)
                     return responder!.perform(#selector(openURL(_:)), with: url) != nil
                 }
             }
