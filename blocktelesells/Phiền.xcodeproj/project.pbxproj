@@ -58,7 +58,6 @@
 		61AB7D471F08B0890033D4FB /* BlockTeleSellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */; };
 		61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */; };
 		61AB7D5E1F08B28C0033D4FB /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */; };
-		61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D581F08B28C0033D4FB /* ContactViewController.swift */; };
 		61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D6F1F08BE960033D4FB /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D6E1F08BE960033D4FB /* CallDirectoryHandler.swift */; };
 		61AB7D731F08BE960033D4FB /* BTSExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -298,7 +297,6 @@
 		61AB7D481F08B0890033D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
 		61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ../ContactTableViewController.swift; sourceTree = "<group>"; };
-		61AB7D581F08B28C0033D4FB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		61AB7D641F08BE690033D4FB /* MMWormhole.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMWormhole.framework; path = Carthage/Build/iOS/MMWormhole.framework; sourceTree = "<group>"; };
 		61AB7D651F08BE690033D4FB /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BTSExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -544,7 +542,6 @@
 			children = (
 				61AB7D541F08B28C0033D4FB /* ContactTableViewCell.swift */,
 				61AB7D551F08B28C0033D4FB /* ContactTableViewController.swift */,
-				61AB7D581F08B28C0033D4FB /* ContactViewController.swift */,
 				61AB7DD51F0E8C720033D4FB /* MainViewController.swift */,
 				61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */,
 				613279E81F494E4E00FFE45E /* NewContactViewController.swift */,
@@ -1105,7 +1102,6 @@
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,
 				61D2A2251F4B5E1700844DE1 /* Guideline.swift in Sources */,
-				61AB7D601F08B28C0033D4FB /* ContactViewController.swift in Sources */,
 				61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */,
 				61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */,
 			);
