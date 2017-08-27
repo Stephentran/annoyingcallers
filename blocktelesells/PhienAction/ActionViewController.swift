@@ -54,7 +54,9 @@ class ActionViewController: FormViewController {
             row.title = "Chia sẻ với Phiền"
         }.onCellSelection { cell, row in
             let url = URL(string: "call-block-main-screen://NewContactViewController")!
-            self.openURL(url)
+            if self.openURL(url) == false {
+                print("There is a error during opening app")
+            }
         }
         let done =  ButtonRow("Done"){ row in
             row.title = "Tắt"

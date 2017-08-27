@@ -79,11 +79,25 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
             if nav?.visibleViewController is MainViewController {
                 DispatchQueue.main.async() {
                     self.updatedStatus.text = message
-                    self.reportedNumberCount.text = String(LocalDataManager.sharedInstance.getLoadedCallers().count)
+                    self.reportedNumberCount.text = self.convertNumberToDisplayText(number: Double(LocalDataManager.sharedInstance.getLoadedCallers().count))
                 }
-                
             }
         })
+        
+    }
+    func convertNumberToDisplayText(number: Double) -> String{
+        let units = ["", Constants.K_UNIT, Constants.MIL_UNIT,Constants.BIL_UNIT]
+        var index = 0
+        var runValue = number
+        while (runValue/1000.0 >= 1.0){
+            index += 1
+            runValue = runValue/1000.0
+        }
+        if index == 0 {
+            return String(Int64(runValue))
+        }else {
+            return String(round(10*runValue)/10) + " " + units[index]
+        }
         
     }
     public func updateData(){
