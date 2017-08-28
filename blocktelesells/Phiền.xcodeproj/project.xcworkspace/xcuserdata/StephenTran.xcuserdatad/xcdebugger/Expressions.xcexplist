@@ -9,38 +9,25 @@
          contextName = "Caller.categoryNames() -&gt; String:Caller.swift">
       </ContextState>
       <ContextState
-         contextName = "CallerDataHelper.findAllByLocal(isLocal : Bool) throws -&gt; [Caller]:CallerDataHelper.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: 36)">
-            </PersistentString>
-            <PersistentString
-               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
       </ContextState>
       <ContextState
          contextName = "DataService.(reloadExtension() -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
-         contextName = "AppDelegate.configureSlides() -&gt; ():AppDelegate.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "slide1 as! UIViewController">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
       </ContextState>
       <ContextState
          contextName = "AppDelegate.application(UIApplication, performFetchWithCompletionHandler : (UIBackgroundFetchResult) -&gt; ()) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "window?.rootViewController">
+               value = "window?.rootViewController as?MainViewController">
             </PersistentString>
             <PersistentString
                value = "window?.rootViewController.childViewControllers">
             </PersistentString>
             <PersistentString
-               value = "window?.rootViewController as?MainViewController">
+               value = "window?.rootViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -286,6 +273,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Guideline.finishGuideline() -&gt; ():Guideline.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Guideline.configureSlides() -&gt; ():Guideline.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIImage(named: &quot;Phien_guideline_1.png&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ContactTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ContactTableViewController.swift">
       </ContextState>
       <ContextState
@@ -293,6 +291,17 @@
          <PersistentStrings>
             <PersistentString
                value = "reachability.isReachable">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CallerDataHelper.findAllByLocal(isLocal : Bool) throws -&gt; [Caller]:CallerDataHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: 36)">
+            </PersistentString>
+            <PersistentString
+               value = "LocalDataManager.sharedInstance.CALLER_CATEGORY_DATA_HELPER.findBy(callerId: item[CallerDataHelper.callerId])">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -330,6 +339,14 @@
          contextName = "DataService.(postCallers(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
+         contextName = "AppDelegate.configureSlides() -&gt; ():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "slide1 as! UIViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataService.(requestCategories(url : String, completionHandler : () -&gt; ()) -&gt; ()).(closure #1):DataService.swift">
       </ContextState>
       <ContextState
@@ -339,12 +356,6 @@
                value = "table.filter(CallerDataHelper.callerId == id).exist()">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DataService.getLoadedPhoneNumbers() -&gt; [Int64 : String]:DataService.swift">
-      </ContextState>
-      <ContextState
-         contextName = "static ProviderDelegate.providerConfiguration.getter:ProviderDelegate.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

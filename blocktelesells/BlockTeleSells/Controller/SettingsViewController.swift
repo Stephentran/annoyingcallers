@@ -55,13 +55,13 @@ class SettingsViewController: FormViewController, PresentationControllerDelegate
         let help1 =  ButtonRow("Help"){ row in
             row.title = "Kích hoạt phiền"
         }.onCellSelection { cell, row in
-            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self)
+            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, typeTutorial: 1, baseViewController: self)
         }
         
         let help2 =  ButtonRow("Help"){ row in
             row.title = "Lấy số nhanh từ lịch sử cuộc gọi"
         }.onCellSelection { cell, row in
-            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self)
+            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, typeTutorial: 2, baseViewController: self)
         }
         form
             +++ Section("Tự động cập nhật")

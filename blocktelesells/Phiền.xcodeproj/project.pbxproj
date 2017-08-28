@@ -146,6 +146,7 @@
 		61E1113A1F5478A700BE64F7 /* Phien_guideline_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111371F5478A700BE64F7 /* Phien_guideline_6.png */; };
 		61E1113B1F5478A700BE64F7 /* Phien_guideline_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111381F5478A700BE64F7 /* Phien_guideline_4.png */; };
 		61E1113C1F5478A700BE64F7 /* Phien_guideline_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111391F5478A700BE64F7 /* Phien_guideline_5.png */; };
+		61E111401F547B7500BE64F7 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1113F1F547B7500BE64F7 /* SlideViewController.swift */; };
 		61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EA12691F507DDE0092FDC2 /* ActionViewController.swift */; };
 		61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */; };
 		61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -364,6 +365,7 @@
 		61E111371F5478A700BE64F7 /* Phien_guideline_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_6.png; sourceTree = "<group>"; };
 		61E111381F5478A700BE64F7 /* Phien_guideline_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_4.png; sourceTree = "<group>"; };
 		61E111391F5478A700BE64F7 /* Phien_guideline_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_5.png; sourceTree = "<group>"; };
+		61E1113F1F547B7500BE64F7 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		61EA12671F507DDE0092FDC2 /* PhienAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhienAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EA12691F507DDE0092FDC2 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		61EA126C1F507DDE0092FDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */,
 				613279E81F494E4E00FFE45E /* NewContactViewController.swift */,
 				61D2A2241F4B5E1700844DE1 /* Guideline.swift */,
+				61E1113F1F547B7500BE64F7 /* SlideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 				61AB7D5D1F08B28C0033D4FB /* ContactTableViewCell.swift in Sources */,
 				61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */,
 				61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */,
+				61E111401F547B7500BE64F7 /* SlideViewController.swift in Sources */,
 				61D2A2251F4B5E1700844DE1 /* Guideline.swift in Sources */,
 				61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */,
 				61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */,

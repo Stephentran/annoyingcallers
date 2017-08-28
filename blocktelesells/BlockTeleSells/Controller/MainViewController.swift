@@ -51,7 +51,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate, Presentatio
     func checkAndShowGuideLine(){
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: Constants.KEY_CHECK_FIRST_TIME) != true{
-            guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self)
+            guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, typeTutorial: 1, baseViewController: self)
         }
         
     }

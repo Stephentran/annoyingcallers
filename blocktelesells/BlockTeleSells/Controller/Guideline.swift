@@ -10,7 +10,7 @@ import UIKit
 import Presentation
 class Guideline: NSObject {
     var window: UIWindow?
-    
+    var baseViewController: UIViewController?
     var navigationController: UINavigationController?
     public lazy var presentationController: PresentationController = {
         let controller = PresentationController(pages: [])
@@ -46,22 +46,37 @@ class Guideline: NSObject {
 
             return button
         }()
-    init(window: UIWindow, navigationController: UINavigationController ) {
+    init(window: UIWindow, navigationController: UINavigationController, typeTutorial: Int, baseViewController: UIViewController ) {
         super.init()
         self.window = window
         self.navigationController = navigationController
+        self.baseViewController = baseViewController
         presentationController.navigationItem.leftBarButtonItem = leftButton
         presentationController.navigationItem.rightBarButtonItem = rightButton
 
-        configureSlides()
+        configureSlides(typeTutorial: typeTutorial)
     }
-    func configureSlides() {
+    func configureSlides(typeTutorial: Int ) {
         var slides = [UIViewController]()
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc1 = mainStoryboard.instantiateViewController(withIdentifier: "slide1")
-        let vc2 = mainStoryboard.instantiateViewController(withIdentifier: "slide2")
-        let vc3 = mainStoryboard.instantiateViewController(withIdentifier: "slide3")
+        let vc1 = mainStoryboard.instantiateViewController(withIdentifier: "slide")
+        let vc2 = mainStoryboard.instantiateViewController(withIdentifier: "slide")
+        let vc3 = mainStoryboard.instantiateViewController(withIdentifier: "slide")
+        if typeTutorial == 1 {
+            (vc1 as! SlideViewController).slideNumber = 1
+            (vc2 as! SlideViewController).slideNumber = 2
+            (vc3 as! SlideViewController).slideNumber = 3
+        }else{
+            (vc1 as! SlideViewController).slideNumber = 4
+            (vc2 as! SlideViewController).slideNumber = 5
+            (vc3 as! SlideViewController).slideNumber = 6
+        }
+        
+        
+        (vc1 as! SlideViewController).guideline = self
+        (vc2 as! SlideViewController).guideline = self
+        (vc3 as! SlideViewController).guideline = self
         slides.append(vc1)
         slides.append(vc2)
         slides.append(vc3)
@@ -86,22 +101,15 @@ class Guideline: NSObject {
         }
     }
     @objc public func finishGuideline(){
-        navigationController?.popViewController(animated: true)
-        /*
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainNav = mainStoryboard.instantiateViewController(withIdentifier: "mainNav")
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = mainNav
-        window?.makeKeyAndVisible()
-        */
+        navigationController?.popToViewController(baseViewController!, animated: true)
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: Constants.KEY_CHECK_FIRST_TIME)
         print("App launched first time")
     }
     
-    static func showGuideLine(navigationController: UINavigationController, presentationControllerDelegate: PresentationControllerDelegate) -> Guideline {
+    static func showGuideLine(navigationController: UINavigationController, presentationControllerDelegate: PresentationControllerDelegate, typeTutorial: Int, baseViewController: UIViewController) -> Guideline {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            let guideline = Guideline(window: window, navigationController: navigationController)
+            let guideline = Guideline(window: window, navigationController: navigationController, typeTutorial: typeTutorial, baseViewController: baseViewController)
             guideline.presentationController.presentationDelegate = presentationControllerDelegate
             navigationController.pushViewController((guideline.presentationController), animated: true)
             return guideline
