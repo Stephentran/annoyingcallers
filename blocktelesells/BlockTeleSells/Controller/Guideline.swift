@@ -10,13 +10,8 @@ import UIKit
 import Presentation
 class Guideline: NSObject {
     var window: UIWindow?
-    public lazy var navigationController: UINavigationController = { [unowned self] in
-        let controller = UINavigationController(rootViewController: self.presentationController)
-        controller.view.backgroundColor = UIColor.gray
-
-        return controller
-    }()
     
+    var navigationController: UINavigationController?
     public lazy var presentationController: PresentationController = {
         let controller = PresentationController(pages: [])
         controller.setNavigationTitle = false
@@ -51,9 +46,10 @@ class Guideline: NSObject {
 
             return button
         }()
-    init(window: UIWindow) {
+    init(window: UIWindow, navigationController: UINavigationController ) {
         super.init()
         self.window = window
+        self.navigationController = navigationController
         presentationController.navigationItem.leftBarButtonItem = leftButton
         presentationController.navigationItem.rightBarButtonItem = rightButton
 
@@ -90,13 +86,25 @@ class Guideline: NSObject {
         }
     }
     @objc public func finishGuideline(){
+        navigationController?.popViewController(animated: true)
+        /*
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainNav = mainStoryboard.instantiateViewController(withIdentifier: "mainNav")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
+        */
         let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+        defaults.set(true, forKey: Constants.KEY_CHECK_FIRST_TIME)
         print("App launched first time")
+    }
+    
+    static func showGuideLine(navigationController: UINavigationController, presentationControllerDelegate: PresentationControllerDelegate) -> Guideline {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            let guideline = Guideline(window: window, navigationController: navigationController)
+            guideline.presentationController.presentationDelegate = presentationControllerDelegate
+            navigationController.pushViewController((guideline.presentationController), animated: true)
+            return guideline
+        
     }
 }

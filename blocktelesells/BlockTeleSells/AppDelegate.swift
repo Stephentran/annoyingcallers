@@ -9,12 +9,12 @@
 import UIKit
 import  UserNotifications
 import DataManager
-import Presentation
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, PresentationControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var guideline: Guideline?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let center = UNUserNotificationCenter.current()
@@ -26,11 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PresentationControllerDel
         if let isAppAlreadyLaunchedOnce = defaults.string(forKey: Constants.KEY_CHECK_FIRST_TIME){
             print("App already launched : \(isAppAlreadyLaunchedOnce)")
         }else{
-            window = UIWindow(frame: UIScreen.main.bounds)
-            guideline = Guideline(window: window!)
-            guideline?.presentationController.presentationDelegate = self
-            window?.rootViewController = guideline?.navigationController
-            window?.makeKeyAndVisible()
+            //window = UIWindow(frame: UIScreen.main.bounds)
+            //guideline = Guideline(window: window!)
+            //guideline?.presentationController.presentationDelegate = self
+            //window?.rootViewController = guideline?.navigationController
+            //window?.makeKeyAndVisible()
+            //window?.rootViewController.pus
         }
         return true
     }
@@ -73,11 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PresentationControllerDel
     }
     
     
-    public func presentationController(_ presentationController: Presentation.PresentationController, didSetViewController viewController: UIViewController, atPage page: Int){
-        if guideline != nil {
-            guideline?.handleMove(atPage: page)
-        }
-    }
+    
     
 
 }

@@ -143,6 +143,9 @@
 		61E111331F5172CF00BE64F7 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
 		61E111341F51D57C00BE64F7 /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
 		61E111361F529E1C00BE64F7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E111351F529E1C00BE64F7 /* Media.xcassets */; };
+		61E1113A1F5478A700BE64F7 /* Phien_guideline_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111371F5478A700BE64F7 /* Phien_guideline_6.png */; };
+		61E1113B1F5478A700BE64F7 /* Phien_guideline_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111381F5478A700BE64F7 /* Phien_guideline_4.png */; };
+		61E1113C1F5478A700BE64F7 /* Phien_guideline_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111391F5478A700BE64F7 /* Phien_guideline_5.png */; };
 		61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EA12691F507DDE0092FDC2 /* ActionViewController.swift */; };
 		61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */; };
 		61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -358,6 +361,9 @@
 		61DE17EA1F41FD4100C32723 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		61E111311F513A5000BE64F7 /* PhienAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhienAction.entitlements; sourceTree = "<group>"; };
 		61E111351F529E1C00BE64F7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		61E111371F5478A700BE64F7 /* Phien_guideline_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_6.png; sourceTree = "<group>"; };
+		61E111381F5478A700BE64F7 /* Phien_guideline_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_4.png; sourceTree = "<group>"; };
+		61E111391F5478A700BE64F7 /* Phien_guideline_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phien_guideline_5.png; sourceTree = "<group>"; };
 		61EA12671F507DDE0092FDC2 /* PhienAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhienAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EA12691F507DDE0092FDC2 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		61EA126C1F507DDE0092FDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -620,6 +626,9 @@
 		61AB7DD71F0E9B820033D4FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				61E111371F5478A700BE64F7 /* Phien_guideline_6.png */,
+				61E111381F5478A700BE64F7 /* Phien_guideline_4.png */,
+				61E111391F5478A700BE64F7 /* Phien_guideline_5.png */,
 				613047DA1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png */,
 				613047D81F4DEA0A0060449E /* Circle-PNG-Image-279x279.png */,
 				61D2A21E1F49FF1000844DE1 /* Phien_guideline_1.png */,
@@ -1000,6 +1009,7 @@
 				61DE17B51F35A3E500C32723 /* Data-List-icon.png in Resources */,
 				615FBDA31F30DAE40094D6EA /* phone-128.png in Resources */,
 				61DE17BA1F3A20A300C32723 /* info-icon.png in Resources */,
+				61E1113B1F5478A700BE64F7 /* Phien_guideline_4.png in Resources */,
 				615FBDA11F30DA7C0094D6EA /* OnOffSwitch.png in Resources */,
 				615FBD921F2F9DFE0094D6EA /* Splashscreen-04.png in Resources */,
 				6134B9811F44B64000A0DFA7 /* phone_c.png in Resources */,
@@ -1008,6 +1018,7 @@
 				61DE17D01F3E20DF00C32723 /* new_bk_final_choice.png in Resources */,
 				61AB7DD91F0E9B820033D4FB /* settings.jpg in Resources */,
 				6134B9821F44B64000A0DFA7 /* settings_c.png in Resources */,
+				61E1113A1F5478A700BE64F7 /* Phien_guideline_6.png in Resources */,
 				61D2A2211F49FF1000844DE1 /* Phien_guideline_1.png in Resources */,
 				615FBD991F30D54D0094D6EA /* settings2.jpeg in Resources */,
 				615FBDA51F30DB460094D6EA /* gear-set.png in Resources */,
@@ -1021,6 +1032,7 @@
 				615FBDB51F30F2800094D6EA /* 05-Edit-icon.png in Resources */,
 				61DE17BC1F3A218E00C32723 /* Help-icon.png in Resources */,
 				613047DB1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png in Resources */,
+				61E1113C1F5478A700BE64F7 /* Phien_guideline_5.png in Resources */,
 				6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */,
 				615FBDA91F30E1870094D6EA /* phone-call-icon.png in Resources */,
 				615FBD901F2F9DFE0094D6EA /* Splashscreen-02.png in Resources */,

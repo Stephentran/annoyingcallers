@@ -11,7 +11,8 @@ import Reachability
 import DataManager
 import CallKit
 import AVFoundation
-class MainViewController: UIViewController , CXCallObserverDelegate{
+import Presentation
+class MainViewController: UIViewController , CXCallObserverDelegate, PresentationControllerDelegate{
     
     @IBOutlet weak var reportedNumberCount: UILabel!
     
@@ -19,6 +20,9 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
     var callObserver: CXCallObserver?
     let reachability = Reachability()!
     @IBOutlet weak var updatedStatus: UILabel!
+    
+    var window: UIWindow?
+    var guideline: Guideline?
     override func viewDidLoad() {
         self.callObserver = CXCallObserver()
         self.callObserver?.setDelegate(self, queue: nil)
@@ -40,7 +44,16 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "newContactViewController") as! NewContactViewController
             self.navigationController?.pushViewController(newViewController, animated: true)
+        }else{
+            checkAndShowGuideLine()
         }
+    }
+    func checkAndShowGuideLine(){
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: Constants.KEY_CHECK_FIRST_TIME) != true{
+            guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self)
+        }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -127,4 +140,10 @@ class MainViewController: UIViewController , CXCallObserverDelegate{
         }
     }
     
+    //MARK: PresentationControllerDelegate
+    public func presentationController(_ presentationController: Presentation.PresentationController, didSetViewController viewController: UIViewController, atPage page: Int){
+        if guideline != nil {
+            guideline?.handleMove(atPage: page)
+        }
+    }
 }
