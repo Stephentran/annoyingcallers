@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwa-BG-Tu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="-1196"/>
+            <point key="canvasLocation" x="1377" y="-1202"/>
         </scene>
         <!--New Contact View Controller-->
         <scene sceneID="xqP-iN-ZGk">
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvr-fp-jqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="-1160"/>
+            <point key="canvasLocation" x="1811" y="-1202"/>
         </scene>
         <!--Slide View Controller-->
         <scene sceneID="ein-Uo-PF4">
@@ -149,83 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiI-qk-e1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="-2270.0704225352115"/>
-        </scene>
-        <!--Blocked Contact List-->
-        <scene sceneID="yPG-ei-fdg">
-            <objects>
-                <tableViewController id="0W2-ru-2K5" customClass="ContactTableViewController" customModule="Phie__n" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="OvE-UM-Y6F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="66" id="J1W-4F-3yr" customClass="ContactTableViewCell" customModule="Phie__n" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="66"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1W-4F-3yr" id="q1B-nr-ACV">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-rk-E54">
-                                            <rect key="frame" x="8" y="-1" width="244" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqg-2s-moj">
-                                            <rect key="frame" x="241" y="0.0" width="68" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RiD-re-NPc">
-                                            <rect key="frame" x="317" y="6" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="blockedToggle:" destination="J1W-4F-3yr" eventType="valueChanged" id="2Dm-Ip-4Do"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwL-Qi-PpG">
-                                            <rect key="frame" x="8" y="36" width="367" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="callerBlocked" destination="RiD-re-NPc" id="Oo9-eV-gAy"/>
-                                    <outlet property="category" destination="xwL-Qi-PpG" id="cHF-4Q-kPq"/>
-                                    <outlet property="contactPhoneNumber" destination="SPv-rk-E54" id="tdx-Nq-Pha"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0W2-ru-2K5" id="mps-H0-mUu"/>
-                            <outlet property="delegate" destination="0W2-ru-2K5" id="ufd-KI-xIb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Blocked Contact List" id="Wkk-9T-yHd">
-                        <barButtonItem key="leftBarButtonItem" image="Arrow-undo-icon.png" id="LaS-Vp-nEG">
-                            <connections>
-                                <action selector="backToBlockList:" destination="0W2-ru-2K5" id="A6q-Yz-C12"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="05-Edit-icon.png" id="BIE-YZ-34i"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0aY-eO-8S1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2210" y="-25"/>
+            <point key="canvasLocation" x="1956" y="-2637"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZJn-SD-7um">
@@ -247,8 +171,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="05-Edit-icon.png" width="24" height="24"/>
-        <image name="Arrow-undo-icon.png" width="24" height="24"/>
         <image name="Circle-PNG-Photos-263x279.png" width="263" height="279"/>
         <image name="Phien_guideline_1.png" width="1152" height="2048"/>
         <image name="hoi2424.png" width="24" height="24"/>

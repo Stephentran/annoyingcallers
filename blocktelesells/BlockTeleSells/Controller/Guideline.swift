@@ -69,7 +69,7 @@ class Guideline: NSObject {
                 numberOfPage = 5
                 
         }
-        for var  index in (0..<numberOfPage) {
+        for index in (0..<numberOfPage) {
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "slide")
             (vc as! SlideViewController).slideNumber = index + 1
             (vc as! SlideViewController).slideType = slideType
