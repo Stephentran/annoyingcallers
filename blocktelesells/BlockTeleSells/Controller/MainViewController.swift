@@ -51,9 +51,13 @@ class MainViewController: UIViewController , CXCallObserverDelegate, Presentatio
     func checkAndShowGuideLine(){
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: Constants.KEY_CHECK_FIRST_TIME) != true{
-            guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, typeTutorial: 1, baseViewController: self)
+            let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.FIRST_TIME_MESSAGE, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: Constants.ALERT_SHOW_GUIDE, style: UIAlertActionStyle.default, handler: runGuideLine))
+            self.present(alert, animated: true, completion: nil)
         }
-        
+    }
+    func runGuideLine(action: UIAlertAction)  {
+        self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, slideType: SlideType.ActivteCallBlock, baseViewController: self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -42,6 +42,30 @@ class CategoryDataHelper: DataHelperProtocol {
        
     }
     public func delete(item: T) throws -> Void{
+        guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
+            throw DataAccessError.Datastore_Connection_Error
+        }
+        if let id = item.categoryId {
+            let query = table.filter(CategoryDataHelper.categoryId == id)
+            do {
+                let tmp = try DB.run(query.delete())
+                guard tmp == 1 else {
+                    throw DataAccessError.Delete_Error
+                }
+            } catch _ {
+                throw DataAccessError.Delete_Error
+            }
+        }
+    }
+    public func deleteAll () throws -> Void {
+        guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
+            throw DataAccessError.Datastore_Connection_Error
+        }
+        do {
+            try DB.run(table.delete())
+        } catch _ {
+            throw DataAccessError.Delete_Error
+        }
     }
     public func updateAll(items: [T]) throws -> Bool {
         var ret = false

@@ -97,6 +97,7 @@ public class DataService{
             if(response.result.isSuccess) {
                 let categoryArray = response.result.value
                 do{
+                    try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.deleteAll()
                     if let categoryArray = categoryArray {
                         for category in categoryArray {
                             if ((try LocalDataManager.sharedInstance.CATEGORY_DATA_HELPER.find(id: category.categoryId!)) != nil) {

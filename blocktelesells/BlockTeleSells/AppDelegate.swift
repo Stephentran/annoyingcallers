@@ -25,13 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let isAppAlreadyLaunchedOnce = defaults.string(forKey: Constants.KEY_CHECK_FIRST_TIME){
             print("App already launched : \(isAppAlreadyLaunchedOnce)")
-        }else{
-            //window = UIWindow(frame: UIScreen.main.bounds)
-            //guideline = Guideline(window: window!)
-            //guideline?.presentationController.presentationDelegate = self
-            //window?.rootViewController = guideline?.navigationController
-            //window?.makeKeyAndVisible()
-            //window?.rootViewController.pus
         }
         return true
     }

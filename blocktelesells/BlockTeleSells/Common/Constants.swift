@@ -22,10 +22,13 @@ class Constants {
     public static let INSERT_DB_ERROR = "Có chút vấn đề và bạn có thể chia sẻ lại?"
     public static let SHARED_SUCCESFULLY = "Cảm ơn bạn đã chia sẻ thông tin!"
     public static let NO_NETWORK_CONNECTION = "Hiện tại thông tin bạn chia sẻ đã được lưu và sẽ được đồng bộ lên trung tâm dữ liệu sau!"
+    public static let FIRST_TIME_MESSAGE = "Để sử dụng Phiền, bạn vui lòng dành thêm 10s để thiết lập hướng dẫn sau"
     public static let ALERT_TITLE = "Thông báo"
     public static let ALERT_BUTTON = "Thông báo"
+    public static let ALERT_SHOW_GUIDE = "Xem hướng dẫn"
     public static let K_UNIT = "K"
     public static let MIL_UNIT = "Mil"
     public static let BIL_UNIT = "Bil"
+    
 
 }

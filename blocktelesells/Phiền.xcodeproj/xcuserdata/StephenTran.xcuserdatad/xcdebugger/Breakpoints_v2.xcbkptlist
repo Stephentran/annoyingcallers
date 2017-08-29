@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "insert(item:)"
             landmarkType = "7">
             <Locations>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "callObserver(_:callChanged:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "updateData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/AppDelegate.swift"
-            timestampString = "525549981.732526"
+            timestampString = "525716006.969397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "application(_:performFetchWithCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,27 +602,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/AppDelegate.swift"
-            timestampString = "525549981.732526"
+            timestampString = "525716006.969397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "application(_:performFetchWithCompletionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlockTeleSells/AppDelegate.swift"
+            timestampString = "525716006.969397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "application(_:performFetchWithCompletionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlockTeleSells/AppDelegate.swift"
-            timestampString = "525549981.732526"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "MainViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,11 +874,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -890,11 +890,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "find(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -922,11 +922,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -938,11 +938,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -954,11 +954,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -970,11 +970,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -986,11 +986,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "insert(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1002,11 +1002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522411213.067939"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "updateAll(items:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1018,11 +1018,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "findAll()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1034,11 +1034,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412550.164204"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "update(cid:updatedItem:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1050,11 +1050,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/DataHelper/EntityHelper/CategoryDataHelper.swift"
-            timestampString = "522412329.311743"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "update(cid:updatedItem:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1638,11 +1638,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/AppDelegate.swift"
-            timestampString = "525549981.732526"
+            timestampString = "525716006.969397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86">
+            startingLineNumber = "79"
+            endingLineNumber = "79">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1652,11 +1652,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "callObserver(_:callChanged:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1668,11 +1668,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "callObserver(_:callChanged:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1684,11 +1684,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "callObserver(_:callChanged:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1796,7 +1796,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -1924,11 +1924,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "requestCategories(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2308,11 +2308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "requestToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2324,11 +2324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "requestToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2340,11 +2340,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "requestToken(completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -2756,11 +2756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "setUpdatedStatus()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2804,11 +2804,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "setUpdatedStatus()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2820,11 +2820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "setUpdatedStatus()"
             landmarkType = "7">
             <Locations>
@@ -2884,11 +2884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager/Service/DataService.swift"
-            timestampString = "524854374.081017"
+            timestampString = "525717053.410273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "requestToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3300,11 +3300,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/Guideline.swift"
-            timestampString = "525637450.733911"
+            timestampString = "525715198.575308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "handleMove(atPage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3316,12 +3316,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/Guideline.swift"
-            timestampString = "525637450.733911"
+            timestampString = "525714330.410907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "init(window:navigationController:typeTutorial:baseViewController:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "init(window:navigationController:slideType:baseViewController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3332,11 +3332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/AppDelegate.swift"
-            timestampString = "525549981.732526"
+            timestampString = "525716006.969397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -3380,7 +3380,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
+            timestampString = "525716263.835609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "convertNumberToDisplayText(number:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlockTeleSells/Controller/MainViewController.swift"
+            timestampString = "525716263.835609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -3395,28 +3411,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlockTeleSells/Controller/MainViewController.swift"
-            timestampString = "525551215.287632"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "convertNumberToDisplayText(number:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/Guideline.swift"
-            timestampString = "525637450.733911"
+            timestampString = "525715198.575308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "finishGuideline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3444,12 +3444,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/Guideline.swift"
-            timestampString = "525637450.733911"
+            timestampString = "525715198.575308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "configureSlides(typeTutorial:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "configureSlides(slideType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3460,12 +3460,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/Guideline.swift"
-            timestampString = "525637450.733911"
+            timestampString = "525714330.410907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "configureSlides(typeTutorial:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "configureSlides(slideType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3476,11 +3476,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlockTeleSells/Controller/SlideViewController.swift"
-            timestampString = "525636545.154681"
+            timestampString = "525713802.351282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
