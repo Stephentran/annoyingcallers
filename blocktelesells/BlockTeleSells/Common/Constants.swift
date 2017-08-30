@@ -16,7 +16,7 @@ class Constants {
     public static let USING_CELLULAR_FOR_REQUEST = true
     public static let REGISTERED_DEVICE_ID = "IphoneDuong"
     public static let KEY_CHECK_FIRST_TIME = "isAppAlreadyLaunchedOnce"
-    public static let BLOCK_CALL_NOT_ENABLED = "Phiền không chạy, khi Chế Độ Chặn Cuộc Gọi chưa bật"
+    public static let BLOCK_CALL_NOT_ENABLED = "Phiền không chạy, khi Chế Độ Chặn Cuộc Gọi chưa bật - xem thêm ở hướng dẫn (?)"
     public static let LATEST_UPDATED = "Phiền lấy số điện thoại mới nhất lúc\n"
     public static let NOT_CONNECT_SERVER = "Tèo rồi! cá mập cắn hay sao mà không kết nối được với máy chủ"
     public static let INSERT_DB_ERROR = "Phiền xin lỗi, lưu bị hư roài. Bạn lưu lại giúp!"
