@@ -20,7 +20,7 @@ class Constants {
     public static let LATEST_UPDATED = "Phiền lấy số điện thoại mới nhất lúc\n"
     public static let NOT_CONNECT_SERVER = "Tèo rồi! cá mập cắn hay sao mà không kết nối được với máy chủ"
     public static let INSERT_DB_ERROR = "Phiền xin lỗi, lưu bị hư roài. Bạn lưu lại giúp!"
-    public static let SHARED_SUCCESFULLY = "Phiền cảm ơn Sói Ca/Hot Girl/Quý Ông/Quý Bà đã báo số chuyên nhiễu!"
+    public static let SHARED_SUCCESFULLY = "Phiền cảm ơn Soái Ca/Hot Girl/Quý Ông/Quý Bà đã báo số chuyên nhiễu!"
     public static let NO_NETWORK_CONNECTION = "Số đã được lưu tạm quá giang tại máy, tí có kết nối Phiền cho lên máy chủ"
     public static let FIRST_TIME_MESSAGE = "Để sử dụng Phiền, bạn vui lòng dành thêm 10s để thiết lập theo hướng dẫn sau"
     public static let CONFIRM_MESSAGE_IN_NEW_CONTACT = "Ơ! Hình như chưa lưu. Vội gì! Lưu giúp Phiền nhé. Hay bạn bỏ?"

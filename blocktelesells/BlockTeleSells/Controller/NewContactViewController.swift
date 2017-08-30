@@ -47,7 +47,10 @@ class NewContactViewController: FormViewController {
                         if self.contactPhoneNumber?.value != nil {
                             cell.layer.borderColor = defaultCellColor
                             cell.layer.borderWidth = borderWidth
-                            self.navigationItem.rightBarButtonItem?.isEnabled = true
+                            if (self.pickerData?.count)! > 0 {
+                                self.navigationItem.rightBarButtonItem?.isEnabled = true
+                            }
+                            
                         }
                         
                     }
@@ -115,13 +118,10 @@ class NewContactViewController: FormViewController {
     // MARK: utility functions
     func loadDataForCategoryPicker(){
         let categories = LocalDataManager.sharedInstance.getLoadedCategories()
-            self.pickerData = [Category]()
-            for category in categories {
-                self.pickerData?.append(category)
-            }
-        
-        
-        
+        self.pickerData = [Category]()
+        for category in categories {
+            self.pickerData?.append(category)
+        }
     }
     // MARK: - Actions
     @objc fileprivate func saveButtonPressed(_ sender: UIBarButtonItem) {
