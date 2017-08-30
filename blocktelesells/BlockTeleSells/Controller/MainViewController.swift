@@ -110,12 +110,26 @@ class MainViewController: UIViewController , CXCallObserverDelegate, Presentatio
             index += 1
             runValue = runValue/1000.0
         }
-        if index == 0 {
-            return String(Int64(runValue))
-        }else {
-            return String(round(10*runValue)/10) + " " + units[index]
-        }
+        var displayValue = ""
         
+        
+        if index == 0 {
+            displayValue = String(Int64(runValue))
+        }else {
+            displayValue = String(floor(10*runValue)/10) + "" + units[index]
+        }
+        if displayValue.characters.count <= 2 {
+            reportedNumberCount.font = UIFont.boldSystemFont(ofSize: 50)
+        }else if displayValue.characters.count == 3 {
+            reportedNumberCount.font = UIFont.boldSystemFont(ofSize: 38)
+        }else if displayValue.characters.count == 4 {
+            reportedNumberCount.font = UIFont.boldSystemFont(ofSize: 30)
+        }else if displayValue.characters.count == 5 {
+            reportedNumberCount.font = UIFont.boldSystemFont(ofSize: 26)
+        }else {
+            reportedNumberCount.font = UIFont.boldSystemFont(ofSize: 24)
+        }
+        return displayValue
     }
     public func updateData(){
         LocalDataManager.sharedInstance.startDataRequest(reachability: reachability,allowCell: Constants.USING_CELLULAR_FOR_REQUEST, completionHandler: completionHandler)

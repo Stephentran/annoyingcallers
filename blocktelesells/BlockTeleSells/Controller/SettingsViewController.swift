@@ -68,7 +68,7 @@ class SettingsViewController: FormViewController, PresentationControllerDelegate
             <<< switchAutoUpdate!
             +++ Section("Chặn số phiền phức")
             <<< switchBlockCall!
-            +++ Section("Hướng dẫn sư dụng")
+            +++ Section("Hướng dẫn sử dụng")
             <<< help1
             <<< help2
     }

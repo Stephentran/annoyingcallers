@@ -85,7 +85,7 @@ class NewContactViewController: FormViewController {
     
     private func initialize() {
         
-        let deleteButton = UIBarButtonItem(image: UIImage(named: "arrow2424.png"), style: .plain, target: self, action: .deleteButtonPressed)
+        let deleteButton = UIBarButtonItem(image: UIImage(named: "arrow2424.png"), style: .plain, target: self, action: .cancelButtonPressed)
         navigationItem.leftBarButtonItem = deleteButton
     
         let saveButton = UIBarButtonItem(image: UIImage(named: "save.png"), style: .plain, target: self, action: .saveButtonPressed)
@@ -130,11 +130,23 @@ class NewContactViewController: FormViewController {
         }
     }
   
-    @objc fileprivate func deleteButtonPressed(_ sender: UIBarButtonItem) {
+    @objc fileprivate func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.CONFIRM_MESSAGE_IN_NEW_CONTACT, preferredStyle: UIAlertControllerStyle.alert)
         
-        _ = navigationController?.popViewController(animated: true)
+            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_CANCEL, style: UIAlertActionStyle.default, handler: confirmBeforeExit))
+        
+            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_EXIT, style: UIAlertActionStyle.destructive, handler: confirmBeforeExit))
+        
+            self.present(alert, animated: true, completion: nil)
     }
-
+    func confirmBeforeExit(action: UIAlertAction){
+        if action.title == Constants.ALERT_BUTTON_EXIT {
+            _ = navigationController?.popViewController(animated: true)
+        }
+       
+    }
+    
+    
     //MARK: Actions
     func submitNewNumber()  {
         let phoneNumber = contactPhoneNumber?.value?.replacingOccurrences(of: " ", with: "") ?? ""
@@ -155,7 +167,7 @@ class NewContactViewController: FormViewController {
         
         if ret == false {
             let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.INSERT_DB_ERROR, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON, style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_OK, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else {
             
@@ -167,11 +179,11 @@ class NewContactViewController: FormViewController {
         if result == true {
             LocalDataManager.sharedInstance.clearCopiedPhoneNumber()
             let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.SHARED_SUCCESFULLY, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON, style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.backToBlockListView()}))
+            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_OK, style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.backToBlockListView()}))
             self.present(alert, animated: true, completion: nil)
         }else{
             let alert = UIAlertController(title: Constants.ALERT_TITLE, message: Constants.NO_NETWORK_CONNECTION, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON, style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.backToBlockListView()}))
+            alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_OK, style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.backToBlockListView()}))
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -195,5 +207,5 @@ class NewContactViewController: FormViewController {
 // MARK: - Selectors
 extension Selector {
     fileprivate static let saveButtonPressed = #selector(NewContactViewController.saveButtonPressed(_:))
-    fileprivate static let deleteButtonPressed = #selector(NewContactViewController.deleteButtonPressed(_:))
+    fileprivate static let cancelButtonPressed = #selector(NewContactViewController.cancelButtonPressed(_:))
 }
