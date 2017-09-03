@@ -20,28 +20,27 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Contact Use</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
-            <key>NSExtensionActivationRule</key>
-            <string>
+			<key>NSExtensionActivationRule</key>
+			<string>
                 SUBQUERY (
                     extensionItems, $extensionItem,
                     SUBQUERY (
                         $extensionItem.attachments, $attachment,
                         ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.vcard"
-                    ).@count >= 1
-                ).@count > 0
+                    ).@count &gt;= 1
+                ).@count &gt; 0
             </string>
-            <!-- OR ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.text" -->
-        </dict>
+		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.ui-services</string>
 	</dict>
-	<key>NSContactsUsageDescription</key>
-	<string>Contact Use</string>
 </dict>
 </plist>
