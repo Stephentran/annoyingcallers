@@ -9,8 +9,8 @@
 import UIKit
 import DataManager
 import Eureka
-import Presentation
-class SettingsViewController: FormViewController, PresentationControllerDelegate {
+import Pages
+class SettingsViewController: FormViewController, PagesControllerDelegate {
     var switchBlockCall: SwitchRow?
     var switchAutoUpdate: SwitchRow?
     
@@ -55,13 +55,13 @@ class SettingsViewController: FormViewController, PresentationControllerDelegate
         let help1 =  ButtonRow("Help"){ row in
             row.title = "Kích hoạt phiền"
         }.onCellSelection { cell, row in
-            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, slideType: SlideType.ActivteCallBlock, baseViewController: self)
+            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, pagesControllerDelegate: self, slideType: SlideType.ActivteCallBlock, baseViewController: self)
         }
         
         let help2 =  ButtonRow("Help"){ row in
             row.title = "Lấy số nhanh từ lịch sử cuộc gọi"
         }.onCellSelection { cell, row in
-            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, slideType: SlideType.GetNumberFromHistory, baseViewController: self)
+            self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, pagesControllerDelegate: self, slideType: SlideType.GetNumberFromHistory, baseViewController: self)
         }
         form
             +++ Section("Tự động cập nhật")
@@ -98,8 +98,9 @@ class SettingsViewController: FormViewController, PresentationControllerDelegate
         _ = navigationController?.popViewController(animated: true)
     }
     
-    //MARK: PresentationControllerDelegate
-    public func presentationController(_ presentationController: Presentation.PresentationController, didSetViewController viewController: UIViewController, atPage page: Int){
+    //MARK: PagesControllerDelegate
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, setViewController viewController: UIViewController, atPage page: Int){
         if guideline != nil {
             guideline?.handleMove(atPage: page)
         }

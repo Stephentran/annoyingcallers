@@ -1,7 +1,7 @@
 {
   "iOS" : [
     {
-      "hash" : "b99bc5939567dd3d9845dc0aa1a54ed76513c7abbbb7fe6fccb7c319beed4b81",
+      "hash" : "ec246ef192567b578b9aa89a0e83e64abc755afe07fc7921ca2f00775ef32fe7",
       "name" : "Cartography"
     }
   ],
@@ -11,13 +11,13 @@
   ],
   "tvOS" : [
     {
-      "hash" : "038853646a846d1b58f62dc6ab3469c31e8e28a9b5dff96200632c0b14623526",
+      "hash" : "a1fcc490fcc26cbffe037f322e1d982cd7953db84e98bef33c704ba822517c49",
       "name" : "Cartography"
     }
   ],
   "Mac" : [
     {
-      "hash" : "6e39a1d1527ac4a7eaa5b214650fe8ddd469f48bf58b314f8f88cfb5df255e9f",
+      "hash" : "2de8c95f9420b01d619e6553312a2aef33724f02025f96ca504a45faa3b36798",
       "name" : "Cartography"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "iOS" : [
     {
-      "hash" : "98f6f7e472603f96716bd2604a600c692cf9bebf30ddbd13de8198105b2796fb",
+      "hash" : "018bd88c35766f5f4b75cf79984c279430381c489b4591da6211b5d3b0580b8b",
       "name" : "Reachability"
     }
   ],
@@ -11,13 +11,13 @@
   ],
   "tvOS" : [
     {
-      "hash" : "2fa31985e57ae5ca1d040a88fb098c413fcd5acdc3a911e40ca11c85d9c98d34",
+      "hash" : "518d6f4c2c9edc6112af2a2a9b52b5c2095e66198627415a3d532e86b577140d",
       "name" : "Reachability"
     }
   ],
   "Mac" : [
     {
-      "hash" : "14dff2d3a9efd43cbfa6b49b1981b36c5a229081de0817dd9b7c52b43ef110dd",
+      "hash" : "223b1c0ae32bc66ef328409c14f2df5b128d87b549847bf7638e80f000261834",
       "name" : "Reachability"
     }
   ]

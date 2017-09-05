@@ -1,7 +1,7 @@
 {
   "iOS" : [
     {
-      "hash" : "eb522c6a57cfaa4db93f940242542bc58f5a2a302889c6c65e22ab6f3efb84f9",
+      "hash" : "edc9bdb77b4208943a94d1fa9ce3f463224a36441973c733d76d24e3a28390d6",
       "name" : "MMWormhole"
     }
   ],
@@ -14,7 +14,7 @@
   ],
   "Mac" : [
     {
-      "hash" : "ba015667a81368fe8c44d12b002d98a6e5ef30f9c912584bac147f4d7fc6c867",
+      "hash" : "23f2cbffb572d99f747c24fb8593d4cfa75d16d2e52f5de76d2ce221ffbb41b7",
       "name" : "MMWormhole"
     }
   ]

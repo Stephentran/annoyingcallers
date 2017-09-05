@@ -7,24 +7,22 @@
 //
 
 import UIKit
-import Presentation
+import Pages
+
 class Guideline: NSObject {
     var numberOfPage: Int = 0
     var window: UIWindow?
     var baseViewController: UIViewController?
     var navigationController: UINavigationController?
-    public lazy var presentationController: PresentationController = {
-        let controller = PresentationController(pages: [])
-        controller.setNavigationTitle = true
-        return controller
-    }()
+    var pages: PagesController?
+    
     
     lazy var leftButton: UIBarButtonItem = { [unowned self] in
         let button = UIBarButtonItem(
             title: "",
             style: .plain,
-            target: self.presentationController,
-            action: #selector(PresentationController.moveBack))
+            target: self.pages,
+            action: #selector(PagesController.moveBack))
     
         button.setTitleTextAttributes(
             [NSForegroundColorAttributeName : UIColor.gray],
@@ -37,8 +35,8 @@ class Guideline: NSObject {
         let button = UIBarButtonItem(
             title: "Sau",
             style: .plain,
-            target: self.presentationController,
-            action: #selector(PresentationController.moveForward))
+            target: self.pages,
+            action: #selector(PagesController.moveForward))
     
     
         button.setTitleTextAttributes(
@@ -52,10 +50,11 @@ class Guideline: NSObject {
         self.window = window
         self.navigationController = navigationController
         self.baseViewController = baseViewController
-        presentationController.navigationItem.leftBarButtonItem = leftButton
-        presentationController.navigationItem.rightBarButtonItem = rightButton
-
+        
+      
         configureSlides(slideType: slideType)
+        pages?.navigationItem.leftBarButtonItem = leftButton
+        pages?.navigationItem.rightBarButtonItem = rightButton
     }
     func configureSlides(slideType: SlideType ) {
         var slides = [UIViewController]()
@@ -76,8 +75,11 @@ class Guideline: NSObject {
             (vc as! SlideViewController).guideline = self
             slides.append(vc)
         }
-        
-        presentationController.add(slides)
+        pages = PagesController(slides)
+        pages?.enableSwipe = true
+        pages?.showBottomLine = true
+        pages?.setNavigationTitle = true
+        pages?.showPageControl = true
     }
     public func handleMove(atPage page: Int){
         if page == numberOfPage - 1 {
@@ -86,15 +88,15 @@ class Guideline: NSObject {
             rightButton.action = #selector(self.finishGuideline)
         }else if page == 0 {
             leftButton.title = ""
-            rightButton.target = self.presentationController
-            rightButton.action = #selector(PresentationController.moveForward)
-            leftButton.action = #selector(PresentationController.moveBack)
+            rightButton.target = self.pages
+            rightButton.action = #selector(PagesController.moveForward)
+            leftButton.action = #selector(PagesController.moveBack)
         }else{
             rightButton.title = "Sau"
             leftButton.title = "Trước"
-            rightButton.target = self.presentationController
-            rightButton.action = #selector(PresentationController.moveForward)
-            leftButton.action = #selector(PresentationController.moveBack)
+            rightButton.target = self.pages
+            rightButton.action = #selector(PagesController.moveForward)
+            leftButton.action = #selector(PagesController.moveBack)
         }
     }
     @objc public func finishGuideline(){
@@ -106,11 +108,11 @@ class Guideline: NSObject {
         }
     }
     
-    static func showGuideLine(navigationController: UINavigationController, presentationControllerDelegate: PresentationControllerDelegate, slideType: SlideType, baseViewController: UIViewController) -> Guideline {
+    static func showGuideLine(navigationController: UINavigationController, pagesControllerDelegate: PagesControllerDelegate, slideType: SlideType, baseViewController: UIViewController) -> Guideline {
             let window = UIWindow(frame: UIScreen.main.bounds)
             let guideline = Guideline(window: window, navigationController: navigationController, slideType: slideType, baseViewController: baseViewController)
-            guideline.presentationController.presentationDelegate = presentationControllerDelegate
-            navigationController.pushViewController((guideline.presentationController), animated: true)
+            guideline.pages?.pagesDelegate = pagesControllerDelegate
+            navigationController.pushViewController((guideline.pages)!, animated: true)
             return guideline
         
     }

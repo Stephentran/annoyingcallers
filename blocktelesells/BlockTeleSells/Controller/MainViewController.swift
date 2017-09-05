@@ -11,8 +11,8 @@ import Reachability
 import DataManager
 import CallKit
 import AVFoundation
-import Presentation
-class MainViewController: UIViewController , CXCallObserverDelegate, PresentationControllerDelegate{
+import Pages
+class MainViewController: UIViewController , CXCallObserverDelegate, PagesControllerDelegate{
     
     @IBOutlet weak var reportedNumberCount: UILabel!
     
@@ -57,7 +57,7 @@ class MainViewController: UIViewController , CXCallObserverDelegate, Presentatio
         }
     }
     func runGuideLine(action: UIAlertAction)  {
-        self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, presentationControllerDelegate: self, slideType: SlideType.ActivteCallBlock, baseViewController: self)
+        self.guideline = Guideline.showGuideLine(navigationController: self.navigationController!, pagesControllerDelegate: self, slideType: SlideType.ActivteCallBlock, baseViewController: self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -158,8 +158,9 @@ class MainViewController: UIViewController , CXCallObserverDelegate, Presentatio
         }
     }
     
-    //MARK: PresentationControllerDelegate
-    public func presentationController(_ presentationController: Presentation.PresentationController, didSetViewController viewController: UIViewController, atPage page: Int){
+    //MARK: PagesControllerDelegate
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, setViewController viewController: UIViewController, atPage page: Int){
         if guideline != nil {
             guideline?.handleMove(atPage: page)
         }

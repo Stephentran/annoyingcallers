@@ -8,14 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		613047DB1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 613047DA1F4DEBFE0060449E /* Circle-PNG-Photos-263x279.png */; };
-		613279E71F494CD000FFE45E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
 		613279E91F494E4E00FFE45E /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613279E81F494E4E00FFE45E /* NewContactViewController.swift */; };
 		6134B9791F43524C00A0DFA7 /* splash1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6134B9771F43524C00A0DFA7 /* splash1.jpg */; };
-		6134B9851F48B5A600A0DFA7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
-		6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
-		615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
-		615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7D271F08B0880033D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D261F08B0880033D4FB /* AppDelegate.swift */; };
 		61AB7D291F08B0880033D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D281F08B0880033D4FB /* ViewController.swift */; };
 		61AB7D2C1F08B0880033D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2A1F08B0880033D4FB /* Main.storyboard */; };
@@ -23,18 +17,13 @@
 		61AB7D311F08B0880033D4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7D2F1F08B0880033D4FB /* LaunchScreen.storyboard */; };
 		61AB7D3C1F08B0890033D4FB /* BlockTeleSellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D3B1F08B0890033D4FB /* BlockTeleSellsTests.swift */; };
 		61AB7D471F08B0890033D4FB /* BlockTeleSellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D461F08B0890033D4FB /* BlockTeleSellsUITests.swift */; };
-		61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D6F1F08BE960033D4FB /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7D6E1F08BE960033D4FB /* CallDirectoryHandler.swift */; };
 		61AB7D731F08BE960033D4FB /* BTSExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61AB7D6C1F08BE960033D4FB /* BTSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		61AB7D781F08BEC10033D4FB /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
 		61AB7D791F08BEC10033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
-		61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
-		61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DBA1F0957C50033D4FB /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
 		61AB7DC11F0957C50033D4FB /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DC01F0957C50033D4FB /* DataManagerTests.swift */; };
 		61AB7DC31F0957C50033D4FB /* DataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AB7DB31F0957C40033D4FB /* DataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; };
 		61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DB11F0957C40033D4FB /* DataManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DCF1F0957E00033D4FB /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DCE1F0957E00033D4FB /* LocalDataManager.swift */; };
 		61AB7DD01F0958380033D4FB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D651F08BE690033D4FB /* SQLite.framework */; };
@@ -43,16 +32,8 @@
 		61AB7DD61F0E8C720033D4FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DD51F0E8C720033D4FB /* MainViewController.swift */; };
 		61AB7DE01F0EAB7C0033D4FB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DDF1F0EAB7C0033D4FB /* DataService.swift */; };
 		61AB7DE21F0EAC220033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
-		61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
-		61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
-		61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DEA1F149A980033D4FB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
 		61AB7DEC1F14D6C40033D4FB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
-		61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
-		61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
-		61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
 		61AB7DF91F17D40A0033D4FB /* DataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DF81F17D40A0033D4FB /* DataHelperProtocol.swift */; };
 		61AB7DFB1F17D4430033D4FB /* CallerDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFA1F17D4430033D4FB /* CallerDataHelper.swift */; };
@@ -60,35 +41,18 @@
 		61AB7DFF1F17D5B40033D4FB /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7DFE1F17D5B40033D4FB /* DataAccessError.swift */; };
 		61AB7E041F193C7F0033D4FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E031F193C7F0033D4FB /* Constants.swift */; };
 		61AB7E081F19477A0033D4FB /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 61AB7E071F19477A0033D4FB /* Cartfile */; };
-		61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */; };
-		61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7E0F1F19F5570033D4FB /* CategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E0E1F19F5570033D4FB /* CategoryDataHelper.swift */; };
 		61AB7E111F19F6020033D4FB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E101F19F6020033D4FB /* Category.swift */; };
 		61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
-		61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
-		61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
-		61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; };
-		61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E161F1A7F090033D4FB /* SwiftyUserDefaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61AB7E1B1F1BCF230033D4FB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1A1F1BCF230033D4FB /* Configuration.swift */; };
 		61AB7E1D1F1BD04A0033D4FB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E1C1F1BD04A0033D4FB /* Common.swift */; };
 		61AB7E211F226F610033D4FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB7E201F226F610033D4FB /* NetworkManager.swift */; };
 		61B0CB371F23C6B800F7D824 /* JSONStringArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0CB361F23C6B800F7D824 /* JSONStringArrayEncoding.swift */; };
 		61C7D7FA1F2A4FAD004DEBFA /* CallerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */; };
 		61C7D7FC1F2A513F004DEBFA /* CallerCategoryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */; };
-		61D2A2131F49F7E300844DE1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; };
-		61D2A2141F49F7EA00844DE1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; };
-		61D2A2151F49F7EA00844DE1 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A20D1F49F52A00844DE1 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61D2A2171F49FD2900844DE1 /* Pages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; };
-		61D2A2191F49FD3F00844DE1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; };
-		61D2A21A1F49FD4400844DE1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; };
-		61D2A21B1F49FD4400844DE1 /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2181F49FD3F00844DE1 /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61D2A21C1F49FD4400844DE1 /* Pages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; };
-		61D2A21D1F49FD4400844DE1 /* Pages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61D2A2161F49FD2900844DE1 /* Pages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61D2A2251F4B5E1700844DE1 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2A2241F4B5E1700844DE1 /* Guideline.swift */; };
 		61DE17AF1F34DDCF00C32723 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17AE1F34DDCF00C32723 /* Device.swift */; };
-		61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
-		61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61DE17BE1F3A291C00C32723 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE17BD1F3A291C00C32723 /* SettingsViewController.swift */; };
 		61DE17CF1F3E20DF00C32723 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17CD1F3E20DF00C32723 /* main_bg.png */; };
 		61DE17EB1F41FD4100C32723 /* arrow2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61DE17E71F41FD4100C32723 /* arrow2424.png */; };
@@ -100,6 +64,17 @@
 		61E111361F529E1C00BE64F7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E111351F529E1C00BE64F7 /* Media.xcassets */; };
 		61E111401F547B7500BE64F7 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1113F1F547B7500BE64F7 /* SlideViewController.swift */; };
 		61E111441F55D33600BE64F7 /* hoi2424.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E111431F55D33600BE64F7 /* hoi2424.png */; };
+		61E111571F5C87FA00BE64F7 /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */; };
+		61E111581F5C87FA00BE64F7 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615FBD811F2E4A350094D6EA /* SwiftValidator.framework */; };
+		61E111591F5C87FA00BE64F7 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E121F1A192F0033D4FB /* Reachability.framework */; };
+		61E1115A1F5C87FA00BE64F7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE61F149A700033D4FB /* SwiftyJSON.framework */; };
+		61E1115B1F5C87FA00BE64F7 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DF01F14EB040033D4FB /* AlamofireObjectMapper.framework */; };
+		61E1115C1F5C87FA00BE64F7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DEB1F14D6C40033D4FB /* ObjectMapper.framework */; };
+		61E1115D1F5C87FA00BE64F7 /* MRCountryPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7E091F19D1DF0033D4FB /* MRCountryPicker.framework */; };
+		61E1115E1F5C87FA00BE64F7 /* MMWormhole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7D641F08BE690033D4FB /* MMWormhole.framework */; };
+		61E1115F1F5C87FA00BE64F7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AB7DE11F0EAC220033D4FB /* Alamofire.framework */; };
+		61E111601F5D078000BE64F7 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6134B9831F48B59D00A0DFA7 /* Eureka.framework */; };
+		61E1116C1F5DAB8300BE64F7 /* Pages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E1116B1F5DAB8300BE64F7 /* Pages.framework */; };
 		61EA126A1F507DDE0092FDC2 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EA12691F507DDE0092FDC2 /* ActionViewController.swift */; };
 		61EA126D1F507DDE0092FDC2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EA126B1F507DDE0092FDC2 /* MainInterface.storyboard */; };
 		61EA12711F507DDE0092FDC2 /* PhienAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61EA12671F507DDE0092FDC2 /* PhienAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -178,22 +153,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				61AB7DEF1F14D7060033D4FB /* ObjectMapper.framework in Embed Frameworks */,
-				61AB7DF31F14EB090033D4FB /* AlamofireObjectMapper.framework in Embed Frameworks */,
-				61D2A21B1F49FD4400844DE1 /* Cartography.framework in Embed Frameworks */,
 				61AB7DC71F0957C50033D4FB /* DataManager.framework in Embed Frameworks */,
-				61DE17B31F3583ED00C32723 /* PhoneNumberKit.framework in Embed Frameworks */,
-				61AB7E191F1A7F150033D4FB /* SwiftyUserDefaults.framework in Embed Frameworks */,
-				61AB7D801F08C5270033D4FB /* SQLite.framework in Embed Frameworks */,
-				61AB7E151F1A197A0033D4FB /* Reachability.framework in Embed Frameworks */,
-				61AB7D7E1F08C5270033D4FB /* MMWormhole.framework in Embed Frameworks */,
-				615FBD841F2E4A3C0094D6EA /* SwiftValidator.framework in Embed Frameworks */,
-				61AB7DE51F0EAECF0033D4FB /* Alamofire.framework in Embed Frameworks */,
-				61D2A21D1F49FD4400844DE1 /* Pages.framework in Embed Frameworks */,
-				6134B9861F48B5A600A0DFA7 /* Eureka.framework in Embed Frameworks */,
-				61AB7E0C1F19D1E60033D4FB /* MRCountryPicker.framework in Embed Frameworks */,
-				61D2A2151F49F7EA00844DE1 /* Presentation.framework in Embed Frameworks */,
-				61AB7DE91F149A740033D4FB /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +218,6 @@
 		61C7D7F91F2A4FAD004DEBFA /* CallerCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallerCategory.swift; path = Model/CallerCategory.swift; sourceTree = "<group>"; };
 		61C7D7FB1F2A513F004DEBFA /* CallerCategoryDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallerCategoryDataHelper.swift; sourceTree = "<group>"; };
 		61D2A20D1F49F52A00844DE1 /* Presentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Presentation.framework; path = Carthage/Build/iOS/Presentation.framework; sourceTree = "<group>"; };
-		61D2A2161F49FD2900844DE1 /* Pages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pages.framework; path = Carthage/Build/iOS/Pages.framework; sourceTree = "<group>"; };
-		61D2A2181F49FD3F00844DE1 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 		61D2A2241F4B5E1700844DE1 /* Guideline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
 		61DE17AE1F34DDCF00C32723 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Model/Device.swift; sourceTree = "<group>"; };
 		61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Carthage/Build/iOS/PhoneNumberKit.framework; sourceTree = "<group>"; };
@@ -272,6 +230,7 @@
 		61E111351F529E1C00BE64F7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		61E1113F1F547B7500BE64F7 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		61E111431F55D33600BE64F7 /* hoi2424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoi2424.png; sourceTree = "<group>"; };
+		61E1116B1F5DAB8300BE64F7 /* Pages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pages.framework; path = Carthage/Build/iOS/Pages.framework; sourceTree = "<group>"; };
 		61EA12671F507DDE0092FDC2 /* PhienAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhienAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EA12691F507DDE0092FDC2 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		61EA126C1F507DDE0092FDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -285,26 +244,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D2A2191F49FD3F00844DE1 /* Cartography.framework in Frameworks */,
-				61D2A2171F49FD2900844DE1 /* Pages.framework in Frameworks */,
-				61D2A2131F49F7E300844DE1 /* Presentation.framework in Frameworks */,
-				61D2A21C1F49FD4400844DE1 /* Pages.framework in Frameworks */,
-				615FBD821F2E4A360094D6EA /* SwiftValidator.framework in Frameworks */,
-				61AB7E0B1F19D1E60033D4FB /* MRCountryPicker.framework in Frameworks */,
-				61AB7DF11F14EB040033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
-				61AB7DED1F14D6F20033D4FB /* ObjectMapper.framework in Frameworks */,
-				61DE17B21F3583ED00C32723 /* PhoneNumberKit.framework in Frameworks */,
-				61AB7E181F1A7F150033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
-				61AB7DE71F149A700033D4FB /* SwiftyJSON.framework in Frameworks */,
-				6134B9851F48B5A600A0DFA7 /* Eureka.framework in Frameworks */,
-				61AB7E141F1A197A0033D4FB /* Reachability.framework in Frameworks */,
-				615FBD831F2E4A3C0094D6EA /* SwiftValidator.framework in Frameworks */,
-				61AB7DE31F0EAEC90033D4FB /* Alamofire.framework in Frameworks */,
-				61D2A21A1F49FD4400844DE1 /* Cartography.framework in Frameworks */,
-				61AB7DC61F0957C50033D4FB /* DataManager.framework in Frameworks */,
-				61AB7D661F08BE690033D4FB /* MMWormhole.framework in Frameworks */,
-				61D2A2141F49F7EA00844DE1 /* Presentation.framework in Frameworks */,
-				61AB7D7F1F08C5270033D4FB /* SQLite.framework in Frameworks */,
+				61E1116C1F5DAB8300BE64F7 /* Pages.framework in Frameworks */,
+				61E111601F5D078000BE64F7 /* Eureka.framework in Frameworks */,
+				61E111571F5C87FA00BE64F7 /* PhoneNumberKit.framework in Frameworks */,
+				61E111581F5C87FA00BE64F7 /* SwiftValidator.framework in Frameworks */,
+				61E111591F5C87FA00BE64F7 /* Reachability.framework in Frameworks */,
+				61E1115A1F5C87FA00BE64F7 /* SwiftyJSON.framework in Frameworks */,
+				61E1115B1F5C87FA00BE64F7 /* AlamofireObjectMapper.framework in Frameworks */,
+				61E1115C1F5C87FA00BE64F7 /* ObjectMapper.framework in Frameworks */,
+				61E1115D1F5C87FA00BE64F7 /* MRCountryPicker.framework in Frameworks */,
+				61E1115E1F5C87FA00BE64F7 /* MMWormhole.framework in Frameworks */,
+				61E1115F1F5C87FA00BE64F7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +286,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613279E71F494CD000FFE45E /* Eureka.framework in Frameworks */,
 				61AB7E171F1A7F090033D4FB /* SwiftyUserDefaults.framework in Frameworks */,
 				61AB7E131F1A192F0033D4FB /* Reachability.framework in Frameworks */,
 				61AB7DF41F14EB720033D4FB /* AlamofireObjectMapper.framework in Frameworks */,
@@ -451,10 +400,9 @@
 		61AB7D631F08BE640033D4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61E1116B1F5DAB8300BE64F7 /* Pages.framework */,
 				61EA12751F5092950092FDC2 /* Contacts.framework */,
 				61EA12761F5092950092FDC2 /* ContactsUI.framework */,
-				61D2A2181F49FD3F00844DE1 /* Cartography.framework */,
-				61D2A2161F49FD2900844DE1 /* Pages.framework */,
 				61D2A20D1F49F52A00844DE1 /* Presentation.framework */,
 				6134B9831F48B59D00A0DFA7 /* Eureka.framework */,
 				61DE17B01F3583E200C32723 /* PhoneNumberKit.framework */,
@@ -628,6 +576,7 @@
 				61AB7D211F08B0880033D4FB /* Resources */,
 				61AB7D771F08BE960033D4FB /* Embed App Extensions */,
 				61AB7D811F08C5280033D4FB /* Embed Frameworks */,
+				61E1114B1F5BEE8C00BE64F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -684,6 +633,7 @@
 				61AB7D681F08BE960033D4FB /* Sources */,
 				61AB7D691F08BE960033D4FB /* Frameworks */,
 				61AB7D6A1F08BE960033D4FB /* Resources */,
+				61E1114C1F5C659400BE64F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -738,6 +688,7 @@
 				61EA12631F507DDE0092FDC2 /* Sources */,
 				61EA12641F507DDE0092FDC2 /* Frameworks */,
 				61EA12651F507DDE0092FDC2 /* Resources */,
+				61E1114D1F5C65A600BE64F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -909,6 +860,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61E1114B1F5BEE8C00BE64F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MMWormhole.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MRCountryPicker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PhoneNumberKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftValidator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Pages.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d ! -name 'DataManager.framework' | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n    \n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    echo \"Merging extracted architectures: ${ARCHS}\"\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    echo \"Replacing original executable with thinned version\"\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+		61E1114C1F5C659400BE64F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then\n    rm -fr Frameworks\nfi";
+		};
+		61E1114D1F5C65A600BE64F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then\n    rm -fr Frameworks\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61AB7D1F1F08B0880033D4FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1059,6 +1065,7 @@
 		61AB7D491F08B0890033D4FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1109,6 +1116,7 @@
 		61AB7D4A1F08B0890033D4FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
