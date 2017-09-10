@@ -35,6 +35,17 @@ class MainViewController: UIViewController , CXCallObserverDelegate, PagesContro
             LocalDataManager.sharedInstance.saveAutoUpdate(autoUpdate: true)
         }
         
+    // Register to receive notification
+        NotificationCenter.default.addObserver(self, selector: #selector(checkDataFromShare), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
+    }
+    func checkDataFromShare(){
+        if LocalDataManager.sharedInstance.loadComeFromActionExtensionFlag() == true {
+            LocalDataManager.sharedInstance.saveComeFromActionExtensionFlag(comeFromActionExtensionFlag: false)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "newContactViewController") as! NewContactViewController
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
